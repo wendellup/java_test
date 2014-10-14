@@ -95,15 +95,17 @@ class ThreadDemo_07_Test {
 		ShareData03k s = new ShareData03k();
 		Consumer c = new Consumer(s);
 		Producer p = new Producer(s);
+		Producer p2 = new Producer(s);
 		c.start();
 		p.start();
-		try {
-			c.join();
-			p.join();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		p2.start();
+//		try {
+//			c.join();
+//			p.join();
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 	}
 }
