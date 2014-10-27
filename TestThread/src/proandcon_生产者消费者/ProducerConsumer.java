@@ -1,4 +1,4 @@
-package proandcon;
+package proandcon_生产者消费者;
 
 /*@author shijin
 * 生产者与消费者模型中，要保证以下几点：

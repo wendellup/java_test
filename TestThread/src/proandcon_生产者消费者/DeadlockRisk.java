@@ -1,4 +1,4 @@
-package proandcon;
+package proandcon_生产者消费者;
 
 class Resource {
 	public Resource(int value) {

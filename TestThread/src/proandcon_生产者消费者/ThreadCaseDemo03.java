@@ -1,4 +1,4 @@
-package proandcon;
+package proandcon_生产者消费者;
 
 class Info{	// 定义信息类
 	private String name = "name";//定义name属性，为了与下面set的name属性区别开

@@ -1,4 +1,4 @@
-package proandcon;
+package proandcon_生产者消费者;
 
 class Foo {
 	private int x = 100;

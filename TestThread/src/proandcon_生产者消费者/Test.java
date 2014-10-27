@@ -1,4 +1,4 @@
-package proandcon;
+package proandcon_生产者消费者;
 
 import java.util.Collections;
 import java.util.LinkedList;
