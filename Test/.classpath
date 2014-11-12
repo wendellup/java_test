@@ -7,6 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="E:/svn/code/lib/log4j-1.2.16.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yuchao/Desktop/egame.common.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/egame.common"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
