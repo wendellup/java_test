@@ -7,8 +7,12 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="E:/svn/code/lib/log4j-1.2.16.jar"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="E:/svn/code/lib/tools/GetApkInfo.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/tools/ant.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/ref/egame.common.jar"/>
+=======
+	<classpathentry combineaccessrules="false" kind="src" path="/egame.common"/>
+>>>>>>> 105ab1156d307f961d000d08b152da8b7022715b
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
