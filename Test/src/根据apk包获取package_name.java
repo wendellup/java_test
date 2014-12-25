@@ -21,13 +21,18 @@ public class 根据apk包获取package_name {
 //	}
 	
 	public static void main(String[] args) throws IOException {
-		 ApkInfo manifestInfo = GetApkInfo.getApkInfoByFilePath("C:\\Users\\yuchao\\Downloads\\FinaleOfThrone_simple_playcn.apk");
-         System.out.println(""+manifestInfo.getPackageName());
-         System.out.println(""+manifestInfo.getVersionCode());
+//		 ApkInfo manifestInfo = GetApkInfo.getApkInfoByFilePath("C:\\Users\\yuchao\\Downloads\\FinaleOfThrone_simple_playcn.apk");
+//         System.out.println(""+manifestInfo.getPackageName());
+//         System.out.println(""+manifestInfo.getVersionCode());
+//         
+//         ApkInfo manifestInfo2 = GetApkInfo.getApkInfoByFilePath("C:\\Users\\yuchao\\Downloads\\243794_1.apk");
+//         System.out.println(""+manifestInfo2.getPackageName());
+//         System.out.println(""+manifestInfo2.getVersionCode());
          
-         ApkInfo manifestInfo2 = GetApkInfo.getApkInfoByFilePath("C:\\Users\\yuchao\\Downloads\\243794_1.apk");
-         System.out.println(""+manifestInfo2.getPackageName());
-         System.out.println(""+manifestInfo2.getVersionCode());
+         ApkInfo manifestInfo3 = GetApkInfo.getApkInfoByFilePath("C:\\Users\\yuchao\\Downloads\\731372.apk");
+         System.out.println("package_name:"+manifestInfo3.getPackageName());
+         System.out.println("version_code:"+manifestInfo3.getVersionCode());
+         System.out.println("version_name:"+manifestInfo3.getVersionName());
 	}
 	
 }
