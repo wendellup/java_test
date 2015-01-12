@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.util.Properties;
 import java.util.Vector;
 
+import org.apache.log4j.Logger;
+
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
@@ -17,6 +19,51 @@ import com.jcraft.jsch.SftpException;
  */
 public class MySFTP {
 
+	private static Logger logger = Logger.getLogger(MySFTP.class);
+	
+	public static void main(String[] args) {
+		MySFTP sf = new MySFTP();
+		ChannelSftp sftp = null;
+		try {
+			String host = "192.168.251.52";
+			int port = 22;
+			String username = "root";
+			String password = "DX-game189.cn";
+			sftp = sf.connect(host, port, username, password);
+			
+			String coreDir = "/opt/app/egame/mobile/egame.core/lib/";
+			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.core.jar", sftp);
+			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
+			
+			String extDir = "/opt/app/egame/mobile/egame.ext/lib/";
+			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.ext.jar", sftp);
+			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
+			
+			String openDir = "/opt/web/mobile.play.cn/8102/webapps/egame.server.open/WEB-INF/lib/";
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.server.open.biz.jar", sftp);
+			
+		} catch (Exception e) {
+			logger.error("", e);
+		} finally{
+			if(sftp!=null){
+				sftp.disconnect();
+			}
+			System.exit(0);
+		}
+		
+//		sf.download(directory, downloadFile, saveFile, sftp);
+//		sf.delete(directory, deleteFile, sftp);
+//		try {
+//			sftp.cd(directory);
+//			sftp.mkdir("ss");
+//			System.out.println("finished");
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+	}
+	
 	/**
 	 * 连接sftp服务器
 	 * 
@@ -128,30 +175,4 @@ public class MySFTP {
 		return sftp.ls(directory);
 	}
 
-	public static void main(String[] args) {
-		MySFTP sf = new MySFTP();
-		String host = "192.168.88.129";
-		int port = 22;
-		String username = "root";
-		String password = "root";
-		String directory = "/test/";
-		String uploadFile = "C:\\Users\\thinkpad\\Desktop\\pom(1).xml";
-		String downloadFile = "upload.txt";
-		String saveFile = "D:\\tmp\\download.txt";
-		String deleteFile = "delete.txt";
-		ChannelSftp sftp = sf.connect(host, port, username, password);
-		sf.upload(directory, uploadFile, sftp);
-		if(sftp!=null){
-			sftp.disconnect();
-		}
-//		sf.download(directory, downloadFile, saveFile, sftp);
-//		sf.delete(directory, deleteFile, sftp);
-//		try {
-//			sftp.cd(directory);
-//			sftp.mkdir("ss");
-//			System.out.println("finished");
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-	}
 }

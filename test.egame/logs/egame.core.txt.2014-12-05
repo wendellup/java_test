@@ -1,0 +1,53 @@
+2014-12-05 11:56:31,549 [main] [Util] [INFO] [557] - logfile:E:\eclipse_workspace_cloud\test.egame\logs\egame.core.txt
+2014-12-05 11:56:31,938 [main] [cn.egame.common.client.EGameClientBase] [INFO] [38] - get service ,rmi server url = rmi://192.168.251.53:1801/IPublicService
+2014-12-05 11:56:33,821 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [512] - filePath:pkg/fl/000/001/798/5fc106c5h1b70ed8.apk
+2014-12-05 11:56:33,857 [main] [cn.egame.common.efs.SFileSystemClient] [INFO] [71] - filesystem.egame=local
+2014-12-05 11:56:33,889 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [516] - writePath:F:/data/local/pkg/fl/000/001/798/5fc106c5h1b70ed8.apk
+2014-12-05 11:56:33,890 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [517] - readPath:F:/data/local/pkg/fl/000/001/798/5fc106c5h1b70ed8.apk
+2014-12-05 11:56:34,184 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [520] - 获取上传文件的总共的容量：10178956
+2014-12-05 11:56:35,818 [main] [test.client.file.UploadTest] [INFO] [27] - efsId:1798381
+2014-12-05 11:57:08,449 [main] [Util] [INFO] [557] - logfile:E:\eclipse_workspace_cloud\test.egame\logs\egame.core.txt
+2014-12-05 11:57:08,499 [main] [cn.egame.common.client.EGameClientBase] [INFO] [38] - get service ,rmi server url = rmi://192.168.251.53:1801/IPublicService
+2014-12-05 11:57:10,130 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [512] - filePath:pkg/fl/000/001/798/d71bcc95h1b70eff.apk
+2014-12-05 11:57:10,133 [main] [cn.egame.common.efs.SFileSystemClient] [INFO] [71] - filesystem.egame=local
+2014-12-05 11:57:10,135 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [516] - writePath:F:/data/local/pkg/fl/000/001/798/d71bcc95h1b70eff.apk
+2014-12-05 11:57:10,137 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [517] - readPath:F:/data/local/pkg/fl/000/001/798/d71bcc95h1b70eff.apk
+2014-12-05 11:57:10,258 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [520] - 获取上传文件的总共的容量：10178956
+2014-12-05 11:57:11,404 [main] [test.client.file.UploadTest] [INFO] [27] - efsId:1798383
+2014-12-05 11:57:33,569 [main] [Util] [INFO] [557] - logfile:E:\eclipse_workspace_cloud\test.egame\logs\egame.core.txt
+2014-12-05 11:57:33,603 [main] [cn.egame.common.client.EGameClientBase] [INFO] [38] - get service ,rmi server url = rmi://192.168.251.53:1801/IPublicService
+2014-12-05 11:57:34,905 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [512] - filePath:pkg/gm/000/001/798/b4690db7h1b70f0a/250378_0.apk
+2014-12-05 11:57:34,908 [main] [cn.egame.common.efs.SFileSystemClient] [INFO] [71] - filesystem.egame=local
+2014-12-05 11:57:34,911 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [516] - writePath:F:/data/local/pkg/gm/000/001/798/b4690db7h1b70f0a/250378_0.apk
+2014-12-05 11:57:34,911 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [517] - readPath:F:/data/local/pkg/gm/000/001/798/b4690db7h1b70f0a/250378_0.apk
+2014-12-05 11:57:35,039 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [520] - 获取上传文件的总共的容量：10178956
+2014-12-05 11:57:36,309 [main] [test.client.file.UploadTest] [INFO] [27] - efsId:1798384
+2014-12-05 11:58:21,818 [main] [Util] [INFO] [557] - logfile:E:\eclipse_workspace_cloud\test.egame\logs\egame.core.txt
+2014-12-05 11:58:21,853 [main] [cn.egame.common.client.EGameClientBase] [INFO] [38] - get service ,rmi server url = rmi://192.168.251.53:1801/IPublicService
+2014-12-05 11:58:23,155 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [512] - filePath:pkg/gm/000/001/798/b8350738h1b70f2e/250378_0.apk
+2014-12-05 11:58:23,158 [main] [cn.egame.common.efs.SFileSystemClient] [INFO] [71] - filesystem.egame=local
+2014-12-05 11:58:23,160 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [516] - writePath:F:/data/local/pkg/gm/000/001/798/b8350738h1b70f2e/250378_0.apk
+2014-12-05 11:58:23,161 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [517] - readPath:F:/data/local/pkg/gm/000/001/798/b8350738h1b70f2e/250378_0.apk
+2014-12-05 11:58:23,289 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [520] - 获取上传文件的总共的容量：10178956
+2014-12-05 11:58:24,561 [main] [test.client.file.UploadTest] [INFO] [27] - efsId:1798386
+2014-12-05 12:00:23,407 [main] [Util] [INFO] [557] - logfile:E:\eclipse_workspace_cloud\test.egame\logs\egame.core.txt
+2014-12-05 12:00:23,436 [main] [cn.egame.common.client.EGameClientBase] [INFO] [38] - get service ,rmi server url = rmi://192.168.251.53:1801/IPublicService
+2014-12-05 12:00:24,939 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [512] - filePath:pkg/gm/000/001/798/eef162c3h1b70f3a/250378_0.apk
+2014-12-05 12:00:24,942 [main] [cn.egame.common.efs.SFileSystemClient] [INFO] [71] - filesystem.egame=local
+2014-12-05 12:00:24,945 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [516] - writePath:F:/data/local/pkg/gm/000/001/798/eef162c3h1b70f3a/250378_0.apk
+2014-12-05 12:00:24,945 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [517] - readPath:F:/data/local/pkg/gm/000/001/798/eef162c3h1b70f3a/250378_0.apk
+2014-12-05 12:00:25,051 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [520] - 获取上传文件的总共的容量：10178956
+2014-12-05 12:00:26,343 [main] [test.client.file.UploadTest] [INFO] [27] - efsId:1798387
+2014-12-05 12:01:08,706 [main] [Util] [INFO] [557] - logfile:E:\eclipse_workspace_cloud\test.egame\logs\egame.core.txt
+2014-12-05 12:01:08,735 [main] [cn.egame.common.client.EGameClientBase] [INFO] [38] - get service ,rmi server url = rmi://192.168.251.53:1801/IPublicService
+2014-12-05 12:01:10,088 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [512] - filePath:pkg/gm/000/001/798/2e45fc60h1b70f4b/250378_0.apk
+2014-12-05 12:01:10,091 [main] [cn.egame.common.efs.SFileSystemClient] [INFO] [71] - filesystem.egame=local
+2014-12-05 12:01:10,093 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [516] - writePath:F:/data/local/pkg/gm/000/001/798/2e45fc60h1b70f4b/250378_0.apk
+2014-12-05 12:01:10,094 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [517] - readPath:F:/data/local/pkg/gm/000/001/798/2e45fc60h1b70f4b/250378_0.apk
+2014-12-05 12:01:10,228 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [520] - 获取上传文件的总共的容量：10178956
+2014-12-05 12:01:11,482 [main] [test.client.file.UploadTest] [INFO] [27] - efsId:1798388
+2014-12-05 14:27:23,323 [main] [Util] [INFO] [557] - logfile:E:\eclipse_workspace_cloud\test.egame\logs\egame.core.txt
+2014-12-05 14:27:23,333 [main] [SCacheClient] [INFO] [60] - cache.egame=redis
+2014-12-05 14:27:23,334 [main] [SCacheClient] [WARN] [71] - redis is turn off ,return null,url = 192.168.251.61:6379
+2014-12-05 14:27:23,339 [main] [SCacheClient] [INFO] [60] - cache.egame_list=redis
+2014-12-05 14:27:23,340 [main] [SCacheClient] [WARN] [71] - redis is turn off ,return null,url = 192.168.251.61:6379

@@ -1,0 +1,8 @@
+2015-01-05 15:51:07,737 [main] [Util] [INFO] [557] - logfile:E:\eclipse_workspace_cloud\test.egame\logs\egame.core.txt
+2015-01-05 15:51:07,783 [main] [cn.egame.common.client.EGameClientBase] [INFO] [38] - get service ,rmi server url = rmi://192.168.251.53:1801/IPublicService
+2015-01-05 15:51:09,796 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [512] - filePath:pkg/gm/000/001/799/13208760h1b76692/250378_0.apk
+2015-01-05 15:51:09,844 [main] [cn.egame.common.efs.SFileSystemClient] [INFO] [71] - filesystem.egame=local
+2015-01-05 15:51:09,875 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [516] - writePath:F:/data/local/pkg/gm/000/001/799/13208760h1b76692/250378_0.apk
+2015-01-05 15:51:09,875 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [517] - readPath:F:/data/local/pkg/gm/000/001/799/13208760h1b76692/250378_0.apk
+2015-01-05 15:51:10,280 [main] [cn.egame.client.biz.EGameClientBiz] [INFO] [520] - 获取上传文件的总共的容量：10178956
+2015-01-05 15:51:12,090 [main] [test.client.file.UploadTest] [INFO] [27] - efsId:1799785
