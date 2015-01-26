@@ -56,7 +56,7 @@ GET | 大厅升级接口 | /api/v2/mobile/hall/check_version.json?model=huawei&s
 
 #post | 游戏升级接口 | /api/v2/mobile/game/check_version.json?terminal_id=1
 
-#GET | 4G列表接口 | /api/v2/mobile/channel/show_advs.json?channel_id=1489&terminal_id=11&vc=730&imsi=123&app_key=8888015&client_id=8888015
+GET | 4G列表接口 | /api/v2/mobile/channel/show_advs.json?channel_id=1489&terminal_id=11&vc=730&imsi=123&app_key=8888015&client_id=8888015
 
 GET | 精选栏目 | /api/v2/mobile/channel/content.json?channel_id=714&terminal_id=100&current_page=0&rows_of_page=20&imsi=1111
 

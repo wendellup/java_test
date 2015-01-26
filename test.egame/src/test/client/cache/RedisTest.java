@@ -1,15 +1,18 @@
 package test.client.cache;
 
+import java.rmi.RemoteException;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
+import cn.egame.client.biz.EGameClientBiz;
 import cn.egame.common.cache.ICacheClient;
 import cn.egame.common.cache.SCacheClient;
 import cn.egame.interfaces.ck.EGameCacheKey;
 import cn.egame.interfaces.ck.EGameCacheKeyV2;
+import cn.egame.interfaces.gc.GameInfo;
 import cn.egame.interfaces.gc.v2.TerminalFilterV2;
 import cn.egame.interfaces.pu.AppParameter;
 
@@ -225,5 +228,27 @@ public class RedisTest {
 		LOGGER.info(tempMap.size());
 	}
 	
+	
+	@Test
+	public void getGameInfoById() throws RemoteException{
+		
+		int gId = 238662;
+		GameInfo domain = EGameClientBiz.getInstance().getGameInfoById(0, 0, gId);
+		LOGGER.info(domain.getGameName()+",is_free_intall:"+domain.getIsFreeInstall());
+	}
+
+	@Test
+	public void setGameInfo() throws RemoteException{
+		
+		int gId = 238662;
+		GameInfo domain = EGameClientBiz.getInstance().getGameInfoById(0, 0, gId);
+		if(domain!=null){
+			domain.setGameName(domain.getGameName()+"1");
+			domain.setIsFreeInstall(1);
+		}
+		EGameClientBiz.getInstance().setGameInfo(0, 0, domain);
+		
+//		LOGGER.info(domain.getGameName()+",is_free_intall:"+domain.getIsFreeInstall());
+	}
 	
 }

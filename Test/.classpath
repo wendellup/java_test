@@ -6,8 +6,8 @@
 	<classpathentry kind="lib" path="E:/svn/code/lib/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/tools/GetApkInfo.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/tools/ant.jar"/>
-	<classpathentry kind="lib" path="lib/ganymed-ssh2-262.jar"/>
 	<classpathentry kind="lib" path="lib/jsch-0.1.51.jar"/>
+	<classpathentry kind="lib" path="lib/ganymed-ssh2-262.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/egame.common"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-aop-3.2.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-aspects-3.2.1.RELEASE.jar"/>

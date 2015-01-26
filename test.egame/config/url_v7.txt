@@ -56,7 +56,7 @@ GET | 大厅升级接口 | /api/v2/mobile/hall/check_version.json?model=huawei&s
 
 #post | 游戏升级接口 | /api/v2/mobile/game/check_version.json?terminal_id=1
 
-GET | 4G列表接口 | /api/v2/mobile/channel/show_advs.json?channel_id=1489&terminal_id=11&vc=730&imsi=123&app_key=8888015&client_id=8888015
+#GET | 4G列表接口 | /api/v2/mobile/channel/show_advs.json?channel_id=1489&terminal_id=11&vc=730&imsi=123&app_key=8888015&client_id=8888015
 
 GET | 精选栏目 | /api/v2/mobile/channel/content.json?channel_id=714&terminal_id=100&current_page=0&rows_of_page=20&imsi=1111
 
@@ -103,3 +103,5 @@ GET | 网游sdk消息推送 | /api/v2/egame/online_sdk/show_message.json?&client
 GET | 一键举报返回举报选项接口 | /api/v2/mobile/comment/list_feedback.json?game_id=5012117
 
 POST | 我的游戏接口 | /api/v2/mobile/my_game_list.json?packages=com.hugenstar.tdzmclient.ayx/com.ct.client/com.netease.rz.play_telecom
+
+GET | 版本广告接口 | /api/v2/mobile/channel/version/show_advs.json?channel_id=762&vc=749&terminal_id=100
