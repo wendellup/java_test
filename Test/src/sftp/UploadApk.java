@@ -3,6 +3,8 @@ package sftp;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.Vector;
 
@@ -22,18 +24,23 @@ public class UploadApk {
 	private static Logger logger = Logger.getLogger(UploadApk.class);
 	
 	public static void main(String[] args) {
+		logger.info("xxxxxxxx");
+	}
+	
+	public static void _main(String[] args) {
 		UploadApk sf = new UploadApk();
 		ChannelSftp sftp = null;
 		try {
-			String host = "192.168.251.52";
+			String host = "192.168.251.53";
 			int port = 22;
 			String username = "root";
 			String password = "DX-game189.cn";
 			sftp = sf.connect(host, port, username, password);
 			
-			String openDir = "/test/apk/";
-			sftp.mkdir(openDir);
-			sf.upload(openDir, "C:\\Users\\yuchao\\Downloads\\5011382_1.apk", sftp);
+			String openDir = "/test/11/22/33/";
+//			System.out.println(sftp.ls("/test/1/2/"));;
+			mkDir(openDir, sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.mobile.extraction.jar", sftp);
 			logger.info("文件上传成功");
 			
 		} catch (Exception e) {
@@ -45,6 +52,8 @@ public class UploadApk {
 			System.exit(0);
 		}
 		
+		
+		
 //		sf.download(directory, downloadFile, saveFile, sftp);
 //		sf.delete(directory, deleteFile, sftp);
 //		try {
@@ -55,6 +64,42 @@ public class UploadApk {
 //			e.printStackTrace();
 //		}
 	}
+	
+	public static boolean openDir(String directory, ChannelSftp sftp) {
+		try {
+			sftp.cd(directory);
+			return true;
+		} catch (SftpException e) {
+			logger.error("openDir Exception : " + e);
+			return false;
+		}
+	} 
+	
+	public static void mkDir(String dirName, ChannelSftp sftp) {
+		String[] dirs = dirName.split("/");
+		List<String> list = new ArrayList<String>();
+		for(String path : dirs){
+			if("".equals(path)
+					|| null==path){
+				list.add("/");
+			}else{
+				list.add(path);
+			}
+		}
+		try {
+			String now = sftp.pwd();
+			for (int i = 0; i < list.size(); i++) {
+				boolean dirExists = openDir(list.get(i), sftp);
+				if (!dirExists) {
+					sftp.mkdir(list.get(i));
+					sftp.cd(list.get(i));
+				}
+			}
+			sftp.cd(now);
+		} catch (SftpException e) {
+			logger.error("mkDir Exception : " + e);
+		}
+	} 
 	
 	/**
 	 * 连接sftp服务器

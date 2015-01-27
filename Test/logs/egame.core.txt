@@ -1,0 +1,129 @@
+2015-01-27 09:33:50,508 [main] [sftp.UploadApk] [ERROR] [40] - 
+4: Failure
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp.mkdir(ChannelSftp.java:2155)
+	at sftp.UploadApk.main(UploadApk.java:35)
+2015-01-27 09:45:43,529 [main] [sftp.UploadApk] [ERROR] [40] - 
+2: No such file
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp.mkdir(ChannelSftp.java:2155)
+	at sftp.UploadApk.main(UploadApk.java:35)
+2015-01-27 10:01:23,073 [main] [sftp.UploadApk] [ERROR] [40] - 
+4: Failure
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp.mkdir(ChannelSftp.java:2155)
+	at sftp.UploadApk.main(UploadApk.java:35)
+2015-01-27 10:01:43,722 [main] [sftp.UploadApk] [ERROR] [40] - 
+4: Failure
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp.mkdir(ChannelSftp.java:2155)
+	at sftp.UploadApk.main(UploadApk.java:35)
+2015-01-27 10:38:51,631 [main] [sftp.UploadApk] [ERROR] [40] - 
+2: No such file
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp.mkdir(ChannelSftp.java:2155)
+	at sftp.UploadApk.main(UploadApk.java:35)
+2015-01-27 13:52:34,834 [main] [sftp.UploadApk] [ERROR] [40] - 
+4: Failure
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp.mkdir(ChannelSftp.java:2155)
+	at sftp.UploadApk.main(UploadApk.java:35)
+2015-01-27 13:52:34,834 [main] [sftp.UploadApk] [ERROR] [40] - 
+4: Failure
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp.mkdir(ChannelSftp.java:2155)
+	at sftp.UploadApk.main(UploadApk.java:35)
+2015-01-27 15:45:41,479 [main] [sftp.UploadApk] [ERROR] [40] - 
+2: No such file
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp.mkdir(ChannelSftp.java:2155)
+	at sftp.UploadApk.main(UploadApk.java:35)
+2015-01-27 15:46:09,957 [main] [sftp.UploadApk] [INFO] [37] - 文件上传成功
+2015-01-27 15:56:06,601 [main] [sftp.UploadApk] [INFO] [38] - 文件上传成功
+2015-01-27 16:19:42,745 [main] [sftp.UploadApk] [ERROR] [41] - 
+2: No such file
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2198)
+	at com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2215)
+	at com.jcraft.jsch.ChannelSftp.ls(ChannelSftp.java:1565)
+	at com.jcraft.jsch.ChannelSftp.ls(ChannelSftp.java:1526)
+	at sftp.UploadApk.main(UploadApk.java:35)
+2015-01-27 16:19:53,566 [main] [sftp.UploadApk] [ERROR] [41] - 
+2: No such file
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2198)
+	at com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2215)
+	at com.jcraft.jsch.ChannelSftp.ls(ChannelSftp.java:1565)
+	at com.jcraft.jsch.ChannelSftp.ls(ChannelSftp.java:1526)
+	at sftp.UploadApk.main(UploadApk.java:35)
+2015-01-27 16:20:00,759 [main] [sftp.UploadApk] [ERROR] [41] - 
+2: No such file
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2198)
+	at com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2215)
+	at com.jcraft.jsch.ChannelSftp.ls(ChannelSftp.java:1565)
+	at com.jcraft.jsch.ChannelSftp.ls(ChannelSftp.java:1526)
+	at sftp.UploadApk.main(UploadApk.java:35)
+2015-01-27 16:20:12,620 [main] [sftp.UploadApk] [ERROR] [41] - 
+2: No such file
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2198)
+	at com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2215)
+	at com.jcraft.jsch.ChannelSftp.ls(ChannelSftp.java:1565)
+	at com.jcraft.jsch.ChannelSftp.ls(ChannelSftp.java:1526)
+	at sftp.UploadApk.main(UploadApk.java:35)
+2015-01-27 16:35:53,764 [main] [sftp.UploadApk] [ERROR] [41] - 
+4: Failure
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp.mkdir(ChannelSftp.java:2155)
+	at sftp.UploadApk.main(UploadApk.java:36)
+2015-01-27 16:36:09,332 [main] [sftp.UploadApk] [ERROR] [41] - 
+4: Failure
+	at com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2846)
+	at com.jcraft.jsch.ChannelSftp.mkdir(ChannelSftp.java:2155)
+	at sftp.UploadApk.main(UploadApk.java:36)
+2015-01-27 16:47:10,885 [main] [sftp.UploadApk] [ERROR] [67] - openDir Exception : 4: 
+2015-01-27 16:47:10,885 [main] [sftp.UploadApk] [ERROR] [85] - mkDir Exception : 4: 
+2015-01-27 16:47:10,885 [main] [sftp.UploadApk] [INFO] [38] - 文件上传成功
+2015-01-27 16:48:09,129 [main] [sftp.UploadApk] [ERROR] [67] - openDir Exception : 4: 
+2015-01-27 16:48:15,513 [main] [sftp.UploadApk] [ERROR] [85] - mkDir Exception : 4: 
+2015-01-27 16:48:16,864 [main] [sftp.UploadApk] [INFO] [38] - 文件上传成功
+2015-01-27 16:48:56,251 [main] [sftp.UploadApk] [ERROR] [67] - openDir Exception : 4: 
+2015-01-27 16:49:19,735 [main] [sftp.UploadApk] [ERROR] [85] - mkDir Exception : 4: 
+2015-01-27 16:49:19,735 [main] [sftp.UploadApk] [INFO] [38] - 文件上传成功
+2015-01-27 16:49:41,945 [main] [sftp.UploadApk] [ERROR] [67] - openDir Exception : 4: 
+2015-01-27 16:49:41,955 [main] [sftp.UploadApk] [ERROR] [85] - mkDir Exception : 4: 
+2015-01-27 16:49:41,955 [main] [sftp.UploadApk] [INFO] [38] - 文件上传成功
+2015-01-27 16:51:59,759 [main] [sftp.UploadApk] [ERROR] [42] - 
+java.lang.UnsupportedOperationException
+	at java.util.AbstractList.add(AbstractList.java:148)
+	at sftp.UploadApk.mkDir(UploadApk.java:76)
+	at sftp.UploadApk.main(UploadApk.java:37)
+2015-01-27 16:52:30,889 [main] [sftp.UploadApk] [ERROR] [42] - 
+java.lang.UnsupportedOperationException
+	at java.util.AbstractList.add(AbstractList.java:148)
+	at sftp.UploadApk.mkDir(UploadApk.java:76)
+	at sftp.UploadApk.main(UploadApk.java:37)
+2015-01-27 16:52:34,861 [main] [sftp.UploadApk] [ERROR] [42] - 
+java.lang.UnsupportedOperationException
+	at java.util.AbstractList.add(AbstractList.java:148)
+	at sftp.UploadApk.mkDir(UploadApk.java:76)
+	at sftp.UploadApk.main(UploadApk.java:37)
+2015-01-27 16:53:17,307 [main] [sftp.UploadApk] [ERROR] [42] - 
+java.lang.UnsupportedOperationException
+	at java.util.AbstractList.add(AbstractList.java:148)
+	at sftp.UploadApk.mkDir(UploadApk.java:76)
+	at sftp.UploadApk.main(UploadApk.java:37)
+2015-01-27 16:54:08,400 [main] [sftp.UploadApk] [ERROR] [42] - 
+java.lang.UnsupportedOperationException
+	at java.util.AbstractList.remove(AbstractList.java:161)
+	at sftp.UploadApk.mkDir(UploadApk.java:76)
+	at sftp.UploadApk.main(UploadApk.java:37)
+2015-01-27 16:57:56,136 [main] [sftp.UploadApk] [ERROR] [69] - openDir Exception : 2: No such file
+2015-01-27 16:57:56,146 [main] [sftp.UploadApk] [ERROR] [69] - openDir Exception : 2: No such file
+2015-01-27 16:57:56,156 [main] [sftp.UploadApk] [INFO] [40] - 文件上传成功
+2015-01-27 17:13:03,766 [main] [sftp.UploadApk] [ERROR] [69] - openDir Exception : 2: No such file
+2015-01-27 17:13:03,766 [main] [sftp.UploadApk] [ERROR] [69] - openDir Exception : 2: No such file
+2015-01-27 17:13:03,776 [main] [sftp.UploadApk] [ERROR] [69] - openDir Exception : 2: No such file
+2015-01-27 17:13:03,806 [main] [sftp.UploadApk] [INFO] [40] - 文件上传成功
+2015-01-27 17:20:07,942 [main] [sftp.UploadApk] [INFO] [27] - xxxxxxxx

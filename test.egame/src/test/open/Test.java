@@ -5,8 +5,15 @@ import java.net.URLEncoder;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import org.apache.log4j.Logger;
+
+import cn.egame.common.util.Utils;
+
 public class Test {
+	private static Logger logger = Logger.getLogger(Test.class);
+	
     public static void main(String[] args) throws UnsupportedEncodingException {
+    	Utils.initLog4j();
         Calendar calendar = GregorianCalendar.getInstance();
         calendar.add(GregorianCalendar.DAY_OF_YEAR, -182);
         long timeMillis = calendar.getTimeInMillis();
@@ -16,6 +23,7 @@ public class Test {
         System.out.println(URLEncoder.encode("2907,2908,2909", "utf-8"));
         System.out.println(URLEncoder.encode("15366189928", "utf-8"));
         
+        logger.info("xxxxxxxxxx");
         
     }
 }
