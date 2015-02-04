@@ -8,7 +8,6 @@
 	<classpathentry kind="lib" path="E:/svn/code/lib/tools/ant.jar"/>
 	<classpathentry kind="lib" path="lib/jsch-0.1.51.jar"/>
 	<classpathentry kind="lib" path="lib/ganymed-ssh2-262.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/egame.common"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-aop-3.2.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-aspects-3.2.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-beans-3.2.1.RELEASE.jar"/>
@@ -31,5 +30,6 @@
 	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-webmvc-3.2.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-webmvc-portlet-3.2.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/ref/egame.common.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

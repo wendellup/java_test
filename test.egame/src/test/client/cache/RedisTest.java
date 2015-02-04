@@ -232,7 +232,7 @@ public class RedisTest {
 	@Test
 	public void getGameInfoById() throws RemoteException{
 		
-		int gId = 238662;
+		int gId = 251141;
 		GameInfo domain = EGameClientBiz.getInstance().getGameInfoById(0, 0, gId);
 		LOGGER.info(domain.getGameName()+",is_free_intall:"+domain.getIsFreeInstall());
 	}
@@ -240,11 +240,11 @@ public class RedisTest {
 	@Test
 	public void setGameInfo() throws RemoteException{
 		
-		int gId = 238662;
+		int gId = 251141;
 		GameInfo domain = EGameClientBiz.getInstance().getGameInfoById(0, 0, gId);
 		if(domain!=null){
 			domain.setGameName(domain.getGameName()+"1");
-			domain.setIsFreeInstall(1);
+//			domain.setIsFreeInstall(1);
 		}
 		EGameClientBiz.getInstance().setGameInfo(0, 0, domain);
 		

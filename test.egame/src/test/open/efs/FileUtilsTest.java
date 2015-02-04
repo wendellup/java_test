@@ -14,7 +14,7 @@ public class FileUtilsTest {
 	
 	@Test
 	public void test(){
-		long id1 = Utils.getFileId("000/001/656/38a64950h1946707", 0);
+		long id1 = Utils.getFileId("000/001/656/00a29e81h1b91043", 0);
 		System.out.println(id1);
 	}
 	
@@ -31,7 +31,7 @@ public class FileUtilsTest {
 	@Test
 	public void testEfsPath() throws Exception{
 //		Utils.initLog4j();
-		long efsId = 1798177;
+		long efsId = 1812984;
 		String remotePath = EGameClientBiz.getInstance().getEfsPath(0, 0, efsId);
 		System.out.println("remotePath----->"+remotePath);
 	}
