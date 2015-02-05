@@ -105,3 +105,12 @@ GET | 一键举报返回举报选项接口 | /api/v2/mobile/comment/list_feedbac
 POST | 我的游戏接口 | /api/v2/mobile/my_game_list.json?packages=com.hugenstar.tdzmclient.ayx/com.ct.client/com.netease.rz.play_telecom
 
 GET | 版本广告接口 | /api/v2/mobile/channel/version/show_advs.json?channel_id=762&vc=749&terminal_id=100
+
+
+
+#----------------------金币相关----------------------------
+GET | 我的任务 | /api/v2/mobile/coin/my_task.json?client_id=8888007&version_code=745&current_page=0&rows_of_page=20
+
+GET | 我的金币 | /api/v2/mobile/coin/my_coin.json?client_id=8888007&version_code=745&access_token=4430b06c9ef9c65ef34034f048d91ff4
+
+GET | 用户未完成任务列表 | /api/v2/mobile/coin/my_event.json?client_id=8888007&version_code=745

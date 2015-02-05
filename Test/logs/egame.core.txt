@@ -127,3 +127,6 @@ java.lang.UnsupportedOperationException
 2015-01-27 17:13:03,776 [main] [sftp.UploadApk] [ERROR] [69] - openDir Exception : 2: No such file
 2015-01-27 17:13:03,806 [main] [sftp.UploadApk] [INFO] [40] - 文件上传成功
 2015-01-27 17:20:07,942 [main] [sftp.UploadApk] [INFO] [27] - xxxxxxxx
+2015-02-05 16:51:29,637 [main] [sftp.My52SFTP] [INFO] [37] - core目录下jar包替换成功
+2015-02-05 16:51:29,784 [main] [sftp.My52SFTP] [INFO] [43] - ext目录下jar包替换成功
+2015-02-05 16:51:29,917 [main] [sftp.My52SFTP] [INFO] [49] - open目录下jar包替换成功
