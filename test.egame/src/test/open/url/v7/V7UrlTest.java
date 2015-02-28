@@ -32,19 +32,29 @@ public class V7UrlTest {
 //					"http://192.168.106.41:8102"
 					
 //					"http://192.168.251.52:8102"
-//					"http://192.168.251.53:8102"
+					"http://192.168.251.53:8102"
 //					  "http://192.168.70.123:8102"
 //					"http://127.0.0.1:8080"
 //					"http://61.160.129.2",
+					
 //					"http://202.102.39.23"
 //					"http://180.96.49.16"
 //					, "http://180.96.49.15"
 //					"http://open.play.cn"
 					
-					"http://192.168.106.41:8102"
+//					"http://192.168.106.41:8102"
 					};
 			V7UrlTest v7UrlTest = new V7UrlTest(prefixUrls);
-			v7UrlTest.test();
+//			while(true){
+//				try {
+//					Thread.currentThread().sleep(5);
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+				v7UrlTest.test();
+				
+//			}
 		}
 		
 	

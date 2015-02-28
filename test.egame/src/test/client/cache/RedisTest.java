@@ -232,23 +232,44 @@ public class RedisTest {
 	@Test
 	public void getGameInfoById() throws RemoteException{
 		
-		int gId = 251141;
+		int gId = 5013054;
 		GameInfo domain = EGameClientBiz.getInstance().getGameInfoById(0, 0, gId);
-		LOGGER.info(domain.getGameName()+",is_free_intall:"+domain.getIsFreeInstall());
+		LOGGER.info(domain.getGameName()+",is_free_intall:"+domain.getGameStatus());
 	}
 
 	@Test
 	public void setGameInfo() throws RemoteException{
-		
 		int gId = 251141;
 		GameInfo domain = EGameClientBiz.getInstance().getGameInfoById(0, 0, gId);
 		if(domain!=null){
 			domain.setGameName(domain.getGameName()+"1");
-//			domain.setIsFreeInstall(1);
 		}
 		EGameClientBiz.getInstance().setGameInfo(0, 0, domain);
-		
-//		LOGGER.info(domain.getGameName()+",is_free_intall:"+domain.getIsFreeInstall());
 	}
+	
+	
+	@Test
+	public void listGIdbyCpId() throws RemoteException{
+		int cpId = 1000;
+		List<Integer> listGIdbyCpId = getCacheList().getListInt(EGameCacheKeyV2.listGIdbyCpId(cpId));
+		LOGGER.info(listGIdbyCpId);
+	}
+	
+	@Test
+	public void listGameIdByTagId() throws RemoteException{
+		int tagId = 1560;
+//		List<Integer> listGIdbyCpId = getCacheList().getListInt(EGameCacheKeyV2.listGIdbyCpId(cpId));
+		List<Integer> gameIds = getCacheList().getListInt(EGameCacheKeyV2.listGameIdByTagId(tagId));
+		LOGGER.info(gameIds);
+	}
+	
+	@Test
+	public void listGameIdByGroupId() throws RemoteException{
+		int groupId = 30;
+//		List<Integer> listGIdbyCpId = getCacheList().getListInt(EGameCacheKeyV2.listGIdbyCpId(cpId));
+		List<Integer> gameIds = getCacheList().getListInt(EGameCacheKeyV2.listGIdByGroupId(groupId));
+		LOGGER.info(gameIds);
+	}
+	
 	
 }
