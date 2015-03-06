@@ -10,6 +10,8 @@ import org.junit.Test;
 import cn.egame.client.biz.EGameClientBiz;
 import cn.egame.common.cache.ICacheClient;
 import cn.egame.common.cache.SCacheClient;
+import cn.egame.common.util.Utils;
+import cn.egame.ext.ng.GiftInfo;
 import cn.egame.interfaces.ck.EGameCacheKey;
 import cn.egame.interfaces.ck.EGameCacheKeyV2;
 import cn.egame.interfaces.gc.GameInfo;
@@ -271,5 +273,28 @@ public class RedisTest {
 		LOGGER.info(gameIds);
 	}
 	
+	@Test
+	public void listAllGiftInfo() throws RemoteException{
+		String cacheKey = EGameCacheKeyV2.listAllGifts();
+		List<GiftInfo> giftInfos = getCacheList().getListT(GiftInfo.class, cacheKey);
+		System.out.println(giftInfos);
+		if(giftInfos!=null){
+			for (GiftInfo giftInfo : giftInfos) {
+				System.out.println(giftInfo.getgId());
+            }
+		}
+	}
 	
+//	boolean cacheSwitch = Utils.toBoolean(properties.getProperty("cache" + temp + ".redis.switch"), true);
+	
+	public static void main(String[] args) {
+		System.out.println("xxxxxxxxxxxx");
+		boolean cacheSwitch = Utils.toBoolean(("ture"), true);
+		System.out.println("-----------"+toBoolean("ture"));
+		System.out.println(cacheSwitch);
+		
+	}
+	 private static boolean toBoolean(String name) { 
+			return ((name != null) && name.equalsIgnoreCase("true"));
+		    }
 }
