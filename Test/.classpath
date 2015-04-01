@@ -31,6 +31,7 @@
 	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-webmvc-portlet-3.2.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/junit-4.7.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="lib/jxl-2.6.12.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/egame.common"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/jedis-2.1.0.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/commons-pool-1.5.4.jar"/>

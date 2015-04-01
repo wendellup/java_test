@@ -24,23 +24,27 @@ public class UploadApk {
 	private static Logger logger = Logger.getLogger(UploadApk.class);
 	
 	public static void main(String[] args) {
-		logger.info("xxxxxxxx");
+		_main(args);
 	}
 	
 	public static void _main(String[] args) {
 		UploadApk sf = new UploadApk();
 		ChannelSftp sftp = null;
 		try {
-			String host = "192.168.251.53";
+			String host = "192.168.251.52";
 			int port = 22;
 			String username = "root";
 			String password = "DX-game189.cn";
 			sftp = sf.connect(host, port, username, password);
 			
-			String openDir = "/test/11/22/33/";
+//			String openDir = "/test/11/22/33/";
 //			System.out.println(sftp.ls("/test/1/2/"));;
+			String openDir = "/data/cdn/efs/mobile/pkg/gm/000/000/836/f27be9ef4hcc32b3/";
+			
 			mkDir(openDir, sftp);
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.mobile.extraction.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.mobile.extraction.jar", sftp);
+			sf.upload(openDir, "C:\\Users\\yuchao\\Downloads\\248267_0.apk", sftp);
+			
 			logger.info("文件上传成功");
 			
 		} catch (Exception e) {

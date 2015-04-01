@@ -3,7 +3,7 @@ package spring.bean;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class PersonService {
+public class PersonService extends POJO{
 	
 	public PersonService(){
 		System.out.println("PersonService constructor...");

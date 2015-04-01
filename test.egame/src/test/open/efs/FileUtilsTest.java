@@ -14,14 +14,14 @@ public class FileUtilsTest {
 	
 	@Test
 	public void test(){
-		long id1 = Utils.getFileId("000/001/656/00a29e81h1b91043", 0);
+		long id1 = Utils.getFileId("1fb3e6b7h155ba17", 0);
 		System.out.println(id1);
 	}
 	
 	@Test
 	public void testEfsId() throws Exception{
 //		Utils.initLog4j();
-		long efsId = 1798177;
+		long efsId = 1786869;
 		FileInfo fileInfo = EGameClientBiz.getInstance().getFileInfo(0, 0, efsId);
 		String ftpFilePath = FileUtils.getFilePath(
 				fileInfo.getFileUsedType(), efsId, fileInfo.getFileName());

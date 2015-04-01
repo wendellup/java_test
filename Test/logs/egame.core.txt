@@ -187,3 +187,177 @@ java.lang.UnsupportedOperationException
 2015-02-28 15:42:54,522 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
 2015-02-28 15:42:54,678 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
 2015-02-28 15:42:54,850 [main] [sftp.My52SFTP] [INFO] [52] - open目录下jar包替换成功
+2015-03-10 14:37:47,786 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-10 14:37:47,926 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-10 14:37:48,066 [main] [sftp.My52SFTP] [INFO] [52] - open目录下jar包替换成功
+2015-03-10 14:39:10,522 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-10 14:39:10,678 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-10 14:39:10,866 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-10 14:55:04,666 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-10 14:55:04,807 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-10 14:55:04,994 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-10 15:18:32,325 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-10 15:18:32,458 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-10 15:18:32,651 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-10 15:21:45,169 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-10 15:21:45,315 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-10 15:21:45,530 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-10 17:38:44,250 [main] [sftp.UploadApk] [INFO] [27] - xxxxxxxx
+2015-03-10 17:38:59,152 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-10 17:38:59,165 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-10 17:38:59,688 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-10 17:39:04,837 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-10 17:42:32,425 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-10 17:42:57,782 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-10 18:16:58,953 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-10 18:16:59,064 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-10 18:16:59,197 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-11 14:42:15,222 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-11 14:42:16,549 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-11 14:42:19,147 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-11 14:59:50,018 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-11 14:59:50,080 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-11 14:59:51,827 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-11 16:54:14,905 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-11 17:09:16,497 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-11 17:09:16,622 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-11 17:09:16,762 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-11 17:17:45,447 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-11 17:17:45,447 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-11 17:17:53,406 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-11 17:22:08,993 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-11 17:22:09,102 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-11 17:22:09,227 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-12 13:57:33,410 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-12 13:57:33,454 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-12 13:57:46,728 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-12 13:58:56,422 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-12 13:58:56,542 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-12 13:58:56,679 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-12 14:50:27,113 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-12 14:50:27,229 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-12 14:50:27,376 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-12 14:53:26,290 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-12 14:53:26,402 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-12 14:53:26,536 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-12 14:53:37,641 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-12 14:53:37,762 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-12 14:53:37,909 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-12 16:04:13,579 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-12 16:04:13,694 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-12 16:04:13,831 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-13 13:52:26,501 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-13 13:52:26,673 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-13 13:52:26,813 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-13 16:49:38,947 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-13 16:49:39,056 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-13 16:49:39,197 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-13 18:08:14,926 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-13 18:08:14,941 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-13 18:08:18,933 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-13 18:50:27,772 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-13 18:50:27,788 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-13 18:50:32,851 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-13 18:57:45,741 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-13 18:57:45,757 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-13 18:57:48,602 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-13 18:59:59,446 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-13 18:59:59,462 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-13 19:00:01,427 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-13 19:01:37,347 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-13 19:01:37,363 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-13 19:01:39,282 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-13 19:08:08,797 [main] [sftp.UploadApk] [ERROR] [77] - openDir Exception : 2: No such file
+2015-03-13 19:08:10,827 [main] [sftp.UploadApk] [INFO] [48] - 文件上传成功
+2015-03-16 16:30:20,231 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-16 16:30:20,391 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-16 16:30:20,522 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-16 16:53:52,263 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-16 16:53:52,383 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-16 16:53:52,523 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-17 14:33:33,684 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-17 14:33:33,840 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-17 14:33:34,089 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-17 15:03:25,060 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-17 15:03:25,169 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-17 15:03:25,325 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-17 16:51:20,676 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-17 16:51:20,789 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-17 16:51:20,930 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-17 16:55:13,514 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-17 16:55:13,654 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-17 16:55:13,797 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-17 16:55:17,952 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-17 16:55:18,062 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-17 16:55:18,202 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-17 16:58:29,814 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-17 16:58:29,954 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-17 16:58:30,141 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-17 18:55:38,868 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-17 18:55:38,977 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-17 18:55:39,133 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-19 16:34:06,114 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-19 16:34:06,290 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-19 16:34:06,449 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-19 19:12:48,475 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-19 19:12:48,646 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-19 19:12:48,823 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-20 14:41:29,310 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-20 14:41:29,487 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-20 14:41:29,648 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-20 16:05:52,984 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-20 16:05:53,124 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-20 16:05:53,281 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-20 16:45:51,802 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-20 16:45:51,928 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-20 16:45:52,099 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-20 16:53:42,913 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-20 16:53:43,069 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-20 16:53:43,240 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-20 16:58:00,828 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-20 16:58:00,969 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-20 16:58:01,156 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-20 17:05:44,774 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-20 17:05:44,914 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-20 17:05:45,086 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-24 15:45:10,805 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-24 15:45:10,963 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-24 15:45:11,098 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-25 16:23:38,660 [main] [org.springframework.context.support.ClassPathXmlApplicationContext] [INFO] [510] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@144c5230: startup date [Wed Mar 25 16:23:38 CST 2015]; root of context hierarchy
+2015-03-25 16:23:38,823 [main] [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] [INFO] [315] - Loading XML bean definitions from class path resource [annotation.xml]
+2015-03-25 16:23:39,956 [main] [org.springframework.beans.factory.support.DefaultListableBeanFactory] [INFO] [596] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@271d900d: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,personService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2015-03-25 16:27:55,281 [main] [org.springframework.context.support.ClassPathXmlApplicationContext] [INFO] [510] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@144c5230: startup date [Wed Mar 25 16:27:55 CST 2015]; root of context hierarchy
+2015-03-25 16:27:55,338 [main] [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] [INFO] [315] - Loading XML bean definitions from class path resource [annotation.xml]
+2015-03-25 16:27:55,614 [main] [org.springframework.beans.factory.support.DefaultListableBeanFactory] [INFO] [596] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@271d900d: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,personService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2015-03-25 16:29:10,390 [main] [org.springframework.context.support.ClassPathXmlApplicationContext] [INFO] [510] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@78aeaea6: startup date [Wed Mar 25 16:29:10 CST 2015]; root of context hierarchy
+2015-03-25 16:29:10,448 [main] [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] [INFO] [315] - Loading XML bean definitions from class path resource [annotation.xml]
+2015-03-25 16:29:10,725 [main] [org.springframework.beans.factory.support.DefaultListableBeanFactory] [INFO] [596] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@271d900d: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,personService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2015-03-26 17:37:04,348 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-26 17:37:04,519 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-26 17:37:04,675 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-26 17:37:53,393 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-26 17:37:53,518 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-26 17:37:53,706 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-26 18:22:13,575 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-26 18:22:13,700 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-26 18:22:13,830 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-26 18:42:55,691 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-26 18:42:55,802 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-26 18:42:55,943 [main] [sftp.My52SFTP] [INFO] [54] - open目录下jar包替换成功
+2015-03-27 10:35:22,657 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-27 10:35:22,674 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-27 10:35:22,898 [main] [sftp.My52SFTP] [INFO] [55] - open目录下jar包替换成功
+2015-03-27 10:43:55,430 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-27 10:43:55,562 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-31 09:39:51,566 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-03-31 09:39:51,675 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-03-31 09:39:51,815 [main] [sftp.My52SFTP] [INFO] [55] - open目录下jar包替换成功
+2015-03-31 14:43:18,151 [main] [Util] [INFO] [554] - logfile:E:\git_github\wendellup\java_test\Test\logs\egame.core.txt
+2015-03-31 14:43:44,079 [main] [Util] [INFO] [554] - logfile:E:\git_github\wendellup\java_test\Test\logs\egame.core.txt
+2015-03-31 14:43:49,378 [main] [Util] [INFO] [554] - logfile:E:\git_github\wendellup\java_test\Test\logs\egame.core.txt
+2015-03-31 14:47:02,918 [main] [Util] [INFO] [554] - logfile:E:\git_github\wendellup\java_test\Test\logs\egame.core.txt
+2015-03-31 14:47:43,477 [main] [Util] [INFO] [554] - logfile:E:\git_github\wendellup\java_test\Test\logs\egame.core.txt
+2015-03-31 14:54:47,014 [main] [cn.egame.common.data.dbpool.SConnectionManager] [INFO] [35] - dbname=egame_game/file=E:\git_github\wendellup\java_test\Test\config\db.properties
+2015-03-31 14:54:47,724 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] [446] - {dataSource-1} inited
+2015-03-31 14:57:10,019 [main] [cn.egame.common.data.dbpool.SConnectionManager] [INFO] [35] - dbname=egame_game/file=E:\git_github\wendellup\java_test\Test\config\db.properties
+2015-03-31 14:57:10,382 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] [446] - {dataSource-1} inited
