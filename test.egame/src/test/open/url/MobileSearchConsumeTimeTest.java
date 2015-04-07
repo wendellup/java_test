@@ -2,7 +2,7 @@ package test.open.url;
 
 import java.io.IOException;
 
-import test.open.utils.Utils2;
+import test.open.utils.BaseUtils;
 
 
 public class MobileSearchConsumeTimeTest {
@@ -18,7 +18,7 @@ public class MobileSearchConsumeTimeTest {
                 
                 String url = ip + searchUrl + str;
                 long urlNewMillisBegin = System.currentTimeMillis();
-                String urlNewContent = Utils2.inputStream2String(Utils2.getInputStreamFromUrl(url));
+                String urlNewContent = BaseUtils.inputStream2String(BaseUtils.getInputStreamFromUrl(url));
                 String searchNewCount = urlNewContent.substring(urlNewContent.indexOf("total")
                         , urlNewContent.indexOf(",", urlNewContent.indexOf("total"))); 
                 long urlNewMillisEnd = System.currentTimeMillis();
