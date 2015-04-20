@@ -264,7 +264,7 @@ public class RedisTest {
 		if(domain!=null){
 			domain.setGameName(domain.getGameName()+"1");
 		}
-		EGameClientBiz.getInstance().setGameInfo(0, 0, domain);
+//		EGameClientBiz.getInstance().setGameInfo(0, 0, domain);
 	}
 	
 	
@@ -315,4 +315,16 @@ public class RedisTest {
 	 private static boolean toBoolean(String name) { 
 			return ((name != null) && name.equalsIgnoreCase("true"));
 		    }
+	 
+	 @Test
+	 public void testListGidsByRuleAndType(){
+		 String cacheKey = EGameCacheKeyV2.listGidsByRuleAndType(730964, 1, 1);
+		 List<Integer> result = getCacheList().getListInt(cacheKey);
+//		 if (result == null) {
+//			 result = dao.listGidsByRuleAndType(739064, 1, 1);
+//			 getCacheList().set(cacheKey, result);
+//		 }
+		 System.out.println(result);
+		 
+	 }
 }

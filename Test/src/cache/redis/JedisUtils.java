@@ -1,4 +1,4 @@
-package redis;
+package cache.redis;
 
 import java.text.ParseException;
 import java.util.ArrayList;

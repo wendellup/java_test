@@ -33,16 +33,33 @@ public class V7UrlTest {
 //					"http://192.168.106.41:8102"
 					
 //					"http://192.168.251.17:8102"
-//					"http://192.168.251.53:8102"
-//					  "http://192.168.106.25:8102",
-//					"http://192.168.106.26:8102",
-//					"http://192.168.106.27:8102",
-//					"http://192.168.106.28:8102"
+					"http://192.168.251.52:8102"
+					
+					/*
+					//重要,三楼接口服务器
+					  "http://192.168.106.25:8102",
+					"http://192.168.106.26:8102",
+					"http://192.168.106.27:8102",
+					"http://192.168.106.28:8102",
+					//重要,六楼接口服务器		
+					"http://192.168.70.123:8102",
+					"http://192.168.70.124:8102",
+					"http://192.168.70.125:8102",
+					"http://192.168.70.126:8102",
+					
 //					"http://127.0.0.1:8080"
 //					"http://61.160.129.2",
 					
-					"http://202.102.39.23"
-//					"http://180.96.49.16"
+					//非重要,三楼接口服务器
+					"http://192.168.106.31:8102",
+					"http://192.168.106.32:8102",
+//					//非重要,六楼接口服务器	
+					"http://192.168.70.127:8102",
+					"http://192.168.70.128:8102"
+					
+					*/
+//					"http://202.102.39.23"
+//					,"http://180.96.49.16"
 //					, "http://180.96.49.15"
 					
 //					"http://open.play.cn"
@@ -50,7 +67,7 @@ public class V7UrlTest {
 //					"http://192.168.106.41:8102"
 					};
 			V7UrlTest v7UrlTest = new V7UrlTest(prefixUrls);
-			///*
+//			/*
 			while(true){
 				try {
 					Thread.currentThread().sleep(5);
@@ -61,7 +78,7 @@ public class V7UrlTest {
 				}
 				
 			}
-			//*/
+//			*/
 //			v7UrlTest.test();
 		}
 		
@@ -145,10 +162,10 @@ public class V7UrlTest {
 			try {
 				long startMillis = System.currentTimeMillis();
 //				if(random){
-//					HashMap<String, String> params = urlV7LinkInfo.getParams();
-//					params.put("timestamp", System.currentTimeMillis()+"");
-//					params.put("access_token", access_token);
-//					urlV7LinkInfo.setParams(params);
+					HashMap<String, String> params = urlV7LinkInfo.getParams();
+					params.put("timestamp", System.currentTimeMillis()+"");
+					params.put("access_token", access_token);
+					urlV7LinkInfo.setParams(params);
 //				}
 				
 				HttpRespons httpRespons = null;
