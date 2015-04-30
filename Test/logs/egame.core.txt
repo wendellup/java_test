@@ -602,3 +602,6 @@ Usage is: expect(a.foo()).andXXX()
 2015-04-27 17:05:46,382 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
 2015-04-27 17:05:46,474 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
 2015-04-27 17:05:46,617 [main] [sftp.My52SFTP] [INFO] [55] - open目录下jar包替换成功
+2015-04-29 16:51:54,777 [main] [sftp.My52SFTP] [INFO] [38] - core目录下jar包替换成功
+2015-04-29 16:51:54,886 [main] [sftp.My52SFTP] [INFO] [45] - ext目录下jar包替换成功
+2015-04-29 16:51:55,026 [main] [sftp.My52SFTP] [INFO] [55] - open目录下jar包替换成功

@@ -1,6 +1,8 @@
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.text.ParseException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -15,10 +17,14 @@ public class TestStr {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-		String dateStr = "2015-04-06 12:00:00";
-		long millis = Utils.toDateLong(dateStr, "yyyy-MM-dd HH:mm:ss");
-		
-		System.out.println(millis);
+//		String dateStr = "2015-04-06 12:00:00";
+//		long millis = Utils.toDateLong(dateStr, "yyyy-MM-dd HH:mm:ss");
+//		
+//		System.out.println(millis);
+		Object obj = new TestStr();
+		Map<Object, Object> map = new HashMap<Object, Object>();
+		map.put("1", obj);
+		System.out.println(map.get("1"));
 	}
 	
 	
@@ -28,4 +34,9 @@ public class TestStr {
 	}
 	
 	
+	
+	@Override
+	public String toString() {
+		return "12345";
+	}
 }

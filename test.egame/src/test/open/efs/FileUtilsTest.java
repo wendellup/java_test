@@ -14,7 +14,7 @@ public class FileUtilsTest {
 	
 	@Test
 	public void test(){
-		long id1 = Utils.getFileId("1fb3e6b7h155ba17", 0);
+		long id1 = Utils.getFileId("dbf15b63h1d67018", 0);
 		System.out.println(id1);
 	}
 	

@@ -3,7 +3,6 @@ package test.client.file;
 import java.rmi.RemoteException;
 import java.security.NoSuchAlgorithmException;
 
-import org.apache.log4j.Logger;
 import org.junit.Test;
 
 import cn.egame.client.EGameClientV2;
@@ -14,21 +13,25 @@ import cn.egame.interfaces.fl.FileUsedType;
 import cn.egame.interfaces.fl.FileUtils;
 
 public class FileTest {
-//	public static void main(String[] args) {
-//		Utils.initLog4j();
-//		System.out.println(Utils.getFileId("51e54234h1b81b25", 0));
-//	}
+	public static void main(String[] args) {
+		Utils.initLog4j();
+		System.out.println(Utils.getFileId("6399c276h1b8eeab", 0));
+	}
 	
 	
 	@Test
 	public void getFilePath(){
 		try {
 			Utils.initLog4j();
-			System.out.println(FileUtils.getFilePath(FileUsedType.game, 1802073, "aa"));
+			FileInfo fi = EGameClientV2.getInstance().getFileInfo(0, 0, 1806058);
+			System.out.println(FileUtils.getFilePath(fi.getFileUsedType(), fi.getEFSId(), fi.getFileName()));
 		} catch (ExceptionCommon e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -36,9 +39,9 @@ public class FileTest {
 	
 	
 	
-	public static void main(String[] args) {
-		Utils.initLog4j();
-	}
+//	public static void main(String[] args) {
+//		Utils.initLog4j();
+//	}
 	
 //	@Test
 	public void fileUsedTypeTest() throws RemoteException{

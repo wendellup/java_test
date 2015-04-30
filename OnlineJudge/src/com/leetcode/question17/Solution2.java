@@ -48,7 +48,7 @@ public class Solution2 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(new Solution2().letterCombinations("23"));
+		System.out.println(new Solution2().letterCombinations("234"));
 		;
 	}
 }
