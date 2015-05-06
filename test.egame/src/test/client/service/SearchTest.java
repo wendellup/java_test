@@ -14,8 +14,7 @@ public class SearchTest {
 	public void testSearchByName() throws RemoteException{
 //		String key = "JAVA-appParameterById:2920";
 		String keyWord = "捕鱼";
-		PageData pd = EGameGameSearchClientBiz.getInstance().searchByName(keyWord, 0, 0, 20, 1105,
-                0, null);
+		PageData pd = EGameGameSearchClientBiz.getInstance().searchByName(keyWord, 0, 0, 20, 1105);
 		
 		if (pd != null && pd.getContent() != null && pd.getContent() instanceof List) {
             List<Integer> gids = (List<Integer>) pd.getContent();

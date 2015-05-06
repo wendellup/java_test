@@ -33,7 +33,7 @@ public class V7UrlTest {
 //					"http://192.168.106.41:8102"
 					
 //					"http://192.168.251.17:8102"
-					"http://192.168.251.53:8102"
+					"http://192.168.251.52:8102"
 					
 //					"http://127.0.0.1:8080"
 					/*
@@ -135,7 +135,6 @@ public class V7UrlTest {
 				 try {
 					 for(String prefixUrl : prefixUrls){
 						HashMap<String, String> params = new HashMap<String, String>();
-						params.put("timestamp", System.currentTimeMillis() + "");
 						params.put("access_token", access_token);
 						UrlV7LinkInfo linkInfo = new UrlV7LinkInfo(line,
 								prefixUrl, params);
@@ -166,7 +165,7 @@ public class V7UrlTest {
 				long startMillis = System.currentTimeMillis();
 //				if(random){
 					HashMap<String, String> params = urlV7LinkInfo.getParams();
-					params.put("timestamp", System.currentTimeMillis()+"");
+					params.put("time_stamp", System.currentTimeMillis()+"");
 					params.put("access_token", access_token);
 					urlV7LinkInfo.setParams(params);
 //				}

@@ -42,7 +42,7 @@ public class ClientCallTest extends EGameClientBase {
 	@Test
     public void getGameInfoById() throws RemoteException {
 		GameInfo gameInfo = null;
-		int gId = 4;
+		int gId = 232857;
         try {
             // 先从缓存中取数据，如果没有去数据库中的
             String key = EGameCacheKey.getGameInfoById(gId);
@@ -55,7 +55,7 @@ public class ClientCallTest extends EGameClientBase {
             throw ex;
         }
         
-        System.out.println(gameInfo);
+        System.out.println(gameInfo.hashCode());
     }
 	
 	public ICacheClient getCacheList() {
