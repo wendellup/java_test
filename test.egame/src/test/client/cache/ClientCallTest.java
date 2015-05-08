@@ -14,6 +14,7 @@ import cn.egame.interfaces.EnumType.GameType;
 import cn.egame.interfaces.EnumType.SearchSortType;
 import cn.egame.interfaces.ck.EGameCacheKey;
 import cn.egame.interfaces.ck.EGameCacheKeyV2;
+import cn.egame.interfaces.gc.GameFileInfo;
 import cn.egame.interfaces.gc.GameInfo;
 import cn.egame.interfaces.gc.IGameService;
 
@@ -66,5 +67,26 @@ public class ClientCallTest extends EGameClientBase {
     public void listGIdBySortType() throws RemoteException {
 		List<Integer> gameIds = getCacheList().getListInt(EGameCacheKeyV2.listGIdBySortType(SearchSortType.firstOnlineTime.getValue()));
 		System.out.println(gameIds);
+	}
+	
+	@Test
+    public void getGameFileInfoById() throws RemoteException {
+		GameFileInfo gameFileInfo = EGameClientV2.getInstance().getGameFileInfoById(0, 0, 5003729);
+		if(gameFileInfo!=null){
+			System.out.println(gameFileInfo.getgId());
+		}
+	}
+	
+	public static void main(String[] args) {
+		GameFileInfo gameFileInfo;
+		try {
+			gameFileInfo = EGameClientV2.getInstance().getGameFileInfoById(0, 0, 5003729);
+			if(gameFileInfo!=null){
+				System.out.println(gameFileInfo.getgId());
+			}
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
