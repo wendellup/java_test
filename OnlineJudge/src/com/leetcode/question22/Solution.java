@@ -40,7 +40,7 @@ public class Solution {
 			dfsGetStr(leftParenthesesNum, rightParentheseNum, currentStr, n, totalSize, result);
 			for(int j=0; j<(n-r) && rightParentheseNum<=l; j++){
 				currentStr = currentStr+")";
-//				System.out.println("r---"+", i="+ i + ", j="+j+"-->"+currentStr);
+				System.out.println("r---"+", i="+ i + ", j="+j+", (n-r)="+(n-r)+"-->"+currentStr);
 				rightParentheseNum++;
 				dfsGetStr(leftParenthesesNum, rightParentheseNum, currentStr, n, totalSize, result);
 			}
@@ -62,7 +62,7 @@ public class Solution {
 	
 	
 	public static void main(String[] args) {
-			System.out.println(new Solution().generateParenthesis(11));
+			System.out.println(new Solution().generateParenthesis(2));
 
 	}
 
