@@ -1,4 +1,4 @@
-package http.httpclient;
+package http.urlconnection;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;

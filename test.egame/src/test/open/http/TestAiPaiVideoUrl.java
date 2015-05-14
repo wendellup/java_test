@@ -8,6 +8,13 @@ import java.io.PrintWriter;
 import java.security.NoSuchAlgorithmException;
 import java.util.Iterator;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.apache.log4j.Logger;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.JsonProcessingException;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -17,9 +24,17 @@ import cn.egame.common.util.Utils;
 
 public class TestAiPaiVideoUrl {
 	private static String ALL_GAME_URL = "http://shouyou.aipai.com/aipai/api/games?sign=d96a0cbc3601e0424298386f1c260816"; 
-	public static String FILE_PATH="C:\\Users\\yuchao\\Desktop\\aipai.txt";
+	public static String FILE_PATH="C:\\Users\\yuchao\\Desktop\\aipaiVideo_20150512.txt";
 	
+	private static Logger LOG = Logger.getLogger(TestAiPaiVideoUrl.class);
+	static int not200StatusCode = 0;
+	static int gameHasVideosNum = 0;
+	static int videosNum = 0;
 	
+	public static void _main(String[] args) {
+		String url = "http://fc14.aipai.com/user/43/4132043/100048/card/10373373/card.mp4?ip=1";
+		System.out.println(httpGetCode(url));
+	}
 	
 	public static void main(String[] args) throws JsonProcessingException, IOException {
 		PrintWriter pw = null;
@@ -34,7 +49,7 @@ public class TestAiPaiVideoUrl {
 				JsonNode jn = jsonMapper.readTree(jsonStr);
 				Iterator<JsonNode> it = jn.iterator();
 				int num = 0;
-				while(it.hasNext() && num<=200){
+				while(it.hasNext()){
 					num++;
 					JsonNode item = it.next();
 					if(item.get("id")!=null
@@ -61,6 +76,7 @@ public class TestAiPaiVideoUrl {
 							if(videoInfoNodeList!=null){
 								Iterator<JsonNode> videoInfoNodeIt = videoInfoNodeList.iterator();
 								int i=1;
+								int curVideoNum = 0;
 								while(videoInfoNodeIt.hasNext()){
 									JsonNode videoNode = videoInfoNodeIt.next();
 									if(videoNode.get("game_id")!=null
@@ -71,6 +87,9 @@ public class TestAiPaiVideoUrl {
 											&& videoNode.get("author")!=null){
 										String gameId = videoNode.get("game_id").getTextValue();	
 										String mp4 = videoNode.get("mp4").getTextValue();
+										if(""!=mp4){
+											curVideoNum++;
+										}
 										String thumbnail = videoNode.get("thumbnail").getTextValue();
 										String title = videoNode.get("title").getTextValue();
 										String description = videoNode.get("description").getTextValue();
@@ -78,6 +97,14 @@ public class TestAiPaiVideoUrl {
 										pw.println("---------------第"+(i++)+"个视频信息------------------------------------------");
 										pw.println("game_id    :"+gameId);
 										pw.println("mp4        :"+mp4);
+										int code = httpGetCode(mp4);
+										if(code!=200){
+											not200StatusCode++;
+											pw.println("非200 game_id  :"+gameId);
+											pw.println("非200 mp4  :"+mp4);
+										}
+										System.out.println("not200StatusCode:"+not200StatusCode);
+										pw.println("code       :"+code);
 										pw.println("thumbnail  :"+thumbnail);
 										pw.println("title      :"+title);
 										pw.println("description:"+description);
@@ -85,6 +112,12 @@ public class TestAiPaiVideoUrl {
 										pw.println("");
 									}
 								}
+								if(curVideoNum!=0){
+									gameHasVideosNum++;
+									videosNum = videosNum+curVideoNum;
+								}
+								System.out.println("gameHasVideosNum:"+gameHasVideosNum);
+								System.out.println("videosNum:"+videosNum);
 							}
 						}
 					}
@@ -124,5 +157,40 @@ public class TestAiPaiVideoUrl {
 			e.printStackTrace();
 		}
 		return encodeStr;
+	}
+	
+	public static int httpGetCode(String url) {
+		CloseableHttpClient httpclient = null;
+		HttpGet httpGet = null;
+		try {
+		    httpclient = HttpClients.createDefault();
+		    httpGet = new HttpGet(url);
+			HttpResponse response = httpclient.execute(httpGet);
+			// System.out.println("-------------------------------------");
+			// System.out.println(response.getStatusLine());
+			// System.out.println("-------------------------------------");
+			return response.getStatusLine().getStatusCode();
+//			if (entity != null
+//					&& entity.getContentType() != null
+//					&& entity.getContentType().toString().trim()
+//							.contains("application/json")) {
+//				returnStr = EntityUtils.toString(entity);
+//				;
+//				EntityUtils.consume(entity);
+//			}
+		} catch (Exception ex) {
+			return -1;
+		} finally{
+		    if(httpGet!=null){
+		        httpGet.releaseConnection();
+		    }
+		    if(httpclient!=null){
+		        try {
+                    httpclient.close();
+                } catch (IOException e) {
+                	LOG.error("", e);
+                }
+		    }
+		}
 	}
 }

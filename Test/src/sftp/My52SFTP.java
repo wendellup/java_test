@@ -31,22 +31,22 @@ public class My52SFTP {
 			String password = "DX-game189.cn";
 			sftp = sf.connect(host, port, username, password);
 			
-			String coreDir = "/opt/app/egame/mobile/egame.core/lib/";
-			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.core.jar", sftp);
-			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
+//			String coreDir = "/opt/app/egame/mobile/egame.core/lib/";
+//			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.core.jar", sftp);
+//			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
 //			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
 			logger.info("core目录下jar包替换成功");
 			
-			String extDir = "/opt/app/egame/mobile/egame.ext/lib/";
-			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.ext.jar", sftp);
-//			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
-			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
+//			String extDir = "/opt/app/egame/mobile/egame.ext/lib/";
+//			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.ext.jar", sftp);
+////			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
+//			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
 //			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
 			logger.info("ext目录下jar包替换成功");
 			
 			String openDir = "/opt/web/mobile.play.cn/8102/webapps/egame.server.open/WEB-INF/lib/";
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.server.open.biz.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client.jar", sftp);

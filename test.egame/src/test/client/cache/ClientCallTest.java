@@ -1,6 +1,7 @@
 package test.client.cache;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
@@ -9,6 +10,7 @@ import cn.egame.client.EGameClientV2;
 import cn.egame.common.cache.ICacheClient;
 import cn.egame.common.cache.SCacheClient;
 import cn.egame.common.client.EGameClientBase;
+import cn.egame.common.exception.ExceptionCommonBase;
 import cn.egame.common.model.PageData;
 import cn.egame.interfaces.EnumType.GameType;
 import cn.egame.interfaces.EnumType.SearchSortType;
@@ -76,6 +78,17 @@ public class ClientCallTest extends EGameClientBase {
 			System.out.println(gameFileInfo.getgId());
 		}
 	}
+	
+	@Test
+	public void listGameIdByTagId() throws ExceptionCommonBase {
+		int tagId = 488390;
+        List<Integer> gameIds = getCacheList().getListInt(EGameCacheKeyV2.listGameIdByTagId(tagId));
+        
+        int filterTagId = 488392;
+        List<Integer> filterGameIds = getCacheList().getListInt(EGameCacheKeyV2.listGameIdByTagId(filterTagId));
+        System.out.println(gameIds);
+        System.out.println(filterGameIds);
+    }
 	
 	public static void main(String[] args) {
 		GameFileInfo gameFileInfo;

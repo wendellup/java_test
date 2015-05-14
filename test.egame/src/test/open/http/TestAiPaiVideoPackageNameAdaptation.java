@@ -23,7 +23,7 @@ import cn.egame.interfaces.gc.GameInfo;
 
 public class TestAiPaiVideoPackageNameAdaptation {
 	private static String ALL_GAME_URL = "http://shouyou.aipai.com/aipai/api/games?sign=d96a0cbc3601e0424298386f1c260816"; 
-	public static String FILE_PATH="C:\\Users\\yuchao\\Desktop\\aipai.txt";
+	public static String FILE_PATH="C:\\Users\\yuchao\\Desktop\\aipaiadapter_20150512.txt";
 	
 	
 	
