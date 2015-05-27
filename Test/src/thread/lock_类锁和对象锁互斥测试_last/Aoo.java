@@ -1,6 +1,5 @@
-package thread.lock_类锁和对象锁互斥测试;
+package thread.lock_类锁和对象锁互斥测试_last;
 
-import sun.reflect.generics.tree.Tree;
 
 public class Aoo {
 	private static byte[] lock = new byte[0];
@@ -55,7 +54,7 @@ public class Aoo {
 		}
 	}
 	
-	public synchronized void classSynMethod(){
+	public void classSynMethod(){
 		synchronized (Aoo.class) {
 			int i=0;
 			while(i++<5){
@@ -72,16 +71,16 @@ public class Aoo {
 	
 	public static void main(String[] args) {
 		
-		final Aoo aoo = new Aoo();
+//		final Aoo aoo = new Aoo();
 		
 		Thread t1 = new Thread(new Runnable() {
 			
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-//				Aoo aoo = new Aoo();
-				aoo.classSynMethod();
-//				aoo.method();
+				Aoo aoo = new Aoo();
+//				aoo.classSynMethod();
+				aoo.method();
 //				aoo.method2();
 //				aoo.privateLockMethod();
 //				aoo.privateNoLockMethod();
@@ -92,10 +91,11 @@ public class Aoo {
 			
 			@Override
 			public void run() {
-//				Aoo aoo2 = new Aoo();
+				Aoo aoo2 = new Aoo();
 //				aoo2.classSynMethod();
-//				aoo2.method();
-				aoo.method2();
+//				aoo2.privateLockMethod();
+				aoo2.method();
+//				aoo.method2();
 //				aoo.privateLockMethod();
 //				aoo.privateNoLockMethod();
 			}

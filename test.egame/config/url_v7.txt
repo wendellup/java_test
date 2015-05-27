@@ -34,15 +34,15 @@ GET | 页游 | /api/v2/mobile/channel/content.json?channel_id=706&terminal_id=10
  
 GET | 常驻内存 | /api/v2/mobile/memory_msg.json?terminal_id=100&imsi=460030260811593&advert_topic_id=1&advert_game_id=1&advert_web_id=1&advert_notify_id=1&advert_sns_msg_id=1&advert_other_tmp_id=1
 
-GET | 获取评论接口 | /api/v2/mobile/comment/list.json?game_id=23&current_page=0&rows_of_page=20
+GET | 获取评论接口 | /api/v2/mobile/comment/list.json?game_id=5007569&current_page=0&rows_of_page=20
 
-#post | 发表评论接口 | /api/v2/mobile/comment/send.json?game_id=23&content=bb
+#post | 发表评论接口 | /api/v2/mobile/comment/send.json?game_id=5007569&content=bb
 
-#post | 赞接口 | /api/v2/mobile/vote.json?game_id=244248&vote_type=2
+#post | 赞接口 | /api/v2/mobile/vote.json?game_id=5007569&vote_type=2
 
 GET | 返回最新专题接口 | /api/v2/mobile/lastest_topic.json?topic_id=704&terminal_id=1
  
-GET | 游戏详情页 | /api/v2/mobile/game_detail.json?terminal_id=1&game_id=240979
+GET | 游戏详情页 | /api/v2/mobile/game_detail.json?terminal_id=1&game_id=5007569
  
 GET | 搜索接口 | /api/v2/mobile/search/result.json?terminal_id=383&keyword=%E4%BD%A0%E5%A6%B9&current_page=0&rows_of_page=20
  
