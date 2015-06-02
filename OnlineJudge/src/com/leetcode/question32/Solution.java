@@ -2,6 +2,7 @@ package com.leetcode.question32;
 
 import java.util.Stack;
 
+//http://www.bubuko.com/infodetail-276831.html
 public class Solution {
 	public static int longestValidParentheses(String s) {
 		if (s == null || s.length() == 0) {
@@ -40,5 +41,7 @@ public class Solution {
 		String s = "(()((())";
 		int len = new Solution().longestValidParentheses(s);
 		System.out.println(len);
+		
+		
 	}
 }
