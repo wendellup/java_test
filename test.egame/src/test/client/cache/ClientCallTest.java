@@ -1,7 +1,10 @@
 package test.client.cache;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -11,6 +14,10 @@ import cn.egame.common.cache.SCacheClient;
 import cn.egame.common.client.EGameClientBase;
 import cn.egame.common.exception.ExceptionCommonBase;
 import cn.egame.common.model.PageData;
+import cn.egame.ext.gc.IGameServiceExt;
+import cn.egame.ext.ng.OnlineGameServiceInfo;
+import cn.egame.interfaces.EnumType.DateType;
+import cn.egame.interfaces.EnumType.GameStatus;
 import cn.egame.interfaces.EnumType.GameType;
 import cn.egame.interfaces.EnumType.MobileNetworkType;
 import cn.egame.interfaces.EnumType.SearchSortType;
@@ -45,10 +52,14 @@ public class ClientCallTest extends EGameClientBase {
         return (IGameService) super.getService("game_service");
     }
 	
+	private IGameServiceExt getGameServiceExt() throws RemoteException {
+        return (IGameServiceExt) super.getService("game_service_ext");
+    }
+	
 	@Test
     public void getGameInfoById() throws RemoteException {
 		GameInfo gameInfo = null;
-		int gId = 232857;
+		int gId = 5011054;
         try {
             // 先从缓存中取数据，如果没有去数据库中的
             String key = EGameCacheKey.getGameInfoById(gId);
@@ -61,7 +72,27 @@ public class ClientCallTest extends EGameClientBase {
             throw ex;
         }
         
-        System.out.println(gameInfo.hashCode());
+        System.out.println(gameInfo.getGameStatus().value());
+    }
+	
+	@Test
+    public void setGameInfoById() throws RemoteException {
+		GameInfo gameInfo = null;
+		int gId = 5011054;
+        try {
+            // 先从缓存中取数据，如果没有去数据库中的
+            String key = EGameCacheKey.getGameInfoById(gId);
+            gameInfo = getGameCache().getT(GameInfo.class, key);
+            if (gameInfo == null) {
+            	gameInfo = getGameService().getGameInfoById(0, 0, gId);
+            }
+        } catch (RemoteException ex) {
+            release(ex, getGameService());
+            throw ex;
+        }
+        
+        gameInfo.setGameStatus(GameStatus.offLine);
+        getGameService().setGameInfo(0, 0, gameInfo);
     }
 	
 	public ICacheClient getCacheList() {
@@ -83,6 +114,33 @@ public class ClientCallTest extends EGameClientBase {
 	}
 	
 	@Test
+	public void pageOnlineGameServiceByAppId() throws ExceptionCommonBase {
+		try {
+			int total = 0;
+			PageData pd = getGameServiceExt().pageOnlineGameServiceByAppId(0, 0, 927, 0, 20);
+			if (pd != null) {
+	            total = pd.getTotal();
+	            Map<String, List<OnlineGameServiceInfo>> map = (HashMap<String, List<OnlineGameServiceInfo>>) pd.getContent();
+	            if (map != null) {
+	                for (DateType dt : DateType.values()) {
+	                    List<OnlineGameServiceInfo> list = map.get(dt.getValue());
+	                    if (list == null || list.size() == 0) {
+	                        continue;
+	                    }
+	                    System.out.println(dt);
+	                    for(OnlineGameServiceInfo ogsi : list){
+	                    	System.out.println(ogsi.getgId());
+	                    }
+	                }
+	            }
+			}
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+		
+    }
+	
+	@Test
 	public void listGameIdByTagId() throws ExceptionCommonBase {
 		int tagId = 488390;
         List<Integer> gameIds = getCacheList().getListInt(EGameCacheKeyV2.listGameIdByTagId(tagId));
@@ -94,7 +152,7 @@ public class ClientCallTest extends EGameClientBase {
     }
 	
 	@Test
-	public static void searchByName() throws RemoteException {
+	public void searchByName() throws RemoteException {
 		String[] keyWords = new String[]{"跑酷","捕鱼","益智","纪念碑谷","僵尸"
 				,"小黄人","我的世界","消除","摩托","飞机"
 				,"益智,跑得快","炮妹","斗地主","忍者,美女","忍者"
@@ -151,12 +209,12 @@ public class ClientCallTest extends EGameClientBase {
 	
 	
 	public static void main(String[] args){
-		try {
-			searchByName();
-		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			searchByName();
+//		} catch (RemoteException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 //		GameFileInfo gameFileInfo;
 //		try {
 //			gameFileInfo = EGameClientV2.getInstance().getGameFileInfoById(0, 0, 5003729);

@@ -30,5 +30,26 @@
 	<classpathentry kind="lib" path="E:/svn/code/lib/commons-io-2.4.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/commons-fileupload-1.2.2.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/java_memcached-release_2.5.3.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-aop-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-aspects-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-beans-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-build-src-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-context-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-context-support-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-core-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-data-redis-1.1.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-expression-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-instrument-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-instrument-tomcat-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-jdbc-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-jms-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-orm-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-oxm-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-struts-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-test-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-tx-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-web-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-webmvc-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/spring/spring-framework-3.2.1/spring-webmvc-portlet-3.2.1.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

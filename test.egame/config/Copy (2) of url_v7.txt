@@ -72,17 +72,17 @@ GET | 大家都在搜 | /api/v2/mobile/channel/content.json?channel_id=713&termi
 
 #post | 已安装游戏应用排序接口| /api/v2/mobile/check_app.json?packages=com.ct.client/com.cl.activity/com.lingan.seeyou&terminal_id=100
 
-GET | ​展现游戏礼包接口| /api/v2/mobile/gift/list_gift.json?current_page=0&rows_of_page=20
+GET | ​展现游戏礼包接口| /api/v2/mobile/gift/list_gift.json?current_page=0&rows_of_page=20&access_token=584fc87dc0fc8bfa60013a581e035808
 
-GET | ​游戏详情页展现游戏礼包接口 | /api/v2/mobile/gift/list_game_gift.json?current_page=0&rows_of_page=20&game_id=250322
+GET | ​游戏详情页展现游戏礼包接口 | /api/v2/mobile/gift/list_game_gift.json?current_page=0&rows_of_page=20&game_id=250322&access_token=584fc87dc0fc8bfa60013a581e035808
 
-GET | 我的礼包接口 | /api/v2/mobile/gift/my_gift.json?current_page=0&rows_of_page=20&type=1
+GET | 我的礼包接口 | /api/v2/mobile/gift/my_gift.json?current_page=0&rows_of_page=20&type=1&access_token=584fc87dc0fc8bfa60013a581e035808
 
-GET | 礼包详情页 | /api/v2/mobile/gift/gift_detail.json?gift_id=19
+GET | 礼包详情页 | /api/v2/mobile/gift/gift_detail.json?gift_id=19&access_token=584fc87dc0fc8bfa60013a581e035808
 
-GET | 开服 | /api/v2/mobile/list_online_game.json?channel_id=927&terminal_id=100&current_page=0&rows_of_page=2
+GET | 开服 | /api/v2/mobile/list_online_game.json?channel_id=927&terminal_id=100&current_page=0&rows_of_page=2&access_token=584fc87dc0fc8bfa60013a581e035808
 
-GET | 开测 | /api/v2/mobile/list_online_game.json?channel_id=928&terminal_id=100&current_page=0&rows_of_page=2
+GET | 开测 | /api/v2/mobile/list_online_game.json?channel_id=928&terminal_id=100&current_page=0&rows_of_page=2&access_token=584fc87dc0fc8bfa60013a581e035808
 
 GET | 7.4.7首页游戏合集卡片 | /api/v2/mobile/channel/content.json?channel_id=723&terminal_id=100&current_page=0&rows_of_page=5&imsi=1111
 
@@ -108,7 +108,7 @@ GET | 版本广告接口 | /api/v2/mobile/channel/version/show_advs.json?channel
 
 GET | 付费下载专区 | /api/v2/mobile/channel/content.json?channel_id=717&terminal_id=100&current_page=0&rows_of_page=20&imsi=1111
 
-GET | 用户已付费游戏 | /api/v2/mobile/list_paid_game.json?show_type=0
+GET | 用户已付费游戏 | /api/v2/mobile/list_paid_game.json?show_type=0&access_token=a374db989e634d669b9a265cc9bf473e
 
 
 
@@ -116,6 +116,6 @@ GET | 用户已付费游戏 | /api/v2/mobile/list_paid_game.json?show_type=0
 #----------------------金币相关----------------------------
 GET | 我的任务 | /api/v2/mobile/coin/my_task.json?client_id=8888007&version_code=745&current_page=0&rows_of_page=20
 
-GET | 我的金币 | /api/v2/mobile/coin/my_coin.json?client_id=8888007&version_code=745
+GET | 我的金币 | /api/v2/mobile/coin/my_coin.json?client_id=8888007&version_code=745&access_token=4430b06c9ef9c65ef34034f048d91ff4
 
 GET | 用户未完成任务列表 | /api/v2/mobile/coin/my_event.json?client_id=8888007&version_code=745

@@ -39,6 +39,10 @@ public class RedisTest {
         return SCacheClient.getInstance("egame_data_support");
     }
     
+    public ICacheClient getGameCache() {
+        return SCacheClient.getInstance("egame");
+    }
+    
     @Test
 	public void getOpenTest(){
 		String key = "JAVA-getCaidanTagKeyById:5125"; 
@@ -53,8 +57,6 @@ public class RedisTest {
 		RedisTest.getCache().set(key, val);
 	}
 	
-	
-    
 	@Test
 	public void getObjTest(){
 		String key = "JAVA-getCaidanTagKeyById:5125"; 
@@ -273,13 +275,7 @@ public class RedisTest {
 	}
 	
 	
-	@Test
-	public void getGameInfoById() throws RemoteException{
-		
-		int gId = 5013054;
-		GameInfo domain = EGameClientBiz.getInstance().getGameInfoById(0, 0, gId);
-		LOGGER.info(domain.getGameName()+",is_free_intall:"+domain.getGameStatus());
-	}
+	
 
 	@Test
 	public void setGameInfo() throws RemoteException{
@@ -349,6 +345,23 @@ public class RedisTest {
 //			 getCacheList().set(cacheKey, result);
 //		 }
 		 System.out.println(result);
-		 
+	 }
+	 
+	 @Test
+	 public void listGameIdByTagId1561(){
+		List<Integer> gameIds = getCacheList().getListInt(
+				EGameCacheKeyV2.listGameIdByTagId(1561));
+		System.out.println(gameIds);
+		
+	 }
+	 
+	 @Test
+	 public void getGameInfoById() throws RemoteException{
+			
+//			int gId = 5028283;
+			int gId = 245945;
+			String cacheIdKey = EGameCacheKey.getGameInfoById(gId);
+	        GameInfo domain = getGameCache().getT(GameInfo.class, cacheIdKey);
+	        System.out.println(domain);
 	 }
 }
