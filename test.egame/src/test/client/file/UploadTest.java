@@ -33,6 +33,7 @@ public class UploadTest {
 //		System.out.println(file.exists());
 	}
 	
+	//上传截图
 	@Test
 	public void uploadView(){
     	try {
@@ -52,20 +53,26 @@ public class UploadTest {
 	
 	@Test
 	public void newUploadForView(){
+		long beginMillis = System.currentTimeMillis();
     	try {
     		/** 文件上传 */
     		Utils.initLog4j();
-    		File file = new File("E:\\pic\\512_512.png");
+//    		File file = new File("E:\\pic\\mao.jpg"); //size:550KB cost:753mllis
+//    		File file = new File("E:\\pic\\mao_550_2.jpg"); //size:3MB cost:1558mllis
+//    		File file = new File("C:\\Users\\yuchao\\Desktop\\222222.jpg");size:10MB cost:7000millis
+    		File file = new File("E:\\pic\\mao_550_3.jpg"); //size:10MB cost:5149
+    		
     		InputStream inputStream = new FileInputStream(file);
     		System.out.println(inputStream.available());
     		ImageScaleInfo imageScaleInfo = new ImageScaleInfo(FileUsedType.game_view);
-    		imageScaleInfo.setImageScaleLevel(7);//1:压缩小图, 3:压缩小图和中图, 4:压缩小图,中图和大图
+    		imageScaleInfo.setImageScaleLevel(1);//1:压缩小图, 3:压缩小图和中图, 7:压缩小图,中图和大图
     		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.game_view,
     				0, 0L, file.getName(), true, imageScaleInfo);
     		logger.info("efsId:"+efsId);
 		} catch (Exception e) {
 			logger.error("", e);
 		}
+    	System.out.println("cost:"+(System.currentTimeMillis()-beginMillis));
 	}
 	
 	@Test

@@ -10,7 +10,7 @@ public class MoveFile {
 	private static Logger logger = Logger.getLogger(UploadTest.class);
 	
 	@Test
-	public void movieFile(){
+	public void moveFile(){
     	try {
     		
     		/** 文件上传 */

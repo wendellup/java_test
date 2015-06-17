@@ -44,7 +44,7 @@ public class My52SFTP {
 			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
 			logger.info("ext目录下jar包替换成功");
 			
-			String openDir = "/opt/web/mobile.play.cn/8888/webapps/egame.server.open/WEB-INF/lib/";
+			String openDir = "/opt/web/mobile.play.cn/8102/webapps/egame.server.open/WEB-INF/lib/";
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.server.open.biz.jar", sftp);

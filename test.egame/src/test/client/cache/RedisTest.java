@@ -12,7 +12,11 @@ import cn.egame.client.biz.EGameClientBiz;
 import cn.egame.common.cache.ICacheClient;
 import cn.egame.common.cache.SCacheClient;
 import cn.egame.common.util.Utils;
+import cn.egame.ext.gc.GameCommentInfo;
+import cn.egame.ext.gc.HallFileTerminalLinkInfo;
+import cn.egame.ext.me.Memory;
 import cn.egame.ext.ng.GiftInfo;
+import cn.egame.interfaces.EnumType.AppParameterParamType;
 import cn.egame.interfaces.ck.EGameCacheKey;
 import cn.egame.interfaces.ck.EGameCacheKeyV2;
 import cn.egame.interfaces.gc.GameInfo;
@@ -364,4 +368,53 @@ public class RedisTest {
 	        GameInfo domain = getGameCache().getT(GameInfo.class, cacheIdKey);
 	        System.out.println(domain);
 	 }
+	 
+	 @Test
+	 public void listMemoryByAdvertType() throws RemoteException{
+//			int gId = 5028283;
+			String cacheIdKey = EGameCacheKeyV2.listMemoryByAdvertType(1);
+			List<Memory> listMemory = getCacheList().getListT(Memory.class, EGameCacheKeyV2.listMemoryByAdvertType(1));
+	        System.out.println(listMemory);
+	 }
+	 
+	 @Test
+	 public void listHallFileTerminalLink() throws RemoteException{
+		 List<HallFileTerminalLinkInfo> listHallFileTerminalLink = getCacheList().getListT(HallFileTerminalLinkInfo.class,
+	             EGameCacheKeyV2.listHallFileTerminalLink());
+		 System.out.println(listHallFileTerminalLink);
+	 }
+	 
+	@Test
+	public void getCommentInfoById() throws RemoteException {
+		long commentId = 102914;
+		String cacheIdKey = EGameCacheKeyV2.getCommentInfoById(commentId);
+		GameCommentInfo domain = getGameCache().getT(GameCommentInfo.class,
+				cacheIdKey);
+		System.out.println(domain);
+
+	}
+
+	@Test
+	public void getAppParameter2(){
+//		int parentId = 836;
+//		 String cacheKey = EGameCacheKeyV2.listAppParameterIdsByParentId(parentId);
+//	        List<Integer> appParameterIds = getCacheList().getListInt(cacheKey);
+//	        System.out.println(appParameterIds);
+//	        for(int paramId :appParameterIds){
+//	        	AppParameter appParameter = RedisTest.getCache().getT(AppParameter.class, EGameCacheKey.getAppParameterById(paramId));
+//	        	System.out.println(appParameter.getParam());
+//	            System.out.println(appParameter.getParam().get(AppParameterParamType.sdk_ref_tag_id));
+//	        }
+	        
+//	        AppParameter appParameter = RedisTest.getCache().getT(AppParameter.class, EGameCacheKey.getAppParameterById(11283));
+//	        AppParameter appParameter = RedisTest.getCache().getT(AppParameter.class, EGameCacheKey.getAppParameterById(11265));
+		AppParameter appParameter = RedisTest.getCache().getT(AppParameter.class, EGameCacheKey.getAppParameterById(11284));
+	        System.out.println(appParameter);
+        	System.out.println(appParameter.getParam().containsKey(AppParameterParamType.sdk_ref_tag_id));
+        appParameter.getParam().get(AppParameterParamType.sdk_ref_tag_id) ;
+        	
+//            System.out.println(Integer.parseInt(appParameter.getParam().get(AppParameterParamType.sdk_ref_tag_id)));
+            System.out.println("-------");
+	}
+	
 }

@@ -1,21 +1,28 @@
 package test.client.cache;
 
 import java.rmi.RemoteException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.junit.Test;
 
+import cn.egame.client.EGameClientExt;
+import cn.egame.client.EGameClientExtV2;
 import cn.egame.client.EGameClientV2;
+import cn.egame.client.biz.EGameClientBiz;
 import cn.egame.common.cache.ICacheClient;
 import cn.egame.common.cache.SCacheClient;
 import cn.egame.common.client.EGameClientBase;
 import cn.egame.common.exception.ExceptionCommonBase;
 import cn.egame.common.model.PageData;
+import cn.egame.ext.EnumTypeExt.AdvertType;
+import cn.egame.ext.gc.HallFileTerminalLinkInfo;
 import cn.egame.ext.gc.IGameServiceExt;
+import cn.egame.ext.me.Memory;
 import cn.egame.ext.ng.OnlineGameServiceInfo;
+import cn.egame.interfaces.EnumType;
+import cn.egame.interfaces.EnumType.AppParameterParamType;
 import cn.egame.interfaces.EnumType.DateType;
 import cn.egame.interfaces.EnumType.GameStatus;
 import cn.egame.interfaces.EnumType.GameType;
@@ -27,6 +34,7 @@ import cn.egame.interfaces.gc.ExtraInfo;
 import cn.egame.interfaces.gc.GameFileInfo;
 import cn.egame.interfaces.gc.GameInfo;
 import cn.egame.interfaces.gc.IGameService;
+import cn.egame.interfaces.pu.AppParameter;
 import cn.egame.search.client.EGameGameSearchClient;
 import cn.egame.search.client.biz.EGameGameSearchClientBiz;
 
@@ -226,4 +234,36 @@ public class ClientCallTest extends EGameClientBase {
 //			e.printStackTrace();
 //		}
 	}
+
+	@Test
+	public void getMemoryByAdvertTypeAndIdV2() throws RemoteException{
+//		MemoryAdvLink memoryAdvLink = EGameClientExtV2.getInstance().getMemoryAdvLinkByMemoryId(0, 0,
+//				1079);
+		Memory memoryInfo = EGameClientExt.getInstance().getMemoryByAdvertTypeAndIdV2(730964, 0,
+                AdvertType.game, (long) 0, "", 1, "");
+		System.out.println(memoryInfo);
+//		memoryInfo.setTitle(memoryInfo.getTitle()+"_update");
+//		EGameClientExt.getInstance().setMemoryInfo(730964, 0, memoryInfo);
+	}
+	
+	@Test
+	public void hallFileTerminalLinkInfo() throws RemoteException{
+		HallFileTerminalLinkInfo hallFileTerminalLinkInfo = EGameClientExtV2.getInstance().getHallFileInfoByTerminalIdAndVersionV2(
+				730964, 0, 1, "752", 8888007);
+		System.out.println(hallFileTerminalLinkInfo);
+		System.out.println(hallFileTerminalLinkInfo.getHallFileId());
+	}
+	
+	@Test
+	public void parameterApp() throws RemoteException{
+		AppParameter app = EGameClientBiz.getInstance().getAppParameterById(0, 0L, 11214);
+		System.out.println(app);
+		Map<EnumType.AppParameterParamType,String> map = new HashMap<EnumType.AppParameterParamType,String>();
+		map.put(AppParameterParamType.sdk_ref_tag_id, "888");
+		app.setParam(map);;
+		EGameClientBiz.getInstance().setAppParameter(0, 0L, app);
+		app = EGameClientBiz.getInstance().getAppParameterById(0, 0L, 11214);
+		System.out.println(app);
+	}
+	
 }
