@@ -23,7 +23,8 @@ import cn.egame.common.util.Utils;
 
 public class V7UrlTest {
 	
-	private static String accessTokenUrl = "/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
+//	private static String accessTokenUrl = "http://192.168.251.52:8102/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
+	private static String accessTokenUrl = "http://open.play.cn/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
 	private static String access_token = "";
 	// 6楼: , 202
 	
@@ -34,7 +35,9 @@ public class V7UrlTest {
 					
 //					"http://192.168.251.17:8102"
 //					"http://192.168.251.52:8102"
+//					"http://192.168.251.53:8102"
 //					"http://202.102.105.62:8102"
+//					"http://202.102.105.63:8102"
 					
 //					"http://127.0.0.1:8080"
 					/*
@@ -45,10 +48,10 @@ public class V7UrlTest {
 					"http://192.168.106.27:8102",
 					"http://192.168.106.28:8102",
 					//重要,六楼接口服务器		
-//					"http://192.168.70.123:8102",
-//					"http://192.168.70.124:8102",
-//					"http://192.168.70.125:8102",
-//					"http://192.168.70.126:8102",
+					"http://192.168.70.123:8102",
+					"http://192.168.70.124:8102",
+					"http://192.168.70.125:8102",
+					"http://192.168.70.126:8102",
 					
 //					"http://61.160.129.2",
 					
@@ -59,7 +62,7 @@ public class V7UrlTest {
 //					"http://192.168.70.127:8102",
 //					"http://192.168.70.128:8102"
 					
-					
+					//外网
 //					"http://202.102.39.23"
 //					,"http://180.96.49.16"
 //					, "http://180.96.49.15"
@@ -93,7 +96,7 @@ public class V7UrlTest {
 	private List<UrlV7LinkInfo> errorlinkInfos = new ArrayList<UrlV7LinkInfo>();;
 	
 	public V7UrlTest(String[] prefixUrls){
-		getAccessToken(prefixUrls);
+		getAccessToken();
 		init(prefixUrls);
 	}
 	
@@ -101,11 +104,11 @@ public class V7UrlTest {
 	 * 获取用户token...
 	 * @param prefixUrls
 	 */
-	private void getAccessToken(String[] prefixUrls) {
+	private void getAccessToken() {
 		try {
 			
 			HttpRespons httpRespons = 
-					new HttpRequester("UTF-8").sendGet(prefixUrls[0]+accessTokenUrl);
+					new HttpRequester("UTF-8").sendGet(accessTokenUrl);
 			
 			ObjectMapper jsonMapper = new ObjectMapper();
 			jsonMapper.configure(JsonParser.Feature.ALLOW_SINGLE_QUOTES , true); 

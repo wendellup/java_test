@@ -3,6 +3,8 @@ package sftp;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.Properties;
 import java.util.Vector;
 
@@ -21,11 +23,17 @@ public class My18SFTP {
 
 	private static Logger logger = Logger.getLogger(My18SFTP.class);
 	
+	public static void __main(String[] args) throws UnsupportedEncodingException {
+//		String str = "[{\"com.hugenstar.tdzmclient.ayx\":1}]";
+		String str = "[{\"com.noumena.android.m5cn\":1},{\"com.ct.client\":1},{\"com.netease.rz.play_telecom\":1},{\"wxjb.third\":1},{\"com.fireant.blfd\":1},{\"com.wt.test\":1},{\"com.easytech.wc2Egame\":1},{\"com.koogame.lululianmeng_dx\":1},{\"com.punchbox.fishingjoy2dcn\":1},{\"com.cynos.ttqsg\":1},{\"com.ycgame.ycW1.ctc\":1},{\"org.funship.findsomething2\":1},{\"com.sg.ytxyzxnb\":1},{\"com.zengame.ttasj.p365egame\":1},{\"com.cwa.mojian.dx\":1},{\"org.cocos2dx.jellycrash\":1},{\"com.ssl.bird\":1},{\"com.company.ZombieTown\":1},{\"com.aiqinggus\":1},{\"com.sg.android.EggLinkLink\":1},{\"mr.midlet.MR_HLLTower.egame\":1},{\"qy.erzhan.com\":1}]";
+		System.out.println(URLEncoder.encode(str, "utf-8"));
+	}
+	
 	public static void main(String[] args) {
 		My18SFTP sf = new My18SFTP();
 		ChannelSftp sftp = null;
 		try {
-			String host = "202.102.105.62";
+			String host = "202.102.105.63";
 			int port = 22;
 			String username = "root";
 			String password = "len@#$passw0rd";
@@ -51,8 +59,9 @@ public class My18SFTP {
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.server.open.biz.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\druid-0.2.8.jar", sftp);
-//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client.jar", sftp);
-//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.interfaces.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.interfaces.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.core.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.tomcat-ext.jar", sftp);
 			logger.info("open目录下jar包替换成功");
 			

@@ -6,6 +6,7 @@ import org.junit.Test;
 import cn.egame.client.biz.EGameClientBiz;
 import cn.egame.common.util.Utils;
 import cn.egame.interfaces.fl.FileInfo;
+import cn.egame.interfaces.fl.FileUsedType;
 import cn.egame.interfaces.fl.FileUtils;
 
 public class FileUtilsTest {
@@ -21,10 +22,15 @@ public class FileUtilsTest {
 	@Test
 	public void testEfsId() throws Exception{
 //		Utils.initLog4j();
-		long efsId = 1786869;
-		FileInfo fileInfo = EGameClientBiz.getInstance().getFileInfo(0, 0, efsId);
+//		long efsId = 2465590;
+//		long efsId = 2465112;
+		long efsId = 2413780;
+		
+		
+//		long efsId = 1786869;
+//		FileInfo fileInfo = EGameClientBiz.getInstance().getFileInfo(0, 0, efsId);
 		String ftpFilePath = FileUtils.getFilePath(
-				fileInfo.getFileUsedType(), efsId, fileInfo.getFileName());
+				FileUsedType.channel_file, efsId, "5025003_1_20021339_1435040226035.apk");
 		System.out.println(ftpFilePath);
 	}
 	

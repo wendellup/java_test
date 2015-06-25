@@ -1,6 +1,7 @@
 package test.client.cache;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -301,9 +302,16 @@ public class RedisTest {
 	
 	@Test
 	public void listGameIdByTagId() throws RemoteException{
-		int tagId = 1560;
+//		int tagId = 1560;
+		int tagId = 1667;
 //		List<Integer> listGIdbyCpId = getCacheList().getListInt(EGameCacheKeyV2.listGIdbyCpId(cpId));
 		List<Integer> gameIds = getCacheList().getListInt(EGameCacheKeyV2.listGameIdByTagId(tagId));
+		System.out.println(gameIds.size());
+		LOGGER.info(gameIds);
+		
+		getCacheList().set(EGameCacheKeyV2.listGameIdByTagId(tagId), new ArrayList<Integer>());
+		gameIds = getCacheList().getListInt(EGameCacheKeyV2.listGameIdByTagId(tagId));
+		System.out.println(gameIds.size());
 		LOGGER.info(gameIds);
 	}
 	
@@ -416,5 +424,6 @@ public class RedisTest {
 //            System.out.println(Integer.parseInt(appParameter.getParam().get(AppParameterParamType.sdk_ref_tag_id)));
             System.out.println("-------");
 	}
+	
 	
 }

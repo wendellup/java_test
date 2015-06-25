@@ -148,15 +148,25 @@ public class ClientCallTest extends EGameClientBase {
 		
     }
 	
+	
+	
 	@Test
 	public void listGameIdByTagId() throws ExceptionCommonBase {
+		/*
 		int tagId = 488390;
         List<Integer> gameIds = getCacheList().getListInt(EGameCacheKeyV2.listGameIdByTagId(tagId));
-        
         int filterTagId = 488392;
         List<Integer> filterGameIds = getCacheList().getListInt(EGameCacheKeyV2.listGameIdByTagId(filterTagId));
         System.out.println(gameIds);
         System.out.println(filterGameIds);
+        */
+		
+		List<Integer> gameIds = getCacheList().getListInt(EGameCacheKeyV2.listGameIdByTagId(1561));
+		System.out.println(gameIds);
+		System.out.println(gameIds.size());
+		System.out.println(gameIds.contains(250792));
+		System.out.println(gameIds.contains(237978));
+		System.out.println(gameIds.contains(5023691));
     }
 	
 	@Test
@@ -217,6 +227,7 @@ public class ClientCallTest extends EGameClientBase {
 	
 	
 	public static void main(String[] args){
+		System.out.println("main in ClientCallTest...");
 //		try {
 //			searchByName();
 //		} catch (RemoteException e) {
@@ -265,5 +276,28 @@ public class ClientCallTest extends EGameClientBase {
 		app = EGameClientBiz.getInstance().getAppParameterById(0, 0L, 11214);
 		System.out.println(app);
 	}
+	
+	@Test
+	public void testListGameFileIdByPackageNameAndStatus(){
+		String packageName = "com.hugenstar.tdzmclient.ayx";
+		List<Integer> gameFileInfoIds = null;
+		try {
+			gameFileInfoIds = EGameClientV2.getInstance().listGameFileIdByPackageNameAndStatus(0, 0L,
+			        packageName, -1);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+		System.out.println(gameFileInfoIds);
+	}
+	
+	@Test
+	public void pageOnlineGameServiceByAppId2() throws RemoteException{
+		PageData pd = EGameClientExt.getInstance().pageOnlineGameServiceByAppId(
+				0, 0L, 927, 0, 20);
+		Map<String, List<OnlineGameServiceInfo>> map = (HashMap<String, List<OnlineGameServiceInfo>>) pd.getContent();
+		System.out.println(map);
+	}
+	
+	
 	
 }
