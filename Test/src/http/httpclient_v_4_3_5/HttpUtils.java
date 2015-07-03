@@ -11,9 +11,12 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.CharsetUtils;
 import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
 
@@ -92,14 +95,45 @@ public class HttpUtils {
 		}
 	}
 	
+	/**
+	 * 表单上传UrlEncodedFormEntity
+	 * @param url
+	 * @param params
+	 * @throws ClientProtocolException
+	 * @throws IOException
+	 */
 	public static void requestPost(String url,List<NameValuePair> params) throws ClientProtocolException, IOException {
 	    CloseableHttpClient httpclient = HttpClientBuilder.create().build();
-	          
 	    HttpPost httppost = new HttpPost(url);
 	        httppost.setEntity(new UrlEncodedFormEntity(params));
 	          
 	        CloseableHttpResponse response = httpclient.execute(httppost);
-	        System.out.println(response.toString());
+	        System.out.println("response.toString:"+response.toString());
+	        System.out.println("contentEncoding:"+response.getEntity().getContentEncoding());
+	        System.out.println("getContentType:"+response.getEntity().getContentType());
+	          
+	        HttpEntity entity = response.getEntity();
+	        String jsonStr = EntityUtils.toString(entity, "utf-8");
+	        System.out.println(jsonStr);
+	          
+	        httppost.releaseConnection();
+	}
+	
+	/**
+	 * 文件上传UrlEncodedFormEntity
+	 * @param url
+	 * @param params
+	 * @throws ClientProtocolException
+	 * @throws IOException
+	 */
+	public static void filePost(String url,List<NameValuePair> params) throws ClientProtocolException, IOException {
+	    CloseableHttpClient httpclient = HttpClientBuilder.create().build();
+	    HttpPost httppost = new HttpPost(url);
+	        
+	        CloseableHttpResponse response = httpclient.execute(httppost);
+	        System.out.println("response.toString:"+response.toString());
+	        System.out.println("contentEncoding:"+response.getEntity().getContentEncoding());
+	        System.out.println("getContentType:"+response.getEntity().getContentType());
 	          
 	        HttpEntity entity = response.getEntity();
 	        String jsonStr = EntityUtils.toString(entity, "utf-8");
