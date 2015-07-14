@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import cn.egame.client.EGameClientV2;
 import cn.egame.common.util.Utils;
+import cn.egame.interfaces.ConstVar;
 import cn.egame.interfaces.ExceptionCommon;
 import cn.egame.interfaces.fl.FileInfo;
 import cn.egame.interfaces.fl.FileUsedType;
@@ -23,8 +24,8 @@ public class FileTest {
 	public void getFilePath(){
 		try {
 			Utils.initLog4j();
-			FileInfo fi = EGameClientV2.getInstance().getFileInfo(0, 0, 1806058);
-			System.out.println(FileUtils.getFilePath(fi.getFileUsedType(), fi.getEFSId(), fi.getFileName()));
+			FileInfo fi = EGameClientV2.getInstance().getFileInfo(0, 0, 1691002);
+			System.out.println(ConstVar.HTTP_HOST+FileUtils.getFilePath(fi.getFileUsedType(), fi.getEFSId(), fi.getFileName()));
 		} catch (ExceptionCommon e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

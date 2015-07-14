@@ -108,13 +108,13 @@ public class HttpUtils {
 	        httppost.setEntity(new UrlEncodedFormEntity(params));
 	          
 	        CloseableHttpResponse response = httpclient.execute(httppost);
-	        System.out.println("response.toString:"+response.toString());
-	        System.out.println("contentEncoding:"+response.getEntity().getContentEncoding());
-	        System.out.println("getContentType:"+response.getEntity().getContentType());
+//	        System.out.println("response.toString:"+response.toString());
+//	        System.out.println("contentEncoding:"+response.getEntity().getContentEncoding());
+//	        System.out.println("getContentType:"+response.getEntity().getContentType());
 	          
 	        HttpEntity entity = response.getEntity();
 	        String jsonStr = EntityUtils.toString(entity, "utf-8");
-	        System.out.println(jsonStr);
+//	        System.out.println(jsonStr);
 	          
 	        httppost.releaseConnection();
 	}

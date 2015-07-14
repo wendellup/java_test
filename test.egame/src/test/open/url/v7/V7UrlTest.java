@@ -23,8 +23,8 @@ import cn.egame.common.util.Utils;
 
 public class V7UrlTest {
 	
-//	private static String accessTokenUrl = "http://192.168.251.52:8102/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
-	private static String accessTokenUrl = "http://open.play.cn/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
+	private static String accessTokenUrl = "http://192.168.251.52:8102/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
+//	private static String accessTokenUrl = "http://open.play.cn/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
 	private static String access_token = "";
 	// 6楼: , 202
 	
@@ -39,7 +39,7 @@ public class V7UrlTest {
 //					"http://202.102.105.62:8102"
 //					"http://202.102.105.63:8102"
 					
-//					"http://127.0.0.1:8080"
+					"http://127.0.0.1:8080"
 					/*
 					//重要,三楼接口服务器
 					  "http://192.168.106.25:8102",
@@ -48,10 +48,10 @@ public class V7UrlTest {
 					"http://192.168.106.28:8102",
 					//重要,六楼接口服务器		
 					 */
-					"http://192.168.70.123:8102",
-					"http://192.168.70.124:8102",
-					"http://192.168.70.125:8102",
-					"http://192.168.70.126:8102",
+//					"http://192.168.70.123:8102",
+//					"http://192.168.70.124:8102",
+//					"http://192.168.70.125:8102",
+//					"http://192.168.70.126:8102",
 					
 //					"http://61.160.129.2",
 					

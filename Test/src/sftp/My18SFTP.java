@@ -59,10 +59,14 @@ public class My18SFTP {
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.server.open.biz.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\druid-0.2.8.jar", sftp);
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client.jar", sftp);
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.interfaces.jar", sftp);
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.core.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.interfaces.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.core.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.tomcat-ext.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.client-2.0.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.interfaces-2.0.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client-2.0.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.interfaces-2.0.jar", sftp);
 			logger.info("open目录下jar包替换成功");
 			
 			

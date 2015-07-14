@@ -13,11 +13,27 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import cn.egame.common.util.Utils;
+
 public class ApacheMD5Util {
     private final static Log log = LogFactory.getLog(ApacheMD5Util.class);
     static MessageDigest md = null;
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchAlgorithmException {
+    	System.out.println(System.currentTimeMillis());
+    	String terminalIdStr = "100";
+    	String gameIdStr = "251141";
+    	String loginUserIdStr = "1028129";
+    	String validTimeStr = "1436250506612";
+    	String GAME_DOWNLOAD_MD5_KEY = "egameDownload";
+    	
+    	String baseStr = terminalIdStr + gameIdStr + loginUserIdStr + validTimeStr + GAME_DOWNLOAD_MD5_KEY;
+    	System.out.println(Utils.encryptMD5(baseStr));
+    	System.out.println(md5(baseStr));;
+    	
+	}
+    
+    public static void main2(String[] args) {
     	File fileDir = new File("F:\\安装包");
     	File[] files = fileDir.listFiles();
     	for(File file : files){
@@ -99,5 +115,6 @@ public class ApacheMD5Util {
     public static String md5File(InputStream is) throws IOException {
         return DigestUtils.md5Hex(is);
     }
+    
     
 }
