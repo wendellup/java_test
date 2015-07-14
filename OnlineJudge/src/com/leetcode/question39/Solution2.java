@@ -2,9 +2,12 @@ package com.leetcode.question39;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-public class Solution {
+public class Solution2 {
 //	Set<List<Integer>> retSet = new HashSet<List<Integer>>();
 	List<List<Integer>> retSet = new ArrayList<List<Integer>>();
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
@@ -15,17 +18,8 @@ public class Solution {
     
     private void iterCandidate(int[] candidates, int paramTarget
     		,List<Integer> midList){
-    	int i=0;
-    	if(midList.size()!=0){
-    		int lastVal = midList.get(midList.size()-1);
-    		for(int x=0; x<candidates.length; x++){
-    			if(candidates[x] == lastVal){
-    				i = x;
-    				break;
-    			}
-    		}
-    	}
-    	for(; i<candidates.length; i++){
+    	
+    	for(int i=0; i<candidates.length; i++){
     		List<Integer> newList = new ArrayList<Integer>(midList);
     		newList.add(candidates[i]);
     		if(candidates[i]==paramTarget){
