@@ -8,6 +8,8 @@ import java.util.Vector;
 
 import org.apache.log4j.Logger;
 
+import cn.egame.common.util.Utils;
+
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
@@ -22,6 +24,7 @@ public class My52SFTP {
 	private static Logger logger = Logger.getLogger(My52SFTP.class);
 	
 	public static void main(String[] args) {
+		Utils.initLog4j();
 		My52SFTP sf = new My52SFTP();
 		ChannelSftp sftp = null;
 		try {
@@ -49,14 +52,15 @@ public class My52SFTP {
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.server.open.biz.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common.event.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.interfaces.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.core.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.tomcat-ext.jar", sftp);
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.client-2.0.jar", sftp);
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.interfaces-2.0.jar", sftp);
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client-2.0.jar", sftp);
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.interfaces-2.0.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.client-2.0.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.interfaces-2.0.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client-2.0.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.interfaces-2.0.jar", sftp);
 			
 			logger.info("open目录下jar包替换成功");
 			

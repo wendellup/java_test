@@ -111,6 +111,24 @@ public class UploadTest {
 		}
 	}
 	
+	@Test
+	public void uploadCmp(){
+    	try {
+    		/** 文件上传 */
+    		Utils.initLog4j();
+    		File file = new File("E:\\pic\\4de0ce7atw1eauybk03mgj20ez0k0wf6.jpg");
+    		InputStream inputStream = new FileInputStream(file);
+    		System.out.println(inputStream.available());
+//    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.game_photo.value(),
+//    				0, 0L, file.getName(), true);
+    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.comment_photo.value(),
+    				0, 0L, file.getName(), true);
+    		logger.info("efsId:"+efsId);
+		} catch (Exception e) {
+			logger.error("", e);
+		}
+	}
+	
 	public static void main(String[] args) {
 		long begin = System.currentTimeMillis();
 		UploadTest uploadDemo = new UploadTest();

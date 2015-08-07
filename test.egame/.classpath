@@ -23,5 +23,7 @@
 	<classpathentry kind="lib" path="E:/svn/code/lib/commons-pool-1.5.4.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/ref/egame.interfaces.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/ref/egame.client.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/druid-0.2.8.jar"/>
+	<classpathentry kind="lib" path="E:/svn/code/lib/mysql-connector-java-5.1.14-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

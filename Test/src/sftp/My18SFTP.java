@@ -10,6 +10,8 @@ import java.util.Vector;
 
 import org.apache.log4j.Logger;
 
+import cn.egame.common.util.Utils;
+
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
@@ -30,10 +32,11 @@ public class My18SFTP {
 	}
 	
 	public static void main(String[] args) {
+		Utils.initLog4j();
 		My18SFTP sf = new My18SFTP();
 		ChannelSftp sftp = null;
 		try {
-			String host = "202.102.105.63";
+			String host = "202.102.105.62";
 			int port = 22;
 			String username = "root";
 			String password = "len@#$passw0rd";

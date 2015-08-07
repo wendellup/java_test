@@ -46,8 +46,6 @@ GET | 游戏详情页 | /api/v2/mobile/game_detail.json?terminal_id=1&game_id=50
  
 GET | 搜索接口 | /api/v2/mobile/search/result.json?terminal_id=383&keyword=%E4%BD%A0%E5%A6%B9&current_page=0&rows_of_page=20
  
-GET | 我的游戏接口 | /oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036120419052&fromer=10010107
- 
 GET | 搜索热词 | /api/v2/mobile/search/list_hot_word.json
 
 GET | 文件同步接口 | /api/v2/egame/efs/get_id.json?efs_id=500000&efs_type=0&num=10

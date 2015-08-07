@@ -1,6 +1,7 @@
 package test.client.cache;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,6 +29,7 @@ import cn.egame.interfaces.EnumType.GameStatus;
 import cn.egame.interfaces.EnumType.GameType;
 import cn.egame.interfaces.EnumType.MobileNetworkType;
 import cn.egame.interfaces.EnumType.SearchSortType;
+import cn.egame.interfaces.EnumType.SysParameterType;
 import cn.egame.interfaces.ck.EGameCacheKey;
 import cn.egame.interfaces.ck.EGameCacheKeyV2;
 import cn.egame.interfaces.gc.ExtraInfo;
@@ -54,6 +56,10 @@ public class ClientCallTest extends EGameClientBase {
 	
 	public ICacheClient getGameCache() {
         return SCacheClient.getInstance("egame");
+    }
+	
+	public ICacheClient getGameDataSupport() {
+        return SCacheClient.getInstance("egame_data_support");
     }
 	
 	private IGameService getGameService() throws RemoteException {
@@ -298,6 +304,39 @@ public class ClientCallTest extends EGameClientBase {
 		System.out.println(map);
 	}
 	
+	@Test
+    public void setGameHistoryByIMSI() throws RemoteException {
+		String key = "JAVA-getGameHistoryByIMSI:123";
+		List<Integer> gameIds = new ArrayList<Integer>();
+		gameIds.add(250792);
+		getGameDataSupport().set(key, gameIds);
+		
+	}
 	
+	@Test
+    public void setGameSimilarityByGameId() throws RemoteException {
+		String key = "JAVA-getGameSimilarityByGameId:250792";
+		
+		
+		
+		Map<Integer, Double> tempMap = new HashMap<Integer, Double>();
+		tempMap.put(235529, 0.1);
+		tempMap.put(229140, 0.2);
+		tempMap.put(229412, 0.7);
+		tempMap.put(230791, 1.7);
+		tempMap.put(230976, 1.0);
+		tempMap.put(231152, 3.7);
+		
+		getGameDataSupport().set(key, tempMap);
+	}
+	
+	@Test
+    public void setSysParameter() throws RemoteException {
+		SysParameterType type = SysParameterType.COMMENT_ADUIT_SWITCH;
+//		SysParameterType type = SysParameterType.COMMENT_MAIN_SWITCH;
+		String cacheKey = EGameCacheKeyV2.getSysParameter(type.value());
+        getGameCache().set(cacheKey, "0");;
+		
+	}
 	
 }

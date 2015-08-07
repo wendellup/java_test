@@ -23,7 +23,7 @@ import cn.egame.common.util.Utils;
 
 public class V7UrlTest {
 	
-	private static String accessTokenUrl = "http://192.168.251.52:8102/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
+	private static String accessTokenUrl = "http://192.168.251.51:8101/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
 //	private static String accessTokenUrl = "http://open.play.cn/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
 	private static String access_token = "";
 	// 6楼: , 202
@@ -59,8 +59,8 @@ public class V7UrlTest {
 //					"http://192.168.106.31:8102",
 //					"http://192.168.106.32:8102",
 //					//非重要,六楼接口服务器	
-//					"http://192.168.70.127:8102",
-//					"http://192.168.70.128:8102"
+//					"http://192.168.206.127:8102",
+//					"http://192.168.206.128:8102"
 					
 					//外网
 //					"http://202.102.39.23"

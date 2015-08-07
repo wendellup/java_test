@@ -16,7 +16,10 @@ import cn.egame.interfaces.fl.FileUtils;
 public class FileTest {
 	public static void main(String[] args) {
 		Utils.initLog4j();
-		System.out.println(Utils.getFileId("6399c276h1b8eeab", 0));
+		System.out.println(Utils.getFileId("47d5d513h221e8bd", 0));
+//		System.out.println(Utils.getFileId("http://cdn.play.cn/f/pkg/gm/000/002/558/36c8d67bh2709e28/2017_RM_2.5.3.2_Channel_2017.apk", 0));
+//		System.out.println(Utils.getFileId("http://cdn.play.cn/f/pkg/gm/006399c276h1b8eeab/_RM_2.5.3.2_Channel_2017.apk", 0));
+		
 	}
 	
 	
@@ -24,8 +27,9 @@ public class FileTest {
 	public void getFilePath(){
 		try {
 			Utils.initLog4j();
-			FileInfo fi = EGameClientV2.getInstance().getFileInfo(0, 0, 1691002);
-			System.out.println(ConstVar.HTTP_HOST+FileUtils.getFilePath(fi.getFileUsedType(), fi.getEFSId(), fi.getFileName()));
+//			FileInfo fi = EGameClientV2.getInstance().getFileInfo(0, 0, 2316049);
+//			System.out.println(ConstVar.HTTP_HOST+FileUtils.getFilePath(fi.getFileUsedType(), fi.getEFSId(), fi.getFileName()));
+			System.out.println(ConstVar.HTTP_HOST+FileUtils.getFilePath(FileUsedType.game, 2316049, "Boom_Beach-159-23540-kunlun-UC-release_1143871_135516a94b15.apk"));
 		} catch (ExceptionCommon e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
