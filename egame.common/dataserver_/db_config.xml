@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--dbId不能为0, 0为保留值有特殊含义,table_config.xml中dbId为0时，表示没有关联到具体的数据库 -->
+
+<servers>
+        <db id="-10" host="127.0.0.1" port="27017" dbname="gamelog" user="root" password="Fengyou.12#$" poolsize="100" isSlave="false" ></db>
+
+        <db id="-2" host="127.0.0.1" port="27017" dbname="stranger" user="root" password="Fengyou.12#$" poolsize="100" isSlave="false" ></db>
+
+        <!-- 索引库idx + 公共库common + 统计库 -->
+        <db id="-1" host="127.0.0.1" port="27017" dbname="common" user="root" password="Fengyou.12#$" poolsize="100" isSlave="false" ></db>
+        <db id="0" host="127.0.0.1" port="27017" dbname="dbidx" user="root" password="Fengyou.12#$" poolsize="100" isSlave="false" ></db>
+
+        <!-- 用户库snsgame -->
+        <db id="1" host="127.0.0.1" port="27017" dbname="snsgame" user="root" password="Fengyou.12#$" poolsize="100" isSlave="false" bottomValue=1,topValue></db>
+        <db id="1" host="127.0.0.1" port="27017" dbname="snsgame" user="root" password="Fengyou.12#$" poolsize="100" isSlave="false" ></db>
+</servers>

@@ -1,0 +1,13 @@
+#filesystem.egame=samba
+#filesystem.egame=nfs
+filesystem.egame=local
+filesystem.egame.samba.ip=192.168.10.14
+filesystem.egame.samba.port=445
+filesystem.egame.samba.username=dev
+filesystem.egame.samba.password=dev3e4e
+filesystem.egame.samba.timeout=300
+filesystem.egame.nfs.ip=192.168.10.63
+filesystem.egame.nfs.port=22
+filesystem.egame.nfs.username=root
+filesystem.egame.nfs.password=test$11
+filesystem.egame.nfs.timeout=300

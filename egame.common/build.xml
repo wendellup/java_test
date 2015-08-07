@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="egame.common" name="egame.common" basedir=".">
+	<property name="lib.dir" value="E:/svn/code/lib" />
+	<target name="egame.common">
+		<echo message="${java.home}" />
+		<property name="egame.common.dir" value="${basedir}/../egame.common" />
+		<delete dir="${egame.common.dir}/target" />
+		<mkdir dir="${egame.common.dir}/target" />
+		<mkdir dir="${egame.common.dir}/target/lib" />
+		<copy file="${egame.common.dir}/readme.txt" tofile="${egame.common.dir}/target/classes/readme.txt" overwrite="true" />
+		<copy file="${egame.common.dir}/history.txt" tofile="${egame.common.dir}/target/classes/history.txt" overwrite="true" />
+		<exec executable="svn" output="${egame.common.dir}/target/classes/version.txt" failonerror="false" failifexecutionfails="false">
+			<arg line="info" />
+		</exec>
+		
+		<copy file="${lib.dir}/log4j-1.2.16.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+		<copy file="${lib.dir}/java_memcached-release_2.5.3.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+		<copy file="${lib.dir}/cache-jedis-2.1.0.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+		<copy file="${lib.dir}/commons-pool-1.5.4.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+		<copy file="${lib.dir}/druid-0.2.8.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+		<copy file="${lib.dir}/mysql-connector-java-5.1.14-bin.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+		<copy file="${lib.dir}/mongo-java-driver-2.11.1.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+		<copy file="${lib.dir}/log4j-1.2.16.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+		<copy file="${lib.dir}/commons-net-2.2.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+		<copy file="${lib.dir}/efs/jcifs-1.3.17.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+		<copy file="${lib.dir}/efs/jsch-0.1.50.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+		<copy file="${lib.dir}/dom4j-2.0.0.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+		<copy file="${lib.dir}/cglib-nodep-2.2.jar" todir="${egame.common.dir}/target/lib" overwrite="true" />
+
+		
+		<path id="master.classpath">
+			<fileset dir="${egame.common.dir}/target/lib">
+				<include name="*.jar" />
+			</fileset>
+		</path>
+		
+		<pathconvert property="manifest.classpath" pathsep=" ">
+			<path refid="master.classpath" />
+			<mapper>
+				<chainedmapper>
+					<flattenmapper />
+					<globmapper from="*.jar" to="./*.jar" />
+				</chainedmapper>
+			</mapper>
+		</pathconvert>
+		
+		<javac srcdir="${egame.common.dir}/src" target="1.6" source="1.6" destdir="${egame.common.dir}/target/classes" includes="**/*.java" includeAntRuntime="no" debug="on">
+			<compilerarg value="-XDignore.symbol.file"/>   
+			<compilerarg line="-encoding UTF8 -Xlint:deprecation" />
+			<classpath refid="master.classpath" />
+		</javac>
+
+		<jar destfile="${egame.common.dir}/target/lib/egame.common.jar">
+			<manifest>
+				<attribute name="Main-Class" value="cn.egame.common.run.Server" />
+				<attribute name="Class-Path" value=". ${manifest.classpath}" />
+			</manifest>
+			<fileset dir="${egame.common.dir}/target/classes" />
+		</jar>
+		<copy file="${egame.common.dir}/target/lib/egame.common.jar" todir="${lib.dir}/ref/" overwrite="true" />
+	</target>
+</project>

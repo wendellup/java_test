@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--垂直分表规则  dbId=0时，表示没有关联到具体的数据库，则用 dbName + 水平分割规则  关联数据库 -->
+<tables>
+	<table name="User"  dbId="1" className="Test.mongoTest.User"/>
+</tables>
