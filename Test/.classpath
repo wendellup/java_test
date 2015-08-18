@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="config"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/tools/GetApkInfo.jar"/>
 	<classpathentry kind="lib" path="E:/svn/code/lib/tools/ant.jar"/>
@@ -53,5 +52,6 @@
 	<classpathentry kind="lib" path="E:/svn/code/lib/httpmime-4.3.6.jar"/>
 	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/egame.common"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

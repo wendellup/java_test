@@ -60,19 +60,14 @@ public class Main {
 			// 把一个普通参数和文件上传给下面这个地址 是一个servlet
 			HttpPost httpPost = new HttpPost(
 					"http://127.0.0.1:8080/Z_Test_Web/upload.action");
-//			HttpPost httpPost = new HttpPost(
-//					"http://127.0.0.1:8080/Z_Test_Web/CosUploadServlet");
 			
 			// 把文件转换成流对象FileBody
 			File file = new File(filePath);
 			FileBody bin = new FileBody(file);
-			/*StringBody uploadFileName = new StringBody("my.png",
-					ContentType.create("text/plain", Consts.UTF_8));*/
 			// 以浏览器兼容模式运行，防止文件名乱码。
 			HttpEntity reqEntity = MultipartEntityBuilder.create()
 					.setMode(HttpMultipartMode.BROWSER_COMPATIBLE)
 					.addPart("uploadFile", bin) // uploadFile对应服务端类的同名属性<File类型>
-					//.addPart("uploadFileName", uploadFileName)// uploadFileName对应服务端类的同名属性<String类型>
 					.setCharset(CharsetUtils.get("UTF-8")).build();
 
 			httpPost.setEntity(reqEntity);

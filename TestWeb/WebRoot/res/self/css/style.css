@@ -1,0 +1,784 @@
+a, a:hover {
+	color: #da1e27;
+}
+
+.navbar-brand img {
+	max-width: 270px;
+}
+
+/* Customize the.navbar */
+.nav ul {
+	position: relative;
+	left: 15%;
+	top: 40px;
+	max-width: 90%;
+}
+
+.container {
+	max-width: 960px;
+}
+
+.jumbotron {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.row {
+  padding: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.row h3, h2 {
+	text-align: center;
+}
+
+/*.row ul {
+	width: 85%;
+	margin: auto;
+}*/
+
+/*@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px)  {
+
+}*/
+
+
+/*.right li a:hover {
+	background: #DDA55A;
+}*/
+
+/*.row-container {
+	width: auto;
+}
+*/
+.list-centered {
+    margin: 0 auto;
+    width: -webkit-fit-content;
+       width: -moz-fit-content;
+            width: fit-content;
+}
+
+.list-centered li {
+    float: left;
+}
+
+.list-centered img {
+	width: 32px;
+	margin: 5px;
+}
+
+
+/* custimize footer  */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  /*margin: 0 auto -60px;*/
+  /* Pad bottom by footer height */
+  /*padding: 0 0 60px;*/
+  background: #ebeeed;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: auto;
+  background-color: black;
+}
+
+#footer p {
+	padding-top: 17px;
+}
+	
+#push-footer {
+    height: 25px;
+    background: #ebeeed;
+}
+
+
+/*  About us page  */
+/*.jumbotron {
+  text-align: center;
+  background-color: transparent;
+}*/
+
+.white-area {
+	background-color: white;
+	margin: 0px;
+}
+
+.jumbotron {
+	margin-top: 0px;
+	height: 300px;
+	background: url(../img/bg2_blur2.png) no-repeat center center;
+	text-align: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+
+  
+.work {
+	background: url(../img/work.jpeg) no-repeat center center;
+}
+
+.crew-hire {
+	background: url(../img/bg3_blur.png) no-repeat center center;
+}
+
+.audio-record {
+	background: url(../img/bg5_blur.png) no-repeat center center;	
+}
+
+.webcasting {
+	background: url(../img/bg_webcast_blur.png) no-repeat center center;
+}
+
+.jumbotron h2 {
+	color: white;
+}
+
+.jumbotron p {
+	color: white;
+}
+
+
+/* 
+fine orologio
+ */
+
+.clienti-titolo {
+	margin-top: 0px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/*.row .clienti*/
+
+#clients img{
+	display: block;
+	margin: auto;
+}
+
+.clienti {
+	background: #c7c9c8;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	margin: 0;
+	margin-right: 4px;    /* to adjust safari border issue */
+	border-bottom: solid 2px #c7c9c8;
+	border-right: solid 1px #c7c9c8;
+}
+
+.clienti .col-md-2 {
+	padding: 0;
+	border-top: solid 1px #c7c9c8;
+	border-left: solid 1px #c7c9c8;
+	overflow: hidden;
+}
+
+.pannello {
+	float: left;
+	width: 100%;
+	height: auto;
+	padding-bottom: 100%;
+	margin: 0;
+	position: relative;
+	font-size: .8em;
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+}
+
+/* -- make sure to declare a default for every property that you want animated -- */
+/* -- general styles, including Y axis rotation -- */
+
+
+.pannello .front {
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0;
+	z-index: 9;
+	width: inherit;
+	height: 100%;
+	background: #fff;
+	text-align: center;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+	/* -- transition is the magic sauce for animation -- */
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	transform-style: flat;
+}
+
+.pannello.flip .front {
+	z-index: 9;
+	border-color: #eee;
+	background: #d8dddc;
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+}
+
+.pannello .back {
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+	width: inherit;
+	height: 100%;
+	background: #424b51;
+	color: #fff;
+	text-align: center;
+	-webkit-transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-transform: rotateY(-180deg);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+	/* -- transition is the magic sauce for animation -- */
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.pannello.flip .back {
+	z-index: 10;
+	background: #da1e27;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+.pannello .front .pad {
+	width: 100%;
+	height: auto;
+}
+
+.pannello img {
+	width: 100%;
+	height: auto;
+}
+
+.pannello .back .pad {
+	padding-top: 30%
+}
+
+.pannello .back h4 {
+	margin-top: 20px;
+	letter-spacing: 0;
+	font-size: 14px;
+}
+
+.pannello .back p {
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 1.1em;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px)  {
+
+.pannello .back .pad {
+	padding-top: 20%
+}
+
+.pannello .back h4 {
+	margin-top: 0px;
+	letter-spacing: 0;
+	font-size: 10px;
+}
+
+.pannello .back p {
+	text-transform: uppercase;
+	font-size: 9px;
+	line-height: 1.1em;
+}
+
+}
+
+/* ==========================================================================
+   SERVICES
+   ========================================================================== */
+   
+.service_info {
+	/*margin-left: 0%;*/
+	background-color: white;
+}
+
+.graphicdesign-img-left {
+	float: left;
+	max-width: 100%;
+	margin: 20px 20px 20px 10px;
+}
+
+.graphicdesign-img-right {
+	float: right;
+	max-width: 100%;
+	margin: 20px 10px 20px 20px;
+}
+
+.info-right {
+	padding-top: 40px;
+}
+
+.info-left {
+	padding-top: 40px;
+	padding-left: 20px;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px)  {
+
+.graphicdesign-img-left {
+	float: left;
+	max-width: 100%;
+	padding-right: 20px;
+}
+
+
+.graphicdesign-img-right {
+	float: right;
+	max-width: 100%;
+	padding-left: 20px;
+}
+
+.info-right {
+	padding: 10px;
+}
+
+.info-left {
+	padding: 10px;
+}
+
+}
+
+
+/* ==========================================================================
+   Work
+   ========================================================================== */
+
+.play {
+   position: absolute;
+   display: block;
+   background: transparent url(../img/play_button.png) center center;
+   height: 42px;
+   width: 42px;
+   top: 85px;
+   left: 138px;
+}
+
+.play:hover {
+	opacity: 0.8;
+}
+.row-featured {
+	/*padding-left: 10px;*/
+	/*padding-right: 10px;*/
+	background-color: white;
+/*	width: 960px;
+	height: 540px;*/	
+}
+
+#feature-video {
+	width: 960px;
+	height: 540px;
+}
+
+.featured-description {
+	padding: 20px;
+}
+
+.media-img1 img {
+	width: 290px;
+	height: auto;	
+}
+
+.media-img2 img {
+	width: 290px;
+	height: auto;
+}
+
+.description {
+	height: 180px;
+	padding: 10px;
+	background-color: white;
+}
+
+.description h5 {
+	color: #da1e27;
+}
+   
+ @media only screen 
+ and (min-device-width : 320px) 
+ and (max-device-width : 480px)  {
+ .work {
+ 	margin-top: 20px;
+ }
+
+ .row-media {
+ 	margin-bottom: 20px;
+ }
+ 
+ .work-media {
+ 	height: auto;
+ 	padding-bottom: 10px;
+ }
+ 
+ .media-img1 img {
+ 	max-width: 100%;
+ 	height: auto;	
+ }
+ 
+ .media-img2 img {
+ 	max-width: 100%;
+ 	height: auto;
+ }
+ 
+ .description {
+ 	height: auto;
+ 	background-color: white;
+ }
+  
+ #feature-video {
+ 	width: 100%;
+ 	height:auto;
+ }
+ 
+ }
+ 
+
+
+/* ==========================================================================
+   CREW HIRES
+   ========================================================================== */
+.crew-info {
+	/*margin-left: 0%;*/
+	background-color: white;
+	margin: 0px;
+	padding: 20px;
+	/*height: 200px;*/
+}
+
+.highlight {
+	/*color: #da1e27;*/
+	margin-top: 20px;
+}
+
+.red {
+	color: #da1e27;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px)  {
+.crew-hire {
+	margin-top: 20px;
+	height: auto;
+}
+
+.crew-info {
+	/*margin-left: 0%;*/
+	background-color: white;
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	width: 100%;
+}
+
+}
+
+/* ==========================================================================
+   Audio Page
+   ========================================================================== */
+   
+.audio-info {
+	/*margin-left: 0%;*/
+	background-color: white;
+	margin: 0px;
+	padding: 20px;
+	/*height: 200px;*/
+}
+
+.super-big {
+	letter-spacing: -5px;
+	font-size: 100px;
+	line-height: 80px;
+}
+
+/* ==========================================================================
+   Webcasting Page
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Contact US
+   ========================================================================== */
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px)  {
+.contact_us {
+	padding-top: 20px;
+	height: 280px;
+}
+
+#push-map {
+	height: 20px;
+}
+
+.hide {
+	display: none;
+}
+}
+
+
+.contact_us {
+	height: 300px;
+	margin-top: 0px;
+	padding: 3px;
+}
+
+#map_canvas {
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    width: 100%;
+	/*position:absolute;*/
+}
+
+.contact {
+	background-color: white;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.sec2 .left {
+	float: left;
+	width: 60%;
+	margin-top: 25px;
+}
+
+.sec2 .left ul li {
+	padding-bottom: 20px;
+}
+
+.sec2 .right {
+	position: relative;
+	float: right;
+	padding: 25px 15px 10px 40px;
+	width: 40%;
+}
+
+.right ul{
+	overflow: hidden;
+	margin: 10px 0 15px;
+}
+
+.right li a {
+	/*background: #DFDFDF;*/
+	width: 42px;
+	height: 42px;
+	float: left;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 10px 0 0;
+}
+
+/*.right li a:hover {
+	background: #DDA55A;
+}*/
+
+ .right li img {
+	width: 42px;	
+	margin: 0 0 0 0;
+}
+ .right li img:hover {
+	opacity: 1;
+}
+
+.gform_wrapper .gform_body .gform_fields .gfield input[type=text],
+.gform_wrapper .gform_body .gform_fields .gfield input[type=email],
+.gform_wrapper .gform_body .gform_fields .gfield input[type=tel],
+.gform_wrapper .gform_body .gform_fields .gfield input[type=url],
+.gform_wrapper .gform_body .gform_fields .gfield input[type=number],
+.gform_wrapper .gform_body .gform_fields .gfield input[type=password],
+.gform_wrapper .gform_body .gform_fields .gfield select,
+.gform_wrapper .gform_body .gform_fields .gfield textarea {
+background: #DFDFDF;
+border: none;
+font-size: 24px;
+padding: 10px 15px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+transition: background .25s ease-in-out;
+-moz-transition: background .25s ease-in-out;
+-webkit-transition: background .25s ease-in-out;
+width: 98%;
+font-weight: normal;
+}
+
+
+/*.page-id-26 .gform_wrapper .gform_body .gform_fields .gfield input[type=text] {
+background: #FFF;
+}
+.gform_wrapper .gform_body .gform_fields .gfield select {
+font-size: 16px;
+background: #FFF;
+border: 1px solid #C6C6C6;
+}*/
+.gform_wrapper .gform_body .gform_fields .gfield input[type=text]:focus,
+.gform_wrapper .gform_body .gform_fields .gfield input[type=email]:focus,
+.gform_wrapper .gform_body .gform_fields .gfield input[type=tel]:focus,
+.gform_wrapper .gform_body .gform_fields .gfield input[type=url]:focus,
+.gform_wrapper .gform_body .gform_fields .gfield input[type=number]:focus,
+.gform_wrapper .gform_body .gform_fields .gfield input[type=password]:focus,
+.gform_wrapper .gform_body .gform_fields .gfield select:focus,
+.gform_wrapper .gform_body .gform_fields .gfield textarea:focus {
+background: #DCE4E6;
+}
+.gform_wrapper .ginput_complex label,
+.gform_wrapper .gfield_time_hour label,
+.gform_wrapper .gfield_time_minute label,
+.gform_wrapper .gfield_date_month label,
+.gform_wrapper .gfield_date_day label,
+.gform_wrapper .gfield_date_year label,
+.gform_wrapper .instruction {
+
+}
+
+.gform_wrapper .gform_footer {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+}
+
+/*.content .gform_wrapper .top_label .gfield_label, .questions .gform_wrapper .top_label .gfield_label  {
+	margin: 10px 0 5px 0;
+	font-weight: normal;
+}*/
+
+
+
+@media screen and (max-width: 1200px) {
+ .sec2 .left {
+	margin: 0;
+}
+}
+
+@media screen and (max-width: 650px) {
+ .sec2 .left {
+	margin: 0;
+	padding: 20px 0 20px;
+	width: 98%;
+}
+.sec2 .right {
+	float: left;
+	margin-top: 20px;
+	margin-right: 0;
+	margin-bottom: 20px;
+	width: 92%;
+}
+}
+
+@media screen and (max-width: 500px) {
+ .sec2 .left {
+	width: 92%;
+}
+
+}
+
+/*  404 page */
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* media query for iOS devices */
+
+/* media query for iPhone */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px)  {
+.navbar-brand img {
+	max-width: 250px;
+	margin-right: 10px;
+	}
+
+.nav ul {
+	position: relative;
+	left: 20px;
+	top: 0px;
+	width: auto;
+}
+
+.mobile-hidden {
+	display: none;
+}
+}
+
+
+/* media query for iPad */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 2) { 
+	
+.navbar-brand img {
+		max-width: 240px;
+	}
+	
+.nav ul {
+		position: relative;
+		right: 10px;
+		top: 20px;
+		max-width: 80%;
+	}
+	
+.row ul {
+	width: 100%;
+	margin: auto;
+	padding-left: 38%;
+}
+
+#push-footer {
+    height: 50px;
+}
+
+}

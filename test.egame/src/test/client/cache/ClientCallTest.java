@@ -26,6 +26,7 @@ import cn.egame.interfaces.EnumType;
 import cn.egame.interfaces.EnumType.AppParameterParamType;
 import cn.egame.interfaces.EnumType.DateType;
 import cn.egame.interfaces.EnumType.GameStatus;
+import cn.egame.interfaces.EnumType.GameTagType;
 import cn.egame.interfaces.EnumType.GameType;
 import cn.egame.interfaces.EnumType.MobileNetworkType;
 import cn.egame.interfaces.EnumType.SearchSortType;
@@ -45,14 +46,21 @@ public class ClientCallTest extends EGameClientBase {
 	public void pageGameIdByChannelId() throws RemoteException {
 		PageData pageData = EGameClientV2.getInstance().pageGameIdByChannelId(
 				0, 0, GameType.mobile, 1, 701, 0, 20,
-				SearchSortType.lookup(1105),null);
-		int total = pageData.getTotal();
-		List<Integer> ids = (List<Integer>) pageData.getContent();
-		if (ids != null) {
-			System.out.println(ids);
-		}
+				SearchSortType.downCountWeek,new ExtraInfo());
+//		int total = pageData.getTotal();
+//		List<Integer> ids = (List<Integer>) pageData.getContent();
+//		if (ids != null) {
+//			System.out.println(ids);
+//		}
 
 	}
+	
+	@Test
+	public void testList() throws RemoteException{
+		List<Integer> notFirstTagIds = EGameClientV2.getInstance().listGameTagIdByGameTagType(0, 0, GameTagType.searchTag);
+		System.out.println(notFirstTagIds);
+	}
+	
 	
 	public ICacheClient getGameCache() {
         return SCacheClient.getInstance("egame");
@@ -69,7 +77,6 @@ public class ClientCallTest extends EGameClientBase {
 	private IGameServiceExt getGameServiceExt() throws RemoteException {
         return (IGameServiceExt) super.getService("game_service_ext");
     }
-	
 	@Test
     public void getGameInfoById() throws RemoteException {
 		GameInfo gameInfo = null;
@@ -86,7 +93,9 @@ public class ClientCallTest extends EGameClientBase {
             throw ex;
         }
         
-        System.out.println(gameInfo.getGameStatus().value());
+//        System.out.println(gameInfo.getGameStatus().value());
+        System.out.println(gameInfo);
+        System.out.println(gameInfo.getIsFreeInstall());
     }
 	
 	@Test
@@ -105,7 +114,9 @@ public class ClientCallTest extends EGameClientBase {
             throw ex;
         }
         
-        gameInfo.setGameStatus(GameStatus.offLine);
+//        gameInfo.setGameStatus(GameStatus.offLine);
+//        gameInfo.setIsFreeInstall(10);
+        gameInfo.setGameName(gameInfo.getGameName()+"xx");
         getGameService().setGameInfo(0, 0, gameInfo);
     }
 	
@@ -337,6 +348,19 @@ public class ClientCallTest extends EGameClientBase {
 		String cacheKey = EGameCacheKeyV2.getSysParameter(type.value());
         getGameCache().set(cacheKey, "0");;
 		
+	}
+	
+	@Test
+    public void getInfo() throws RemoteException {
+		String key = "similarityMatrix-gId:"+240135;
+        List<Integer> gameIds = (List<Integer>) getGameCache().get(key);;
+        System.out.println(gameIds);
+        
+        String key2 = "similarityMatrix-gId:"+5016991;
+        List<Integer> gameIds2 = (List<Integer>) getGameCache().get(key2);;
+        System.out.println(gameIds2);
+        
+        
 	}
 	
 }

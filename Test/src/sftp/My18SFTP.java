@@ -33,6 +33,7 @@ public class My18SFTP {
 	
 	public static void main(String[] args) {
 		Utils.initLog4j();
+		
 		My18SFTP sf = new My18SFTP();
 		ChannelSftp sftp = null;
 		try {
