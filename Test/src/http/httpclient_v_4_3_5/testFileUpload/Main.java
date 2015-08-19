@@ -35,10 +35,10 @@ public class Main {
 	 */
 	public static void main(String[] args) throws ClassNotFoundException {
 		try {
-			for(int i=0; i<10; i++){
+//			for(int i=0; i<10; i++){
 				postFile();
 				
-			}
+//			}
 		} catch (ParseException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -59,7 +59,7 @@ public class Main {
 			String filePath = new String("F:\\安装包201441\\test.7z");
 			// 把一个普通参数和文件上传给下面这个地址 是一个servlet
 			HttpPost httpPost = new HttpPost(
-					"http://127.0.0.1:8080/Z_Test_Web/upload.action");
+					"http://127.0.0.1:8080/TestWeb/upload.action");
 			
 			// 把文件转换成流对象FileBody
 			File file = new File(filePath);
