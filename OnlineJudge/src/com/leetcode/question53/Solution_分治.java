@@ -1,6 +1,6 @@
 package com.leetcode.question53;
 
-public class Solution {
+public class Solution_分治 {
 	public int maxSubArray(int[] A) {
         int[] sum = new int[A.length];
         
