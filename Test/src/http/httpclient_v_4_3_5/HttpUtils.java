@@ -24,6 +24,12 @@ public class HttpUtils {
 	
 	private static Logger LOG = Logger.getLogger(HttpUtils.class);
 	
+	public static void main(String[] args) {
+		String url = "http://127.0.0.1:8080/api/v2/mobile/memory_msg.json?terminal_id=22660&advert_game_id=1&client_id=8888015";
+		
+		httpGet(url);
+	}
+	
 	public static String httpGet(String url) {
 		CloseableHttpClient httpclient = null;
 		HttpGet httpGet = null;
@@ -31,6 +37,7 @@ public class HttpUtils {
 		try {
 		    httpclient = HttpClients.createDefault();
 		    httpGet = new HttpGet(url);
+		    httpGet.setHeader("x-forwarded-for", " 124.160.75.205");   
 			HttpResponse response = httpclient.execute(httpGet);
 			// System.out.println("-------------------------------------");
 			// System.out.println(response.getStatusLine());
@@ -40,7 +47,7 @@ public class HttpUtils {
 					&& entity.getContentType() != null
 					) {
 				returnStr = EntityUtils.toString(entity);
-				;
+				System.out.println(returnStr);
 				EntityUtils.consume(entity);
 			}
 		} catch (Exception ex) {
