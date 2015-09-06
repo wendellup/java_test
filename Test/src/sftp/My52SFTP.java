@@ -61,8 +61,18 @@ public class My52SFTP {
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.interfaces-2.0.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client-2.0.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.interfaces-2.0.jar", sftp);
-			
 			logger.info("open目录下jar包替换成功");
+			
+			String messageCenterDir = "/opt/app/egame/mobile/egame.message.center/lib/";
+			sf.upload(messageCenterDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
+			sf.upload(messageCenterDir, "E:\\svn\\code\\lib\\ref\\egame.message.center.jar", sftp);
+			logger.info("消息中心目录下jar包替换成功");
+			
+			String clockDir = "/opt/app/egame/egame.mobile.extraction/lib/";
+			sf.upload(clockDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
+			sf.upload(clockDir, "E:\\svn\\code\\lib\\ref\\egame.mobile.extraction.jar", sftp);
+			sf.upload(clockDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
+			logger.info("定时任务目录下jar包替换成功");
 			
 		} catch (Exception e) {
 			logger.error("", e);

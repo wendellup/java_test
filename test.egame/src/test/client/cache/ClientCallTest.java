@@ -1,11 +1,16 @@
 package test.client.cache;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.junit.Test;
 
 import cn.egame.client.EGameClientExt;
@@ -17,6 +22,7 @@ import cn.egame.common.cache.SCacheClient;
 import cn.egame.common.client.EGameClientBase;
 import cn.egame.common.exception.ExceptionCommonBase;
 import cn.egame.common.model.PageData;
+import cn.egame.common.util.Utils;
 import cn.egame.ext.EnumTypeExt.AdvertType;
 import cn.egame.ext.gc.HallFileTerminalLinkInfo;
 import cn.egame.ext.gc.IGameServiceExt;
@@ -25,7 +31,6 @@ import cn.egame.ext.ng.OnlineGameServiceInfo;
 import cn.egame.interfaces.EnumType;
 import cn.egame.interfaces.EnumType.AppParameterParamType;
 import cn.egame.interfaces.EnumType.DateType;
-import cn.egame.interfaces.EnumType.GameStatus;
 import cn.egame.interfaces.EnumType.GameTagType;
 import cn.egame.interfaces.EnumType.GameType;
 import cn.egame.interfaces.EnumType.MobileNetworkType;
@@ -38,10 +43,14 @@ import cn.egame.interfaces.gc.GameFileInfo;
 import cn.egame.interfaces.gc.GameInfo;
 import cn.egame.interfaces.gc.IGameService;
 import cn.egame.interfaces.pu.AppParameter;
+import cn.egame.message.MessageInfo;
 import cn.egame.search.client.EGameGameSearchClient;
 import cn.egame.search.client.biz.EGameGameSearchClientBiz;
 
 public class ClientCallTest extends EGameClientBase {
+	
+	private static Logger logger = Logger.getLogger(ClientCallTest.class);
+	
 	@Test
 	public void pageGameIdByChannelId() throws RemoteException {
 		PageData pageData = EGameClientV2.getInstance().pageGameIdByChannelId(
@@ -64,6 +73,10 @@ public class ClientCallTest extends EGameClientBase {
 	
 	public ICacheClient getGameCache() {
         return SCacheClient.getInstance("egame");
+    }
+	
+	public ICacheClient getGameListCache() {
+        return SCacheClient.getInstance("egame_list");
     }
 	
 	public ICacheClient getGameDataSupport() {
@@ -325,10 +338,18 @@ public class ClientCallTest extends EGameClientBase {
 	}
 	
 	@Test
+    public void listCommentReplyMsgByUserId() throws IOException {
+		String key = "JAVA-listCommentReplyMsgByUserId:978748";
+		List<MessageInfo> messageInfos = (List<MessageInfo>) getGameListCache().get(key);
+		System.out.println(messageInfos.size());
+		System.out.println(Utils.objectWrite(messageInfos).length);
+		
+		
+	}
+	
+	@Test
     public void setGameSimilarityByGameId() throws RemoteException {
 		String key = "JAVA-getGameSimilarityByGameId:250792";
-		
-		
 		
 		Map<Integer, Double> tempMap = new HashMap<Integer, Double>();
 		tempMap.put(235529, 0.1);
@@ -347,20 +368,26 @@ public class ClientCallTest extends EGameClientBase {
 //		SysParameterType type = SysParameterType.COMMENT_MAIN_SWITCH;
 		String cacheKey = EGameCacheKeyV2.getSysParameter(type.value());
         getGameCache().set(cacheKey, "0");;
-		
 	}
 	
 	@Test
     public void getInfo() throws RemoteException {
-		String key = "similarityMatrix-gId:"+240135;
-        List<Integer> gameIds = (List<Integer>) getGameCache().get(key);;
-        System.out.println(gameIds);
-        
-        String key2 = "similarityMatrix-gId:"+5016991;
-        List<Integer> gameIds2 = (List<Integer>) getGameCache().get(key2);;
-        System.out.println(gameIds2);
-        
-        
+		PrintWriter pw = null;
+		try {
+			pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream("E:\\git_github\\wendellup\\java_test\\test.egame\\out.txt"), "utf-8"));
+			for(int gId=1; gId<5057868; gId++){
+				pw.println(gId);
+				System.out.println(gId);
+				List<Integer> gameIds = EGameClientV2.getInstance().listSimilarityGidsByGameId(0, 0, gId);
+				if(gameIds!=null && gameIds.size()==1){
+				}
+			}
+		}catch( Exception e){
+			logger.error("", e);
+		}finally{
+			pw.flush();
+			pw.close();
+		}
 	}
 	
 }

@@ -1,4 +1,6 @@
-package http.httpclient_v_4_3_5;
+package http.httpclient_v_4_3_5.testV7;
+
+import http.httpclient_v_4_3_5.HttpUtils;
 
 import java.io.Closeable;
 import java.io.IOException;

@@ -1,7 +1,7 @@
 package http.urlconnection.testV7;
 
 import http.httpclient_v_4_3_5.HttpUtils;
-import http.httpclient_v_4_3_5.V7SendComment;
+import http.httpclient_v_4_3_5.testV7.V7SendComment;
 
 import java.io.IOException;
 import java.net.URLEncoder;

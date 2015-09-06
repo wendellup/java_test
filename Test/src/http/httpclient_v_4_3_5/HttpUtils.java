@@ -25,7 +25,7 @@ public class HttpUtils {
 	private static Logger LOG = Logger.getLogger(HttpUtils.class);
 	
 	public static void main(String[] args) {
-		String url = "http://127.0.0.1:8080/api/v2/mobile/memory_msg.json?terminal_id=22660&advert_game_id=1&client_id=8888015";
+		String url = "http://127.0.0.1:8080/api/v2/mobile/memory_msg.json?terminal_id=100&advert_topic_id=1&advert_game_id=1&advert_web_id=1&advert_notify_id=1&advert_sns_msg_id=1&advert_other_tmp_id=1&imsi=460036660132243&client_id=8888007";
 		
 		httpGet(url);
 	}
@@ -37,7 +37,7 @@ public class HttpUtils {
 		try {
 		    httpclient = HttpClients.createDefault();
 		    httpGet = new HttpGet(url);
-		    httpGet.setHeader("x-forwarded-for", " 124.160.75.205");   
+//		    httpGet.setHeader("x-forwarded-for", " 124.160.75.205");   
 			HttpResponse response = httpclient.execute(httpGet);
 			// System.out.println("-------------------------------------");
 			// System.out.println(response.getStatusLine());
