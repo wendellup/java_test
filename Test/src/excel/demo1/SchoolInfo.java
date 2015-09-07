@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 public class SchoolInfo implements Serializable{
 
-	private static final long serialVersionUID = 6064620425250496073L;
-	
 	private String unitId;
 	private String cityName;
 	private String countyName;
