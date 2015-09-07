@@ -21,7 +21,10 @@ public class V7MyGameListTest {
 	private static int Cnt = 0;
 
 	public static void main(String[] args) throws InterruptedException {
-		main_3(0);
+		while(true){
+			main_3(0);
+			
+		}
 //		int times = 0;
 		// while(true){
 		// times++;
