@@ -15,16 +15,15 @@ import cn.egame.interfaces.fl.FileUsedType;
 public class UploadTest {
 	private static Logger logger = Logger.getLogger(UploadTest.class);
 	
-	
 	@Test
 	public void uploadTest(){
     	try {
     		/** 文件上传 */
     		Utils.initLog4j();
     		
-    		InputStream inputStream = new FileInputStream(new File("F:\\test1\\250378_0.apk"));
+    		InputStream inputStream = new FileInputStream(new File("C:\\Users\\yuchao\\Desktop\\3cbdd151h2b86ffd.zip"));
     		System.out.println(inputStream.available());
-    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.GAME, 0, 0, "250378_0.apk", false);
+    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.GAME, 0, 0, "EPSH_100.zip", false);
     		logger.info("efsId:"+efsId);
 		} catch (Exception e) {
 			logger.error("", e);
@@ -116,7 +115,7 @@ public class UploadTest {
     	try {
     		/** 文件上传 */
     		Utils.initLog4j();
-    		File file = new File("E:\\pic\\4de0ce7atw1eauybk03mgj20ez0k0wf6.jpg");
+    		File file = new File("C:\\Users\\yuchao\\Desktop\\EPSH_100.zip");
     		InputStream inputStream = new FileInputStream(file);
     		System.out.println(inputStream.available());
 //    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.game_photo.value(),

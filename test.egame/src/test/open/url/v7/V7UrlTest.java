@@ -23,8 +23,8 @@ import cn.egame.common.util.Utils;
 
 public class V7UrlTest {
 	
-	private static String accessTokenUrl = "http://192.168.251.51:8101/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
-//	private static String accessTokenUrl = "http://open.play.cn/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
+//	private static String accessTokenUrl = "http://192.168.251.51:8101/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
+	private static String accessTokenUrl = "http://open.play.cn/oauth/access_token?grant_type=password&client_id=8888007&client_secret=5da590de538da6a59c723b6cb092b210&imsi=460036580106912&fromer=10010107";
 	private static String access_token = "";
 	// 6楼: , 202
 	
@@ -35,21 +35,21 @@ public class V7UrlTest {
 //					"http://192.168.251.17:8102"
 //					"http://192.168.251.52:8102"
 //					"http://192.168.251.53:8102"
-					"http://202.102.105.62:8102"
+//					"http://202.102.105.62:8102"
 //					"http://202.102.105.63:8102"
 //					"http://127.0.0.1:8080"
 					/*
+					 */
 					//重要,三楼接口服务器
 					  "http://192.168.106.25:8102",
 					"http://192.168.106.26:8102",
 					"http://192.168.106.27:8102",
 					"http://192.168.106.28:8102",
 					//重要,六楼接口服务器		
-					 */
-//					"http://192.168.70.123:8102",
-//					"http://192.168.70.124:8102",
-//					"http://192.168.70.125:8102",
-//					"http://192.168.70.126:8102",
+					"http://192.168.70.123:8102",
+					"http://192.168.70.124:8102",
+					"http://192.168.70.125:8102",
+					"http://192.168.70.126:8102",
 					
 //					"http://61.160.129.2",
 					
@@ -57,11 +57,13 @@ public class V7UrlTest {
 //					"http://192.168.106.31:8102",
 //					"http://192.168.106.32:8102",
 //					//非重要,六楼接口服务器	
-//					"http://192.168.206.127:8102",
-//					"http://192.168.206.128:8102"
+//					"http://192.168.206.27:8102",
+//					"http://192.168.206.28:8102"
 					
 					//外网
+					//6楼
 //					"http://202.102.39.23"
+					//3楼
 //					,"http://180.96.49.16"
 //					, "http://180.96.49.15"
 					
@@ -71,6 +73,13 @@ public class V7UrlTest {
 //					"http://open.play.cn"
 					
 //					"http://192.168.106.41:8102"
+					
+					
+//					rmi.message_center_service_url=rmi://192.168.207.41:819/IMessage
+					//三楼
+//					192.168.107.25:819
+					//六楼
+//					192.168.207.41:819
 					};
 			V7UrlTest v7UrlTest = new V7UrlTest(prefixUrls);
 //			/*

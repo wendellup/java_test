@@ -43,7 +43,12 @@ import cn.egame.interfaces.gc.GameFileInfo;
 import cn.egame.interfaces.gc.GameInfo;
 import cn.egame.interfaces.gc.IGameService;
 import cn.egame.interfaces.pu.AppParameter;
+import cn.egame.message.MessageEnum.MessageAction;
+import cn.egame.message.MessageEnum.MsgBusinessType;
+import cn.egame.message.MessageEnum.UserMessageType;
 import cn.egame.message.MessageInfo;
+import cn.egame.message.UserMessageEvent;
+import cn.egame.message.client.MessageClient;
 import cn.egame.search.client.EGameGameSearchClient;
 import cn.egame.search.client.biz.EGameGameSearchClientBiz;
 
@@ -257,23 +262,18 @@ public class ClientCallTest extends EGameClientBase {
 	
 	
 	public static void main(String[] args){
-		System.out.println("main in ClientCallTest...");
-//		try {
-//			searchByName();
-//		} catch (RemoteException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		GameFileInfo gameFileInfo;
-//		try {
-//			gameFileInfo = EGameClientV2.getInstance().getGameFileInfoById(0, 0, 5003729);
-//			if(gameFileInfo!=null){
-//				System.out.println(gameFileInfo.getgId());
-//			}
-//		} catch (RemoteException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		Utils.initLog4j();
+		logger.info("111");
+		MessageInfo messageInfo = new MessageInfo();
+        long longMillis = System.currentTimeMillis()-1000*30;
+        messageInfo.setInsertTime(longMillis);
+        messageInfo.setEffectBeginTime(longMillis);
+        messageInfo.setBusinessId(new Long(11).intValue());
+        messageInfo.setMsgBusinessType(MsgBusinessType.commentReplyMsg.getValue());
+        UserMessageEvent userMessageEvent = new UserMessageEvent(messageInfo, 611, MessageAction.add);
+        MessageClient.getInstance().pushMessageEvent(0, 4, userMessageEvent);
+        logger.info("111");
+        System.exit(1);
 	}
 
 	@Test
@@ -349,17 +349,22 @@ public class ClientCallTest extends EGameClientBase {
 	
 	@Test
     public void setGameSimilarityByGameId() throws RemoteException {
-		String key = "JAVA-getGameSimilarityByGameId:250792";
+		String key = "JAVA-listSimilarityGidsByGameId:1";
 		
-		Map<Integer, Double> tempMap = new HashMap<Integer, Double>();
-		tempMap.put(235529, 0.1);
-		tempMap.put(229140, 0.2);
-		tempMap.put(229412, 0.7);
-		tempMap.put(230791, 1.7);
-		tempMap.put(230976, 1.0);
-		tempMap.put(231152, 3.7);
+		List<Integer> ids = new ArrayList<Integer>();
+//		ids.add(1);
+//		ids.add(2);
+		String str = "";
+		getGameListCache().set(key, str);
+	}
+	
+	@Test
+    public void getGameSimilarityByGameId() throws RemoteException {
+//		String key = "JAVA-getGameSimilarityByGameId:5010177";
+		String key = "JAVA-listSimilarityGidsByGameId:1";
 		
-		getGameDataSupport().set(key, tempMap);
+		
+		System.out.println(getGameDataSupport().get(key));;
 	}
 	
 	@Test
@@ -390,4 +395,64 @@ public class ClientCallTest extends EGameClientBase {
 		}
 	}
 	
+	@Test
+	public void getGameInfo(){
+		
+		try {
+			GameInfo gameInfo = EGameClientBiz.getInstance().getGameInfoByIdAndStatus(8888043, 0L,730011, null);
+			System.out.println(gameInfo);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	@Test
+	public void sendMsg(){
+		/*
+		logger.info("111");
+		MessageInfo messageInfo = new MessageInfo();
+        long longMillis = System.currentTimeMillis()-1000*30;
+        messageInfo.setInsertTime(longMillis);
+        messageInfo.setEffectBeginTime(longMillis);
+        messageInfo.setBusinessId(new Long(11).intValue());
+        messageInfo.setMsgBusinessType(MsgBusinessType.commentReplyMsg.getValue());
+        UserMessageEvent userMessageEvent = new UserMessageEvent(messageInfo, 2, MessageAction.add);
+        MessageClient.getInstance().pushMessageEvent(0, 2, userMessageEvent);
+        logger.info("111");
+        */
+		
+		Utils.initLog4j();
+		logger.info("111");
+		MessageInfo messageInfo = new MessageInfo();
+        long longMillis = System.currentTimeMillis()-1000*30;
+        messageInfo.setInsertTime(longMillis);
+        messageInfo.setEffectBeginTime(longMillis);
+        messageInfo.setBusinessId(new Long(11).intValue());
+        messageInfo.setMsgBusinessType(MsgBusinessType.commentTopMsg.getValue());
+        UserMessageEvent userMessageEvent = new UserMessageEvent(messageInfo, 811, MessageAction.add);
+        MessageClient.getInstance().pushMessageEvent(0, 4, userMessageEvent);
+        logger.info("111");
+        try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+        
+	}
+	
+	@Test
+	public void getMsg(){
+//		PageData pageData = MessageClient.getInstance().pageMessageInfoByKey(0, 2,
+//                2 + "", UserMessageType.userSysMessage.getValue(), 0, 50);
+		PageData pageData = MessageClient.getInstance().pageMessageInfoByKey(0, 2,
+                61 + "", UserMessageType.userCommentReply.getValue(), 0, 50);
+		
+		if (pageData != null && pageData.getContent() != null && pageData.getContent() instanceof List) {
+            List<MessageInfo> messageInfos = (List<MessageInfo>) pageData.getContent();
+            for (MessageInfo mI : messageInfos) {
+            	System.out.println(mI.getBusinessId());
+            }
+		}
+	}
 }
