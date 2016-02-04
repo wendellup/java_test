@@ -24,6 +24,7 @@ import cn.egame.common.exception.ExceptionCommonBase;
 import cn.egame.common.model.PageData;
 import cn.egame.common.util.Utils;
 import cn.egame.ext.EnumTypeExt.AdvertType;
+import cn.egame.ext.flow.FlowChannelInfo;
 import cn.egame.ext.gc.HallFileTerminalLinkInfo;
 import cn.egame.ext.gc.IGameServiceExt;
 import cn.egame.ext.me.Memory;
@@ -55,6 +56,18 @@ import cn.egame.search.client.biz.EGameGameSearchClientBiz;
 public class ClientCallTest extends EGameClientBase {
 	
 	private static Logger logger = Logger.getLogger(ClientCallTest.class);
+	
+	private ICacheClient getFlowCache() {
+        return SCacheClient.getInstance("flow");
+    }
+	
+	@Test
+	public void listAllGifts(){
+		String cacheKey = EGameCacheKeyV2.listAllGifts();
+        List<Integer> giftIds = getCacheList().getListInt(cacheKey);
+        System.out.println("giftIds:"+giftIds);
+        
+	}
 	
 	@Test
 	public void pageGameIdByChannelId() throws RemoteException {
@@ -116,6 +129,14 @@ public class ClientCallTest extends EGameClientBase {
         System.out.println(gameInfo.getIsFreeInstall());
     }
 	
+	
+	
+	@Test
+    public void setCheckTrafficOrder() throws RemoteException {
+		String cacheKey = "JAVA-checkTrafficOrder:700750-15366189928-32-300509028034";
+//        getGameService().setGameInfo(0, 0, gameInfo);
+        getGameCache().set(cacheKey, "success", 60);
+    }
 	@Test
     public void setGameInfoById() throws RemoteException {
 		GameInfo gameInfo = null;
@@ -141,6 +162,14 @@ public class ClientCallTest extends EGameClientBase {
 	public ICacheClient getCacheList() {
         return SCacheClient.getInstance("egame_list");
     }
+	
+	@Test
+	public void getParameterAppInfo(){
+		// 先从缓存中取数据，如果没有去数据库中的
+        String key = EGameCacheKey.getAppParameterById(701);
+        AppParameter appParameterInfo = getGameCache().getT(AppParameter.class, key);
+        System.out.println(appParameterInfo);
+	}
 	
 	@Test
     public void listGIdBySortType() throws RemoteException {
@@ -261,7 +290,7 @@ public class ClientCallTest extends EGameClientBase {
 	}
 	
 	
-	public static void main(String[] args){
+	public static void _main(String[] args){
 		Utils.initLog4j();
 		logger.info("111");
 		MessageInfo messageInfo = new MessageInfo();
@@ -397,7 +426,6 @@ public class ClientCallTest extends EGameClientBase {
 	
 	@Test
 	public void getGameInfo(){
-		
 		try {
 			GameInfo gameInfo = EGameClientBiz.getInstance().getGameInfoByIdAndStatus(8888043, 0L,730011, null);
 			System.out.println(gameInfo);
@@ -405,7 +433,6 @@ public class ClientCallTest extends EGameClientBase {
 			e.printStackTrace();
 		}
 	}
-	
 	
 	@Test
 	public void sendMsg(){
@@ -454,5 +481,35 @@ public class ClientCallTest extends EGameClientBase {
             	System.out.println(mI.getBusinessId());
             }
 		}
+	}
+	
+	@Test
+	public void listOnlineGame(){
+		int appParamId = 927;
+		String cacheKey = EGameCacheKeyV2.listOnlineGameServiceInfoByAppId(appParamId);
+        List<OnlineGameServiceInfo> result = getCacheList().getListT(OnlineGameServiceInfo.class, cacheKey);
+		if(result!=null){
+			logger.info("result size:"+result.size());
+		}
+		logger.info("end...");
+	}
+	
+	
+	@Test
+	public void test() throws RemoteException{
+		String channelCode = "700750";
+		String cacheKey = EGameCacheKeyV2.getFlowChannelInfoByChannelCode(channelCode);
+        FlowChannelInfo result = getFlowCache().getT(FlowChannelInfo.class, cacheKey);
+        System.out.println(result.getCallbackUrl());
+        
+//		FlowChannelInfo flowChannelInfo = EgameFlowClient.getInstance().getFlowChannelInfoByChannelCode(ConstVar.APP_FLOW, 0, "700750");
+//        if (flowChannelInfo == null || Utils.stringIsNullOrEmpty(flowChannelInfo.getCallbackUrl())) {
+//        	System.out.println("error");
+//        }
+//        System.out.println(flowChannelInfo.getCallbackUrl());
+	}
+	public static void main(String[] args) {
+		
+		new ClientCallTest().listAllGifts();
 	}
 }

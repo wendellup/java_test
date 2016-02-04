@@ -28,6 +28,8 @@ public class TestUtils {
 		List<Integer> list2 = Arrays.asList(intAry2);
 		
 		System.out.println(Utils.collectionsRetain(list1, list2));
+		
+		
 	}
 	
 	@Test
