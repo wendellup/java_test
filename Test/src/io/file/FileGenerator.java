@@ -7,6 +7,9 @@ import java.util.Random;
 
 import org.junit.Test;
 
+import cn.egame.common.util.Utils;
+import cn.egame.common.web.WebUtils;
+
 public class FileGenerator {
 	
 	@Test
@@ -59,5 +62,44 @@ public class FileGenerator {
 			pw.close();
 		}
 
+	}
+	
+	@Test
+	public void generatorImsi() {
+		PrintWriter pw = null;
+		try {
+			pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(
+					"201512251412.txt")));
+			long initImsi = 5000000000000L;
+			for (long i = 0; i < 5000; i++) {
+				String str = initImsi + i + "";
+				pw.println(str);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			pw.flush();
+			pw.close();
+		}
+	}
+	
+	@Test
+	public void sendGetToImsi() {
+		try {
+			long initImsi = 5000000000000L;
+			for (long i = 0; i < 5000; i++) {
+				String str = initImsi + i + "";
+				System.out.println(str);
+				String urlStr = "http://192.168.70.159:8808/api/v2/push/sdk/memory_msg.json?imsi="+str;
+				try {
+					WebUtils.http(urlStr, "GET", "UTF-8", null, null, null);
+				} catch (Exception e) {
+					
+				}
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
 	}
 }

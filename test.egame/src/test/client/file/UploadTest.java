@@ -115,14 +115,30 @@ public class UploadTest {
     	try {
     		/** 文件上传 */
     		Utils.initLog4j();
-    		File file = new File("C:\\Users\\yuchao\\Desktop\\EPSH_100.zip");
+    		File file = new File("C:\\Users\\yuchao\\Desktop\\EPSH_103.zip");
     		InputStream inputStream = new FileInputStream(file);
     		System.out.println(inputStream.available());
 //    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.game_photo.value(),
 //    				0, 0L, file.getName(), true);
-    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.comment_photo.value(),
+    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.game.value(),
     				0, 0L, file.getName(), true);
     		logger.info("efsId:"+efsId);
+		} catch (Exception e) {
+			logger.error("", e);
+		}
+	}
+	
+	@Test
+	public void uploadPushImsiFile(){
+    	try {
+    		/** 文件上传 */
+    		Utils.initLog4j();
+    		File file = new File("C:\\Users\\yuchao\\Desktop\\EPSH_120.zip");
+    		InputStream inputStream = new FileInputStream(file);
+    		System.out.println(inputStream.available());
+//    		String filePath = EGameClientBiz.getInstance().writeToPushFile(inputStream, FileUsedType.PUSH_ISMI_FILE, 0, 0L, file.getName());
+//    		String filePath = EGameClientBiz.getInstance().writeToPushFile(inputStream, FileUsedType.PUSH_HALL_FILE, 0, 0L, file.getName());
+//    		logger.info("filePath:"+filePath);
 		} catch (Exception e) {
 			logger.error("", e);
 		}
