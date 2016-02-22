@@ -4,6 +4,8 @@ import java.io.UnsupportedEncodingException;
 
 import org.apache.log4j.Logger;
 
+import cn.egame.common.util.Utils;
+
 public class Test {
 	private static Logger logger = Logger.getLogger(Test.class);
 	
@@ -22,9 +24,11 @@ public class Test {
 //        System.out.println(Utils.toDateString(1380358500000L, dateFormat));
 //        System.out.println(Utils.toDateString(1358621768000L, dateFormat));
 //        System.out.println(System.currentTimeMillis());
-    	new Test().new ThreadA().start();
-    	new Test().new ThreadB().start();
+//    	new Test().new ThreadA().start();
+//    	new Test().new ThreadB().start();
         
+    	String id = "dc912141h1aa6ef5";
+    	System.out.println(Utils.getFileId(id, -1));
     }
     
     class ThreadA extends Thread{
