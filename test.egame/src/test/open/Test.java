@@ -10,6 +10,8 @@ public class Test {
 	private static Logger logger = Logger.getLogger(Test.class);
 	
     public static void main(String[] args) throws Exception {
+//    	bfg删除
+    	
 //        Calendar calendar = GregorianCalendar.getInstance();
 //        calendar.add(GregorianCalendar.DAY_OF_YEAR, -182);
 //        long timeMillis = calendar.getTimeInMillis();
