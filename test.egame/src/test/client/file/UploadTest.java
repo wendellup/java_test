@@ -21,15 +21,18 @@ public class UploadTest {
     		/** 文件上传 */
     		Utils.initLog4j();
     		
-    		InputStream inputStream = new FileInputStream(new File("C:\\Users\\yuchao\\Desktop\\3cbdd151h2b86ffd.zip"));
+    		InputStream inputStream = new FileInputStream(new File("E:\\pic\\6.png"));
     		System.out.println(inputStream.available());
-    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.GAME, 0, 0, "EPSH_100.zip", false);
+    		//a.上传mate_file普通文件类型
+//    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.MATE_FILE, 0, 0, "6.png", false);
+    		//b.上传mate_photo图片文件类型
+    		ImageScaleInfo imageScaleInfo = new ImageScaleInfo(FileUsedType.mate_photo);
+    		imageScaleInfo.setImageScaleLevel(3);//1:压缩小图, 3:压缩小图和中图
+    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.mate_photo, 0, 0, "6.png", true, imageScaleInfo);
     		logger.info("efsId:"+efsId);
 		} catch (Exception e) {
 			logger.error("", e);
 		}
-//		File file = new File("F:/f/ad/90be655f2hc35667.jpg");
-//		System.out.println(file.exists());
 	}
 	
 	//上传截图
@@ -41,6 +44,7 @@ public class UploadTest {
     		File file = new File("E:\\pic\\jgl2.jpg");
     		InputStream inputStream = new FileInputStream(file);
     		System.out.println(inputStream.available());
+    		
     		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.GAME_VIEW, 0, 0, file.getName(), true);
     		logger.info("efsId:"+efsId);
 		} catch (Exception e) {

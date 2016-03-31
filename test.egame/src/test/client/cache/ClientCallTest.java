@@ -27,6 +27,9 @@ import cn.egame.ext.EnumTypeExt.AdvertType;
 import cn.egame.ext.flow.FlowChannelInfo;
 import cn.egame.ext.gc.HallFileTerminalLinkInfo;
 import cn.egame.ext.gc.IGameServiceExt;
+import cn.egame.ext.match.MatchCheatInfo;
+import cn.egame.ext.match.MatchGamePoolInfo;
+import cn.egame.ext.match.MatchScoreManagerInfo;
 import cn.egame.ext.me.Memory;
 import cn.egame.ext.ng.OnlineGameServiceInfo;
 import cn.egame.interfaces.EnumType;
@@ -44,6 +47,7 @@ import cn.egame.interfaces.gc.GameFileInfo;
 import cn.egame.interfaces.gc.GameInfo;
 import cn.egame.interfaces.gc.IGameService;
 import cn.egame.interfaces.pu.AppParameter;
+import cn.egame.match.client.EgameMatchClient;
 import cn.egame.message.MessageEnum.MessageAction;
 import cn.egame.message.MessageEnum.MsgBusinessType;
 import cn.egame.message.MessageEnum.UserMessageType;
@@ -493,6 +497,95 @@ public class ClientCallTest extends EGameClientBase {
 		}
 		logger.info("end...");
 	}
+	
+//	@Test
+//	public void getMatchAttendNum() throws RemoteException{
+//		A.参赛总人数(所有游戏实际参与人数*20+（1-100）的随机数) EGameCacheKeyV2.getMatchTotalAttendNum()
+//	    B.各个赛种参赛人数(所有游戏实际参与人数*20+（1-100）的随机数) EGameCacheKeyV2.getMatchCategoryAttendNum(categoryId)
+//	    C.每个比赛的参赛人数(实际参与人数*20+（1-100）的随机数) EGameCacheKeyV2.getMatchAttendNum(matchId)
+//	    private static long getMatchAttendNum(int matchId) {
+//	        return 20 * Utils.toLong(EGameCacheKeyV2.getMatchAttendNum(matchId), 0)
+//	                + new Random().nextInt(99) + 1;
+//	    }
+//		int matchId = 5;
+//		long matchTotalAttendNum = Utils.toLong(getGameCache().get(
+//						EGameCacheKeyV2.getMatchAttendNum(matchId)), 0);
+//		
+////		long matchTotalAttendNum = Utils.toLong(getGameCache().get(EGameCacheKeyV2.getMatchTotalAttendNum()), 0);
+//		logger.info("EGameCacheKeyV2.getMatchTotalAttendNum():"
+//				+ matchTotalAttendNum);
+//	}
+	
+	@Test
+	public void listMatchCheatInfoFromRMI() throws RemoteException{
+//		String cacheKey = EGameCacheKeyV2.listAllCheatPackageNames();
+//        List<String> result = getCacheList().getListString(cacheKey);
+        List<String> result = EgameMatchClient.getInstance().listAllCheatPackageNames(0, 0);
+        System.out.println(result);
+		
+	}
+	
+	@Test
+	public void listMatchCheatInfoFromCache() throws RemoteException{
+		
+//		String cacheKey = EGameCacheKeyV2.listAllCheatPackageNames();
+//        List<String> infos = dao.listAllCheatPackageNames();
+//        getCacheList().set(cacheKey, infos);
+		String cacheKey = EGameCacheKeyV2.listAllCheatPackageNames();
+        List<String> result = getCacheList().getListString(cacheKey);
+        System.out.println(result);
+	}
+	
+	@Test
+	public void getMatchCheatInfoFromRMI() {
+		int id = 43;
+		MatchCheatInfo result = null;
+		try {
+			result = EgameMatchClient.getInstance().getMatchCheatInfoById(0, 0, id);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        System.out.println(result);
+    }
+	
+	@Test
+	public void getMatchCheatInfoFromCache() {
+		int id = 43;
+		String cacheKey = EGameCacheKeyV2.getMatchCheatInfoById(id);
+        MatchCheatInfo result = getGameCache().getT(MatchCheatInfo.class, cacheKey);
+        System.out.println(result);
+    }
+	
+	@Test
+	public void setMatchCheatInfoFromRMI() {
+		MatchCheatInfo info = new MatchCheatInfo();
+		info.setName("2");
+		info.setPackageName("2");
+		try {
+			EgameMatchClient.getInstance().setMatchCheatInfo(0,0,info);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+        getGameCache().set(EGameCacheKeyV2.getMatchCheatInfoById(info.getId()), info);
+    }
+	
+	@Test
+	public void getMatchScoreManagerByUserIdAndStageId() {
+		long userId = 49654029;
+		int stageId = 110;
+		String cacheKey = EGameCacheKeyV2.getMatchScoreManagerByUserIdAndStageId(userId, stageId);
+        MatchScoreManagerInfo result = getGameCache().getT(MatchScoreManagerInfo.class, cacheKey);
+        System.out.println(result);
+    }
+	
+	@Test
+	public void getMatchGamePoolInfoById() {
+		int id = 2;
+		String cacheKey = EGameCacheKeyV2.getMatchGamePoolInfoById(id);
+        MatchGamePoolInfo result = getGameCache().getT(MatchGamePoolInfo.class, cacheKey);
+        System.out.println(result);
+    }
 	
 	
 	@Test
