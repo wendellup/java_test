@@ -56,7 +56,7 @@ public class My52SFTP {
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\flow\\commons-beanutils-1.8.0.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\flow\\commons-lang-2.4.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\flow\\ezmorph-1.0.6.jar", sftp);
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common-servlet.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common.event.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client.jar", sftp);
@@ -67,6 +67,7 @@ public class My52SFTP {
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.interfaces-2.0.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client-2.0.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.interfaces-2.0.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\bcprov-jdk16-1.46.jar", sftp);
 			logger.info("open目录下jar包替换成功");
 			
 //			String messageCenterDir = "/opt/app/egame/mobile/egame.message.center/lib/";
