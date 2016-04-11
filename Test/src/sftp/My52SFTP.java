@@ -52,7 +52,7 @@ public class My52SFTP {
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.server.open.biz.jar", sftp);
-//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.third.open.biz.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.third.open.biz.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\flow\\commons-beanutils-1.8.0.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\flow\\commons-lang-2.4.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\flow\\ezmorph-1.0.6.jar", sftp);

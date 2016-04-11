@@ -21,10 +21,18 @@ public class TestStr {
 //		long millis = Utils.toDateLong(dateStr, "yyyy-MM-dd HH:mm:ss");
 //		
 //		System.out.println(millis);
-		Object obj = new TestStr();
-		Map<Object, Object> map = new HashMap<Object, Object>();
-		map.put("1", obj);
-		System.out.println(map.get("1"));
+//		Object obj = new TestStr();
+//		Map<Object, Object> map = new HashMap<Object, Object>();
+//		map.put("1", obj);
+//		System.out.println(map.get("1"));
+		String abcStr = "abc";
+		char[] charAry = new char[256];
+//		System.out.println(abcStr.charAt(0));
+//		charAry[abcStr.charAt(0)]++;
+//		charAry[abcStr.indexOf('a')]++;
+//		System.out.println(charAry[abcStr.charAt(0)]);
+		charAry[0] = 97;
+		System.out.println(charAry[0]==97);
 	}
 	
 	

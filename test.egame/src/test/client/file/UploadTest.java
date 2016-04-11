@@ -26,9 +26,9 @@ public class UploadTest {
     		//a.上传mate_file普通文件类型
 //    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.MATE_FILE, 0, 0, "6.png", false);
     		//b.上传mate_photo图片文件类型
-    		ImageScaleInfo imageScaleInfo = new ImageScaleInfo(FileUsedType.mate_photo);
+    		ImageScaleInfo imageScaleInfo = new ImageScaleInfo(FileUsedType.mate_game_photo);
     		imageScaleInfo.setImageScaleLevel(3);//1:压缩小图, 3:压缩小图和中图
-    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.mate_photo, 0, 0, "6.png", true, imageScaleInfo);
+    		long efsId = EGameClientBiz.getInstance().writeToFile(inputStream, FileUsedType.mate_game_photo, 0, 0, "6.png", true, imageScaleInfo);
     		logger.info("efsId:"+efsId);
 		} catch (Exception e) {
 			logger.error("", e);
