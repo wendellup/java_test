@@ -25,11 +25,11 @@ public class 根据apk包获取package_name {
 //         System.out.println(""+manifestInfo.getPackageName());
 //         System.out.println(""+manifestInfo.getVersionCode());
 //         
-//         ApkInfo manifestInfo2 = GetApkInfo.getApkInfoByFilePath("C:\\Users\\yuchao\\Downloads\\243794_1.apk");
-//         System.out.println(""+manifestInfo2.getPackageName());
-//         System.out.println(""+manifestInfo2.getVersionCode());
+         ApkInfo manifestInfo2 = GetApkInfo.getApkInfoByFilePath("C:\\Users\\yuchao\\Downloads\\10000738 (7).apk");
+         System.out.println(""+manifestInfo2.getPackageName());
+         System.out.println(""+manifestInfo2.getVersionCode());
          
-         ApkInfo manifestInfo3 = GetApkInfo.getApkInfoByFilePath("C:\\Users\\yuchao\\Downloads\\248267_0.apk");
+         ApkInfo manifestInfo3 = GetApkInfo.getApkInfoByFilePath("C:\\Users\\yuchao\\Downloads\\774ff7c684041738f69b2cff19b30f69.apk");
          System.out.println("package_name:"+manifestInfo3.getPackageName());
          System.out.println("version_code:"+manifestInfo3.getVersionCode());
          System.out.println("version_name:"+manifestInfo3.getVersionName());

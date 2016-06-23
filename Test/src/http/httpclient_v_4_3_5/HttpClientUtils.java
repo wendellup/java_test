@@ -96,6 +96,23 @@ public class HttpClientUtils {
 		}
 		return null;
 	}
+	
+	public static int simpleGetInvokeRetHttpCode(String url, Map<String, String> params,String charset)
+			throws ClientProtocolException, IOException, URISyntaxException {
+
+		HttpClient client = buildHttpClient(false);
+
+		HttpGet get = buildHttpGet(url, params);
+
+		HttpResponse response = client.execute(get);
+		
+		if(response==null || response.getStatusLine()==null 
+				){
+			return -1;
+		}else{
+			return response.getStatusLine().getStatusCode();
+		}
+	}
 
 	/**
 	 * 简单post调用
@@ -303,4 +320,7 @@ public class HttpClientUtils {
 		map.put("terminal_id", "1");
 		System.out.println(simplePostInvoke(url, map));
 	}
+	
+	
+	
 }

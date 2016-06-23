@@ -24,6 +24,8 @@ public class My52SFTP {
 	private static Logger logger = Logger.getLogger(My52SFTP.class);
 	
 	public static void main(String[] args) {
+		
+		
 		Utils.initLog4j();
 		My52SFTP sf = new My52SFTP();
 		ChannelSftp sftp = null;
@@ -38,21 +40,21 @@ public class My52SFTP {
 			
 			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.core.jar", sftp);
 			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
-			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
+//			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
 			logger.info("core目录下jar包替换成功");
 			
 			String extDir = "/opt/app/egame/mobile/egame.ext/lib/";
 			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.ext.jar", sftp);
 			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
 			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
-			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
+//			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
 			logger.info("ext目录下jar包替换成功");
 			
 			String openDir = "/opt/web/mobile.play.cn/8102/webapps/egame.server.open/WEB-INF/lib/";
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.server.open.biz.jar", sftp);
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.third.open.biz.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.third.open.biz.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\flow\\commons-beanutils-1.8.0.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\flow\\commons-lang-2.4.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\flow\\ezmorph-1.0.6.jar", sftp);

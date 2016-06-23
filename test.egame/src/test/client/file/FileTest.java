@@ -30,7 +30,7 @@ public class FileTest {
 	public void getFilePath(){
 		try {
 			Utils.initLog4j();
-			FileInfo fi = EGameClientV2.getInstance().getFileInfo(0, 0, 2877765);
+			FileInfo fi = EGameClientV2.getInstance().getFileInfo(0, 0, 2942461);
 			System.out.println(ConstVar.DOWNLOAD_URL+FileUtils.getFilePath(fi.getFileUsedType(), fi.getEFSId(), fi.getFileName()));
 			System.out.println(ConstVar.DOWNLOAD_URL+FileUtils.getFilePath(FileUsedType.game, 2316049, "Boom_Beach-159-23540-kunlun-UC-release_1143871_135516a94b15.apk"));
 		} catch (ExceptionCommon e) {

@@ -65,6 +65,30 @@ public class FileGenerator {
 	}
 	
 	@Test
+	public void generatorIpFile() {
+		PrintWriter pw = null;
+		try {
+			pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(
+					"ip.txt")));
+			for (long i = 0; i < 5000; i++) {
+				String ip = "";
+				for(int j = 0; j < 4; j++){
+					int ipVal = new Random().nextInt(255);
+					ip = ip + ipVal +".";
+				}
+				ip = ip.substring(0, ip.length()-1);
+				pw.println(ip);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			pw.flush();
+			pw.close();
+		}
+	}
+	
+	
+	@Test
 	public void generatorImsi() {
 		PrintWriter pw = null;
 		try {

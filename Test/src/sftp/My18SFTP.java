@@ -76,7 +76,6 @@ public class My18SFTP {
 			sf.upload(openDir, "E:\\svn\\code\\lib\\bcprov-jdk16-1.46.jar", sftp);
 			logger.info("open目录下jar包替换成功");
 			
-			
 		} catch (Exception e) {
 			logger.error("", e);
 		} finally{
