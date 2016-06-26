@@ -2,6 +2,11 @@ package com.leetcode.question80_Remove_Duplicates_from_Sorted_Array_II;
 
 import java.util.Arrays;
 
+/**
+ * 参考文章url：
+ * http://www.programcreek.com/2013/01/leetcode-remove-duplicates-from-sorted-array-java/
+ * http://www.programcreek.com/2013/01/leetcode-remove-duplicates-from-sorted-array-ii-java/
+ */
 public class Solution {
 	// Manipulate original array
 	public static int removeDuplicatesNaive(int[] nums) {
