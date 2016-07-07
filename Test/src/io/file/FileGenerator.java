@@ -5,12 +5,17 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.Random;
 
+import org.apache.log4j.Logger;
 import org.junit.Test;
 
+import cn.egame.common.efs.IFileSystem;
+import cn.egame.common.efs.SFileSystemClient;
 import cn.egame.common.util.Utils;
 import cn.egame.common.web.WebUtils;
 
 public class FileGenerator {
+	
+	private static Logger LOGGER = Logger.getLogger(FileGenerator.class);
 	
 	@Test
 	public void generator721() {
@@ -106,6 +111,44 @@ public class FileGenerator {
 			pw.close();
 		}
 	}
+	
+	@Test
+	public void generatorFileForRsyncTest() {
+		long currentTimeMillis = System.currentTimeMillis();
+		//定时按照时间生成文件夹及文件,测试rsync和inotify同步
+//		String basePath = "E:/data/cdn";
+		String basePath = "/test/src";
+		String filePath = basePath +"/file/" + Utils.toPath("/", currentTimeMillis) + "/" + Utils.toFileName(currentTimeMillis) + "/"+currentTimeMillis+".txt";
+		LOGGER.info("filePath:" + filePath);
+		IFileSystem fileSystem = SFileSystemClient.getInstance("egame");
+		PrintWriter pw = null;
+		try {
+			fileSystem.mkdirs(filePath);
+			pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(
+					filePath)));
+				pw.println(currentTimeMillis);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if(pw!=null){
+				pw.flush();
+				pw.close();
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		Utils.initLog4j();
+		while(true){
+			new FileGenerator().generatorFileForRsyncTest();
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				LOGGER.error("", e);
+			}
+		}
+	}
+	
 	
 	@Test
 	public void sendGetToImsi() {
