@@ -126,7 +126,11 @@ public class FileGenerator {
 			fileSystem.mkdirs(filePath);
 			pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(
 					filePath)));
-				pw.println(currentTimeMillis);
+			StringBuilder sb = new StringBuilder();
+			for(int i=0; i<50; i++){
+				sb = sb.append(currentTimeMillis);
+			}
+			pw.println(sb.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -142,7 +146,7 @@ public class FileGenerator {
 		while(true){
 			new FileGenerator().generatorFileForRsyncTest();
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				LOGGER.error("", e);
 			}
