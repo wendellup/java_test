@@ -143,14 +143,66 @@ public class FileGenerator {
 	
 	public static void main(String[] args) {
 		Utils.initLog4j();
-		while(true){
-			new FileGenerator().generatorFileForRsyncTest();
-			try {
-				Thread.sleep(100);
-			} catch (InterruptedException e) {
-				LOGGER.error("", e);
+		//同时创建两个文件
+
+		new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				PrintWriter pw = null;
+				try {
+					pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(
+							"/test/src/666.txt")));
+					StringBuilder sb = new StringBuilder();
+					for(int i=0; i<10; i++){
+						sb = sb.append(6);
+						Thread.sleep(1000);
+					}
+					pw.println(sb.toString());
+				} catch (Exception e) {
+					e.printStackTrace();
+				} finally {
+					if(pw!=null){
+						pw.flush();
+						pw.close();
+					}
+				}
 			}
-		}
+		}).start();;
+		
+		new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				PrintWriter pw = null;
+				try {
+					pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(
+							"/test/src/777.txt")));
+					StringBuilder sb = new StringBuilder();
+					for(int i=0; i<10; i++){
+						sb = sb.append(7);
+						Thread.sleep(100);
+					}
+					pw.println(sb.toString());
+				} catch (Exception e) {
+					e.printStackTrace();
+				} finally {
+					if(pw!=null){
+						pw.flush();
+						pw.close();
+					}
+				}
+			}
+		}).start();;
+		
+//		while(true){
+//			new FileGenerator().generatorFileForRsyncTest();
+//			try {
+//				Thread.sleep(500);
+//			} catch (InterruptedException e) {
+//				LOGGER.error("", e);
+//			}
+//		}
 	}
 	
 	
