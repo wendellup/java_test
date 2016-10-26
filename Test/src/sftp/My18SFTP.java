@@ -61,7 +61,7 @@ public class My18SFTP {
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.server.open.biz.jar", sftp);
-			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.third.open.biz.jar", sftp);
+//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.third.open.biz.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common-servlet.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\druid-0.2.8.jar", sftp);

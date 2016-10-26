@@ -32,6 +32,18 @@ public class TestGetAndPost {
 		return str;
 	}
 	
+	
+	@Test
+	public void testHttpGet(){
+		String str = null;
+		try {
+			String loginUrl = "http://192.168.251.53:8102/api/v2/mobile/channel/content.json?channel_id=701&terminal_id=100&current_page=0&rows_of_page=20&imsi=1111";
+			str = WebUtils.http(loginUrl, "GET", "UTF-8", null, null, null);
+			System.out.println(str);
+		} catch (Exception e) {
+		}
+	}
+	
 	@Test
 	public void testGetStream() throws ExceptionCommonBase{
 		String accessToken = getAccessToken();

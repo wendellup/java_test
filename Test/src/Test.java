@@ -6,7 +6,15 @@ import cn.egame.common.web.WebUtils;
 
 
 public class Test {
+	
 	public static void main(String[] args) {
+		String regex = "^.{6,20}$";
+		String word1 = ".........adb.";
+		System.out.println(word1.matches(regex));
+		
+	}
+	
+	public static void main_(String[] args) {
 		//404
 //		String url = "http://192.168.251.53:18103/f/pkg/gm/000/001/766/14ee4fbch1af3bb5/5013347_1.apk";
 		//网络不通

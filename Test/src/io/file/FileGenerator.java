@@ -98,9 +98,9 @@ public class FileGenerator {
 		PrintWriter pw = null;
 		try {
 			pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(
-					"201512251412.txt")));
-			long initImsi = 5000000000000L;
-			for (long i = 0; i < 5000; i++) {
+					"imsiblack.txt")));
+			long initImsi = 460027529035881L;
+			for (long i = 1000000; i < 2000000; i++) {
 				String str = initImsi + i + "";
 				pw.println(str);
 			}
@@ -127,7 +127,7 @@ public class FileGenerator {
 			pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(
 					filePath)));
 			StringBuilder sb = new StringBuilder();
-			for(int i=0; i<50; i++){
+			for(int i=0; i<80; i++){
 				sb = sb.append(currentTimeMillis);
 			}
 			pw.println(sb.toString());
@@ -142,6 +142,7 @@ public class FileGenerator {
 	}
 	
 	public static void main(String[] args) {
+		/*
 		Utils.initLog4j();
 		//同时创建两个文件
 
@@ -194,15 +195,15 @@ public class FileGenerator {
 				}
 			}
 		}).start();;
-		
-//		while(true){
-//			new FileGenerator().generatorFileForRsyncTest();
-//			try {
-//				Thread.sleep(500);
-//			} catch (InterruptedException e) {
-//				LOGGER.error("", e);
-//			}
-//		}
+		*/
+		while(true){
+			new FileGenerator().generatorFileForRsyncTest();
+			try {
+				Thread.sleep(800);
+			} catch (InterruptedException e) {
+				LOGGER.error("", e);
+			}
+		}
 	}
 	
 	
