@@ -1,0 +1,3 @@
+2018-12-26 16:16:15,736 [main] [cn.egame.client.biz.EGameClientBiz] [ERROR] [1134] - java.rmi.ServerException: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+	java.io.InvalidObjectException: enum constant game_view_edu_pad does not exist in class cn.egame.interfaces.fl.FileUsedType

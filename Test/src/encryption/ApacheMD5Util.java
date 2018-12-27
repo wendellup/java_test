@@ -21,6 +21,15 @@ public class ApacheMD5Util {
     
     public static void main(String[] args) throws NoSuchAlgorithmException {
     	System.out.println(System.currentTimeMillis());
+    	
+    	
+    	System.out.println("-----------md5 file test begin-------------");
+    	System.out.println(md5(new File("C:\\Users\\yuchao\\Desktop\\push上线_20180402\\mydata4vip.datx")));
+    	
+    	System.out.println(md5(new File("C:\\Users\\yuchao\\Desktop\\mydata4vip.datx")));
+    	
+    	System.out.println("-----------md5 file test end-------------");
+    	
     	String terminalIdStr = "100";
     	String gameIdStr = "251141";
     	String loginUserIdStr = "1028129";

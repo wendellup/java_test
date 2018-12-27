@@ -17,6 +17,5 @@ public class DescDecode {
 	public static void main(String[] args) throws InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, IOException {
 		String str = "U2FsdGVkX1+GwIYSkb6ewlmShIAAR+k1oKV87HFVoZlaCLjKUa3RsXxMIzs88xv2gvX9wXRao4SLaiOyB8I13w== ";
 		System.out.println(DES.decryptForDES(str, "46152837"));
-		Utils.
 	}
 }

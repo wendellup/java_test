@@ -7,11 +7,17 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.CookieStore;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.entity.ByteArrayEntity;
+import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.DefaultConnectionKeepAliveStrategy;
+import org.apache.http.impl.client.DefaultRedirectStrategy;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
@@ -27,12 +33,75 @@ public class HttpUtils {
 		httpGet(url);
 	}
 	
+//	private static final Logger LOG = LogManager.getLogger(HttpClient.class);
+	public static CloseableHttpClient httpClient = null;
+	public static HttpClientContext context = null;
+	public static CookieStore cookieStore = null;
+	public static RequestConfig requestConfig = null;
+
+	
+	public static void init() {
+		context = HttpClientContext.create();
+		cookieStore = new BasicCookieStore();
+		// 配置超时时间（连接服务端超时1秒，请求数据返回超时2秒）
+		requestConfig = RequestConfig.custom().setConnectTimeout(120000).setSocketTimeout(60000)
+				.setConnectionRequestTimeout(60000).build();
+		// 设置默认跳转以及存储cookie
+		httpClient = HttpClientBuilder.create().setKeepAliveStrategy(new DefaultConnectionKeepAliveStrategy())
+				.setRedirectStrategy(new DefaultRedirectStrategy()).setDefaultRequestConfig(requestConfig)
+				.setDefaultCookieStore(cookieStore).build();
+	}
+
+	public static String httpGetKeepSession(String url) {
+//		CloseableHttpClient httpclient = null;
+		HttpGet httpGet = null;
+		String returnStr = null;
+		try {
+//		    httpclient = HttpClients.createDefault();
+//		    httpclient.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "UTF-8"); 
+//		    httpclient.getParams().setCookiePolicy(CookiePolicy.BROWSER_COMPATIBILITY); 
+//		    httpclient.getParams().setCookiePolicy(CookiePolicy.);
+		    httpGet = new HttpGet(url);
+//		    httpGet.setHeader("x-forwarded-for", " 124.160.75.205");   
+			HttpResponse response = httpClient.execute(httpGet);
+			// System.out.println("-------------------------------------");
+			// System.out.println(response.getStatusLine());
+			// System.out.println("-------------------------------------");
+			HttpEntity entity = response.getEntity();
+			if (entity != null
+					&& entity.getContentType() != null
+					) {
+				returnStr = EntityUtils.toString(entity);
+				System.out.println(returnStr);
+				EntityUtils.consume(entity);
+			}
+		} catch (Exception ex) {
+			LOG.error("", ex);
+		} finally{
+		    if(httpGet!=null){
+		        httpGet.releaseConnection();
+		    }
+//		    if(httpClient!=null){
+//		        try {
+//		        	httpClient.close();
+//                } catch (IOException e) {
+//                    LOG.error("", e);
+//                }
+//		    }
+		}
+		return returnStr;
+	}
+	
+	
 	public static String httpGet(String url) {
 		CloseableHttpClient httpclient = null;
 		HttpGet httpGet = null;
 		String returnStr = null;
 		try {
 		    httpclient = HttpClients.createDefault();
+//		    httpclient.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "UTF-8"); 
+//		    httpclient.getParams().setCookiePolicy(CookiePolicy.BROWSER_COMPATIBILITY); 
+//		    httpclient.getParams().setCookiePolicy(CookiePolicy.);
 		    httpGet = new HttpGet(url);
 //		    httpGet.setHeader("x-forwarded-for", " 124.160.75.205");   
 			HttpResponse response = httpclient.execute(httpGet);
@@ -109,7 +178,9 @@ public class HttpUtils {
 	public static void requestPost(String url,List<NameValuePair> params) throws ClientProtocolException, IOException {
 	    CloseableHttpClient httpclient = HttpClientBuilder.create().build();
 	    HttpPost httppost = new HttpPost(url);
-	        httppost.setEntity(new UrlEncodedFormEntity(params));
+//	        httppost.setEntity(new UrlEncodedFormEntity(params));
+	        
+	        httppost.setEntity(new ByteArrayEntity("{a:1,b:2}".getBytes()));
 	          
 	        CloseableHttpResponse response = httpclient.execute(httppost);
 //	        System.out.println("response.toString:"+response.toString());

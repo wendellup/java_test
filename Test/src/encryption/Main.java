@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.RandomAccessFile;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
+import java.security.NoSuchAlgorithmException;
 import java.util.zip.CRC32;
 
 import cn.egame.common.util.Utils;
@@ -70,20 +71,23 @@ public class Main {
     }
 
     
-    public static void main(String[] args) throws IOException {
-		File fileDir = new File("F:\\安装包");
-    	File[] files = fileDir.listFiles();
-    	for(File file : files){
-    		if(file.isFile()){
-    			long beginMillis = System.currentTimeMillis();
-    			long encryCode = checksumMappedFile(file.getAbsolutePath());
-    			long endMillis = System.currentTimeMillis();
-    			System.out.println(encryCode+",fileSize:"
-    					+file.length()/1024/1024+"MB,cost:"+(endMillis-beginMillis)
-    					+"millisSeconds."+",fileName:"+file.getName());
-    			
-    		}
-    	}
+    public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
+//		File fileDir = new File("F:\\安装包");
+//    	File[] files = fileDir.listFiles();
+//    	for(File file : files){
+//    		if(file.isFile()){
+//    			long beginMillis = System.currentTimeMillis();
+//    			long encryCode = checksumMappedFile(file.getAbsolutePath());
+//    			long endMillis = System.currentTimeMillis();
+//    			System.out.println(encryCode+",fileSize:"
+//    					+file.length()/1024/1024+"MB,cost:"+(endMillis-beginMillis)
+//    					+"millisSeconds."+",fileName:"+file.getName());
+//    			
+//    		}
+//    	}
+    	
+    	String md5 = Utils.encryptMD5("192.168.251.17/f/pkg/ph/view/big/000/002/852/deaeae07h2b85a06.jpg");
+    	System.out.println(md5);
 		
 	}
     

@@ -1,9 +1,0 @@
-nosql=mongo
-nosql.mongo.host=192.168.10.63
-nosql.mongo.port=27017
-nosql.mongo.dbname=testdb
-nosql.mongo.poolsize=50
-nosql.mongo.user=root
-nosql.mongo.password=test11
-nosql.mongo.slave=false
-

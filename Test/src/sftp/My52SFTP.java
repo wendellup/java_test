@@ -41,14 +41,14 @@ public class My52SFTP {
 //			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.core.jar", sftp);
 //			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
 //			sf.upload(coreDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
-			logger.info("core目录下jar包替换成功");
+//			logger.info("core目录下jar包替换成功");
 			
 			String extDir = "/opt/app/egame/mobile/egame.ext/lib/";
-			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.ext.jar", sftp);
+//			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.ext.jar", sftp);
 //			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.client.jar", sftp);
-			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
+//			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
 //			sf.upload(extDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
-			logger.info("ext目录下jar包替换成功");
+//			logger.info("ext目录下jar包替换成功");
 			
 			String openDir = "/opt/web/mobile.play.cn/8102/webapps/egame.server.open/WEB-INF/lib/";
 			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.interfaces.jar", sftp);
@@ -60,15 +60,15 @@ public class My52SFTP {
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\flow\\ezmorph-1.0.6.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common-servlet.jar", sftp);
-//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common.event.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.common.event.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client.jar", sftp);
 //			sf.upload(openDir, "E:\\·svn\\code\\lib\\ref\\egame.user.ext.interfaces.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.core.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.tomcat-ext.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.client-2.0.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.interfaces-2.0.jar", sftp);
-//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client-2.0.jar", sftp);
-//			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.interfaces-2.0.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.client-2.0.jar", sftp);
+			sf.upload(openDir, "E:\\svn\\code\\lib\\ref\\egame.user.ext.interfaces-2.0.jar", sftp);
 //			sf.upload(openDir, "E:\\svn\\code\\lib\\bcprov-jdk16-1.46.jar", sftp);
 			logger.info("open目录下jar包替换成功");
 			

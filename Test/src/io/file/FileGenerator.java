@@ -22,11 +22,12 @@ public class FileGenerator {
 		PrintWriter pw = null;
 		try {
 			pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(
-					"721_random_imsi.txt")));
-			for (int i = 100; i < 100000 + 100; i++) {
-				String str = "/api/v2/mobile/channel/content.json?channel_id=721&terminal_id=2&current_page=0&rows_of_page=20&imsi="
-						+randomImsi();
-				pw.println(str);
+					"C:\\Users\\yuchao\\Desktop\\testImsi.txt")));
+			for (long i = 100000000000000L; i < 100000000000000L+200000; i++) {
+				String imsi = "T"+i;
+//				String str = "/api/v2/mobile/channel/content.json?channel_id=721&terminal_id=2&current_page=0&rows_of_page=20&imsi="
+//						+randomImsi();
+				pw.println(imsi);
 			}
 			
 		} catch (Exception e) {

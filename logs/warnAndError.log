@@ -1,0 +1,10 @@
+2018-12-27 09:06:03,657 [main] [cn.egame.common.client.EGameClientBase] [ERROR] [49] - rmi.public_service_url = rmi://127.0.0.1:1801/IPublicService
+2018-12-27 09:06:04,688 [main] [cn.egame.common.client.EGameClientBase] [ERROR] [49] - rmi.public_service_url = rmi://127.0.0.1:1801/IPublicService
+2018-12-27 09:06:04,688 [main] [cn.egame.client.biz.EGameClientBiz] [ERROR] [1134] - cn.egame.common.exception.ExceptionCommonBase: ErrorCode:-1 / Message:Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused: connect
+2018-12-27 09:17:25,829 [main] [cn.egame.client.biz.EGameClientBiz] [ERROR] [1134] - java.rmi.ServerException: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+	java.io.InvalidObjectException: enum constant game_view_pad does not exist in class cn.egame.interfaces.fl.FileUsedType
+2018-12-27 09:18:13,709 [main] [cn.egame.client.biz.EGameClientBiz] [ERROR] [1134] - java.rmi.ServerException: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+	java.io.InvalidObjectException: enum constant game_view_pad does not exist in class cn.egame.interfaces.fl.FileUsedType

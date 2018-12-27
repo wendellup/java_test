@@ -11,8 +11,12 @@ import cn.egame.common.cache.ICacheClient;
 import cn.egame.common.cache.SCacheClient;
 import cn.egame.common.util.Utils;
 
+import com.danga.MemCached.MemCachedClient;
+import com.danga.MemCached.SockIOPool;
+
 public class MemcachedTest {
 	static {
+		
         Utils.initLog4j();
     }
     static Logger logger = Logger.getLogger("OpenHandler");
@@ -70,5 +74,58 @@ public class MemcachedTest {
     	}
     }
     
+    @Test
+    public void testMemcachedSetGet(){
+    	String serverURL = "192.168.251.53:20003";
+    	
+            logger.info("setMemcachedPool:" + serverURL);
+            
+            if (serverURL == null || serverURL.length() < 1)
+                return;
+            
+            SockIOPool pool = SockIOPool.getInstance();
+            // set the servers and the weights
+            pool.setServers(new String[] {serverURL});
+            // pool.setWeights( weights );
+            
+            // set some basic pool settings
+            // 5 initial, 5 min, and 250 max conns
+            // and set the max idle time for a conn
+            // to 30
+            pool.setInitConn(5);
+            pool.setMinConn(5);
+            pool.setMaxConn(500);
+            pool.setMaxIdle(1000 * 60 * 30);
+            
+            // set the sleep for the maint thread
+            // it will wake up every x seconds and
+            // maintain the pool size
+            pool.setMaintSleep(30);
+            
+            // set some TCP settings
+            // disable nagle
+            // set the read timeout to 3 secs
+            // and don't set a connect timeout
+            pool.setNagle(false);
+            pool.setSocketTO(3000);
+            pool.setSocketConnectTO(0);
+            
+            // initialize the connection pool
+            pool.initialize();
+             
+            MemCachedClient memCached = new MemCachedClient();
+            memCached.setPrimitiveAsString(true);
+            memCached.setSanitizeKeys(false);
+            
+            memCached.set("", "abc1");
+            System.out.println("----------->");
+            System.out.println(memCached.get(""));
+            
+            // memCached.setCompressEnable(true);
+            // memCached.setCompressThreshold(64 * 1024);
+        }
+    	
+//    		boolean isNullInstanceOfObj = null instanceof Object;
+//    		System.out.println(isNullInstanceOfObj);
     
 }

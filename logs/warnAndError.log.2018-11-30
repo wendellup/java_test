@@ -1,0 +1,4 @@
+2018-11-30 15:29:09,177 [main] [cn.egame.common.client.EGameClientBase] [ERROR] [49] - rmi.game_serviceV2_url = rmi://192.168.107.25:814/IGameServiceV2
+2018-11-30 15:29:30,201 [main] [cn.egame.common.client.EGameClientBase] [ERROR] [49] - rmi.game_serviceV2_url = rmi://192.168.107.25:814/IGameServiceV2
+2018-11-30 15:30:38,498 [main] [cn.egame.common.client.EGameClientBase] [ERROR] [49] - rmi.game_serviceV2_url = rmi://192.168.107.14:814/IGameServiceV2
+2018-11-30 15:30:59,500 [main] [cn.egame.common.client.EGameClientBase] [ERROR] [49] - rmi.game_serviceV2_url = rmi://192.168.107.14:814/IGameServiceV2

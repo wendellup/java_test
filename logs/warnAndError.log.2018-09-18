@@ -1,0 +1,2 @@
+2018-09-18 19:54:45,525 [main] [cn.egame.common.client.EGameClientBase] [ERROR] [49] - rmi.game_serviceV2_url = rmi://127.0.0.1:1801/IGameServiceV2
+2018-09-18 19:54:46,535 [main] [cn.egame.common.client.EGameClientBase] [ERROR] [49] - rmi.game_serviceV2_url = rmi://127.0.0.1:1801/IGameServiceV2

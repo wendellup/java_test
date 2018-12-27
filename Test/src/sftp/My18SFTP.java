@@ -40,7 +40,8 @@ public class My18SFTP {
 			String host = "202.102.105.62";
 			int port = 22;
 			String username = "root";
-			String password = "len@#$passw0rd";
+//			String password = "len@#$passw0rd";
+			String password = "DX-game189.cn";
 			sftp = sf.connect(host, port, username, password);
 			
 			String coreDir = "/opt/app/egame/mobile/egame.core/lib/";
