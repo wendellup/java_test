@@ -533,7 +533,7 @@ _L1:
  }
  */
 
- private static String urlsToPath(URL aurl[])
+ public static String urlsToPath(URL aurl[])
  {
      if(aurl.length == 0)
          return null;
